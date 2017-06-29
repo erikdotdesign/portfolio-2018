@@ -1,6 +1,6 @@
 import React from 'react';
 import DuckImage from '../assets/Duck.jpg';
-import styles from '../../../styles/components/components.homeView.sass';
+import styles from 'components.homeView.sass';
 
 export const HomeView = () => (
   <div>

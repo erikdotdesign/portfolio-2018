@@ -29,6 +29,7 @@ const config = {
   resolve: {
     modules: [
       inProject(project.srcDir),
+      inProjectSrc('styles/components'),
       'node_modules',
     ],
     extensions: ['*', '.js', '.jsx', '.json'],

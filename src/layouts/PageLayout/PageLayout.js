@@ -1,7 +1,7 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import PropTypes from 'prop-types';
-import styles from '../../styles/components/components.pageLayout.sass';
+import styles from 'components.pageLayout.sass';
 
 export const PageLayout = ({ children }) => (
   <div className='container text-center'>
