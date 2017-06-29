@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import createStore from './store/createStore';
-import './styles/main.sass';
+import './styles/base.sass';
 
 // Store Initialization
 // ------------------------------------

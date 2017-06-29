@@ -1,11 +1,11 @@
 import React from 'react';
 import DuckImage from '../assets/Duck.jpg';
-import './HomeView.sass';
+import styles from '../../../styles/components/components.homeView.sass';
 
 export const HomeView = () => (
   <div>
     <h4>Welcome!</h4>
-    <img alt='This is a duck, because Redux!' className='duck' src={DuckImage} />
+    <img alt='This is a duck, because Redux!' className={styles.duck} src={DuckImage} />
   </div>
 );
 
