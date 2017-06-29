@@ -1,0 +1,29 @@
+// ITCSS: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+// Settings – used with preprocessors and contain font, colors definitions, etc.
+@import './settings/settings.globb'
+
+// Tools – globally used mixins and functions.
+// It’s important not to output any CSS in the first 2 layers.
+@import './tools/tools.globb'
+
+// Generic – reset and/or normalize styles, box-sizing definition, etc.
+// This is the first layer which generates actual CSS.
+@import './generic/generic.globb'
+
+// Elements – styling for bare HTML elements (like H1, A, etc.).
+// These come with default styling from the browser so we can redefine them here.
+@import './elements/elements.globb'
+
+// Objects – class-based selectors which define undecorated design patterns,
+// for example media object known from OOCSS.
+// Common component styles
+@import './objects/objects.globb'
+
+// Components – specific UI components. This is where majority of our work takes
+// place and our UI components are often composed of Objects and Components.
+// Component styles are treated as css modules
+
+// Utilities – utilities and helper classes with ability to override anything
+// which goes before in the triangle, eg. hide helper class.
+@import './utilities/utilities.globb'
