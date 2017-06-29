@@ -22,7 +22,8 @@
 
 // Components – specific UI components. This is where majority of our work takes
 // place and our UI components are often composed of Objects and Components.
-// Component styles are treated as css modules
+// Component styles are treated as css modules and should not be imported into base styles.
+// Each component stylesheet will import the base styles with the webpack sass-loader data option.
 
 // Utilities – utilities and helper classes with ability to override anything
 // which goes before in the triangle, eg. hide helper class.
