@@ -98,6 +98,7 @@ const extractStyles = new ExtractTextPlugin({
 });
 
 // Non CSS Modules: Base styles
+// ------------------------------------
 config.module.rules.push({
   test: /\.(sass|scss)$/,
   include: inProjectSrc('styles/base.sass'),
@@ -140,6 +141,7 @@ config.module.rules.push({
 });
 
 // CSS Modules: Component styles
+// ------------------------------------
 config.module.rules.push({
   test: /\.(sass|scss)$/,
   include: inProjectSrc('styles/components'),
