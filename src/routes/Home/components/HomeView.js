@@ -1,11 +1,13 @@
 import React from 'react';
 import DuckImage from '../assets/Duck.jpg';
 import styles from 'components.homeView.sass';
+import BlobGrid from '../../../components/BlobGrid';
 
 export const HomeView = () => (
   <div>
-    <h4>Welcome!</h4>
-    <img alt='This is a duck, because Redux!' className={styles.duck} src={DuckImage} />
+    <BlobGrid width={559}
+              height={533}
+              viewBox='0 0 559 533' />
   </div>
 );
 
