@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import locationReducer from './location';
+import baseline from '../modules/baseline';
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
-    ...asyncReducers
+    ...asyncReducers,
+    baseline
   });
 };
 

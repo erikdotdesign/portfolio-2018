@@ -1,0 +1,9 @@
+@import '~sassline/assets/sass/sassline-base/typography';
+
+.top-stroke {
+  @include box-shadow-border(top, 1px, $black);
+}
+
+.top-stroke--strong {
+  @include box-shadow-border(top, 2px, $black);
+}

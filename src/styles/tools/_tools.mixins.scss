@@ -1,0 +1,36 @@
+@mixin absolute-full {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin content-block {
+  @include absolute-full;
+  content: '';
+  width: 100%;
+  display: block;
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+  @if $inset {
+    box-shadow:inset $top $left $blur $size $color;
+  } @else {
+    box-shadow: $top $left $blur $size $color;
+  }
+}
+
+@mixin box-shadow-border($position, $width, $color) {
+  @if ($position == full) {
+    @include box-shadow(0, 0, 0, $width, $color);
+  } @else if ($position == top) {
+    @include box-shadow(0, $width, 0, 0, $color, true);
+  } @else if ($position == right) {
+    @include box-shadow(-#{$width}, 0, 0, 0, $color, true);
+  } @else if ($position == bottom) {
+    @include box-shadow(0, -#{$width}, 0, 0, $color, true);
+  } @else if ($position == left) {
+    @include box-shadow($width, 0, 0, 0, $color, true);
+  }
+}

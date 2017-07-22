@@ -5190,6 +5190,10 @@ sass-loader@^6.0.5:
     lodash.tail "^4.1.1"
     pify "^2.3.0"
 
+sassline@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/sassline/-/sassline-2.1.2.tgz#798f66213209944c10b30bee880ad21d7c5d8514"
+
 sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"

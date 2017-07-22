@@ -1,0 +1,31 @@
+@import '~sassline/assets/sass/sassline-base/modular-scale';
+
+$new-modular-scale: (
+  //http://www.modularscale.com/?20,40&px&1.618
+  scale-3: (
+    alpha:   64.72,
+    beta:    52.358,
+    gamma:   40,
+    delta:   32.36,
+    epsilon: 24.722,
+    zeta:    20.0,
+    eta:     15.279,
+    theta:   12.361,
+    iota:    9.443
+  ),
+  //http://www.modularscale.com/?22,50&px&1.618
+  scale-4: (
+    alpha:   80.9,
+    beta:    57.594,
+    gamma:   50,
+    delta:   35.596,
+    epsilon: 30.902,
+    zeta:    22.0,
+    eta:     19.099,
+    theta:   13.597,
+    iota:    11.804
+  )
+);
+
+$modular-scale: map_merge($modular-scale, $new-modular-scale);
+

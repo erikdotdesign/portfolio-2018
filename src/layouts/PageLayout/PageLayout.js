@@ -1,18 +1,23 @@
 import React from 'react';
-import { IndexLink, Link } from 'react-router';
 import PropTypes from 'prop-types';
-import styles from 'components.pageLayout.sass';
 import TopNav from '../../components/TopNav';
 
-export const PageLayout = ({ children }) => (
-  <div className={styles['c-pageLayout']}>
-    <IndexLink to='/' activeClassName='page-layout__nav-item--active'>Home</IndexLink>
-    <Link to='/counter' activeClassName='page-layout__nav-item--active'>Counter</Link>
-    {children}
-  </div>
-);
+class PageLayout extends React.Component {
+  render() {
+    return (
+      <div className={`c-page-layout ${this.props.baseline ? 'c-page-layout--baseline' : ''}`}>
+        <TopNav disableBaseline={this.props.disableBaseline} enableBaseline={this.props.enableBaseline} baseline={this.props.baseline} />
+        {this.props.children}
+      </div>
+    )
+  }
+};
+
 PageLayout.propTypes = {
   children: PropTypes.node,
+  baseline: PropTypes.bool.isRequired,
+  disableBaseline: PropTypes.func.isRequired,
+  enableBaseline: PropTypes.func.isRequired
 };
 
 export default PageLayout;

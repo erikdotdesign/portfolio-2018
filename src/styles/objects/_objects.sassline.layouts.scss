@@ -1,0 +1,26 @@
+@import '~sassline/assets/sass/sassline-base/layouts';
+
+.section {
+  @include breakpoint(break-1) {
+    padding-bottom: map-get($gutterwidths, small);
+    padding-top: map-get($gutterwidths, small);
+  }
+
+  @include breakpoint(break-3) {
+   padding-bottom: map-get($gutterwidths, medium);
+    padding-top: map-get($gutterwidths, medium);
+  }
+}
+
+.columns-flush {
+  @include breakpoint(break-1) {
+    margin-left: -#{map-get($gutterwidths, small)};
+    margin-right: -#{map-get($gutterwidths, small)};
+  }
+
+  @include breakpoint(break-3) {
+    margin-left: -#{map-get($gutterwidths, medium)};
+    margin-right: -#{map-get($gutterwidths, medium)};
+  }
+}
+
