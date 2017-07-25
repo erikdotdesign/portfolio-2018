@@ -1,4 +1,4 @@
-[
+const workList = [
   {
     "id":"twitch",
     "tags":["Branding","Front-End","UI/UX"],
@@ -23,4 +23,6 @@
     "name":"Colledger",
     "snippet":"A prototype college search tool created in response to our nation's ever-growing student loan debt crisis."
   }
-]
+];
+
+export default workList;

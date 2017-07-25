@@ -14,3 +14,14 @@ $headingtype: (
   bold: 700,
   cap-height: 0.66
 );
+
+$headingColour: $gray-dark !default;
+$bodyColour: $gray-medium !default;
+$linkColour: $gray-dark !default;
+$hoverColour: $gray-dark !default;
+$captionColour: $gray-light !default;
+$white: #FFFFFF !default;
+
+// Background colours.
+$backgroundColour: #FCFCFC !default;
+$codeBackgroundColour: #F5F4F2 !default;

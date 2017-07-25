@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IndexLink, Link } from 'react-router';
+import BlockReveal from './BlockReveal';
 
 class TopNav extends React.Component {
   render () {
+    const { baseline, disableBaseline, enableBaseline } = this.props;
     return (
       <nav className='c-top-nav'>
         <div className='c-top-nav__content'>
           <div className='c-top-nav__left'>
-            <IndexLink className='c-top-nav__logo' to='/'>erik.design</IndexLink>
+            <BlockReveal inline={true} delay={0} duration={0.5} textShift={0} direction="topBottom">
+              <IndexLink className='c-top-nav__logo' to='/'>erik.design</IndexLink>
+            </BlockReveal>
           </div>
           <div className='c-top-nav__right'>
-            <button className='o-button' onClick={() => this.props.baseline ? this.props.disableBaseline() : this.props.enableBaseline()}>
+            <button className='o-button' onClick={() => baseline ? disableBaseline() : enableBaseline()}>
               Show Baseline
             </button>
           </div>

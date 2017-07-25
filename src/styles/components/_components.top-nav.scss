@@ -6,7 +6,6 @@
   height: 3rem;
   background-color: rgba($white, 0.99);
   z-index: 99;
-  @include box-shadow-border(bottom, 1px, $black);
 }
 
 .c-top-nav__content {
@@ -28,6 +27,7 @@
 
 .c-top-nav__logo {
   color: $headingColour;
+  position: relative;
   font-weight: 700;
   line-height: 3rem;
 }
