@@ -1,31 +1,62 @@
 @import '~sassline/assets/sass/sassline-base/modular-scale';
 
-$new-modular-scale: (
-  //http://www.modularscale.com/?20,40&px&1.618
-  scale-3: (
-    alpha:   64.72,
-    beta:    52.358,
-    gamma:   40,
-    delta:   32.36,
-    epsilon: 24.722,
-    zeta:    20.0,
-    eta:     15.279,
-    theta:   12.361,
-    iota:    9.443
+$modular-display-scale: (
+  scale-0: (
+    alpha:   76.294,
+    beta:    68.359,
+    gamma:   61.035,
+    delta:   54.688,
+    epsilon: 48.828,
+    zeta:    43.75,
+    eta:     39.063,
+    theta:   35,
+    iota:    31.25
   ),
-  //http://www.modularscale.com/?22,50&px&1.618
+  scale-1: (
+    alpha:   81.062,
+    beta:    73.242,
+    gamma:   64.85,
+    delta:   58.594,
+    epsilon: 51.88,
+    zeta:    46.875,
+    eta:     41.504,
+    theta:   37.5,
+    iota:    33.203
+  ),
+  scale-2: (
+    alpha:   85.831,
+    beta:    78.125,
+    gamma:   68.665,
+    delta:   62.5,
+    epsilon: 54.932,
+    zeta:    50,
+    eta:     43.945,
+    theta:   40,
+    iota:    35.156
+  ),
+  scale-3: (
+    alpha:   149.569,
+    beta:    126.293,
+    gamma:   112.205,
+    delta:   94.744,
+    epsilon: 84.175,
+    zeta:    71.076,
+    eta:     63.147,
+    theta:   53.32,
+    iota:    47.372
+  ),
   scale-4: (
-    alpha:   80.9,
-    beta:    57.594,
-    gamma:   50,
-    delta:   35.596,
-    epsilon: 30.902,
-    zeta:    22.0,
-    eta:     19.099,
-    theta:   13.597,
-    iota:    11.804
+    alpha:   248.639,
+    beta:    199.879,
+    gamma:   175.841,
+    delta:   141.357,
+    epsilon: 124.357,
+    zeta:    99.97,
+    eta:     87.947,
+    theta:   70.7,
+    iota:    62.197
   )
 );
 
-$modular-scale: map_merge($modular-scale, $new-modular-scale);
+// $modular-scale: map_merge($modular-scale, $new-modular-scale);
 
