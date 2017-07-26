@@ -38,17 +38,17 @@ class BlockReveal extends React.Component {
             .to(this.block, this.props.duration, {transform: 'scale3d(0,1,1)', transformOrigin: '0 50%', ease: Quint.easeInOut}, `-=${this.props.duration}`);
   }
   topBottom = (timeline) => {
-    timeline.set(this.block, {transformOrigin: '50% 0'})
+    timeline.set(this.block, {transformOrigin: '50% 0', height: 'calc(100% + 20px)', top: -20})
             .from(this.block, this.props.duration, {transform: 'scale3d(1,0,1)', ease: Quint.easeInOut})
             .set(this.element, {opacity: 1})
-            .from(this.element, this.props.duration, {y: -10})
+            .from(this.element, this.props.duration, {y: -20})
             .to(this.block, this.props.duration, {transform: 'scale3d(1,0,1)', transformOrigin: '50% 100%', ease: Quint.easeInOut}, `-=${this.props.duration}`);
   }
   bottomTop = (timeline) => {
-    timeline.set(this.block, {transformOrigin: '50% 100%'})
+    timeline.set(this.block, {transformOrigin: '50% 100%', height: 'calc(100% + 20px)', bottom: -20})
             .from(this.block, this.props.duration, {transform: 'scale3d(1,0,1)', ease: Quint.easeInOut})
             .set(this.element, {opacity: 1})
-            .from(this.element, this.props.duration, {y: 10})
+            .from(this.element, this.props.duration, {y: 20})
             .to(this.block, this.props.duration, {transform: 'scale3d(1,0,1)', transformOrigin: '50% 0', ease: Quint.easeInOut}, `-=${this.props.duration}`);
   }
   render () {

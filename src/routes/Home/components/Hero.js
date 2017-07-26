@@ -1,5 +1,6 @@
 import React from 'react';
 import BlockReveal from '../../../components/BlockReveal';
+import DownArrow from './DownArrow';
 
 export const Hero = () => (
   <div className="section c-hero">
@@ -14,6 +15,7 @@ export const Hero = () => (
           <h1 className='epsilon--display-condensed'>Design</h1>
         </BlockReveal>
       </div>
+      <DownArrow />
     </div>
   </div>
 );
