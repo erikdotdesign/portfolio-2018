@@ -1,10 +1,10 @@
 import React from 'react';
-import { TweenLite, TimelineLite } from 'gsap';
+import { TweenMax, TimelineMax } from 'gsap';
 import PropTypes from 'prop-types';
 
 class BlockReveal extends React.Component {
   componentDidMount() {
-    const BlockRevealTimeline = new TimelineLite({delay: this.props.delay});
+    const BlockRevealTimeline = new TimelineMax({delay: this.props.delay});
 
     switch(this.props.direction) {
       case 'leftRight':

@@ -3,14 +3,14 @@
   right: 0
   bottom: 1rem
 
+.c-down-arrow__svg--sm
   +breakpoint(break-0)
-    transform: scale(0.5)
-
-  +breakpoint(break-2)
-    transform: scale(0.75)
-
+    display: inline-block
   +breakpoint(break-3)
-    transform: scale(0.8)
+    display: none
 
-  +breakpoint(break-4)
-    transform: scale(1)
+.c-down-arrow__svg--lg
+  +breakpoint(break-0)
+    display: none
+  +breakpoint(break-3)
+    display: inline-block

@@ -12,9 +12,7 @@ class TopNav extends React.Component {
             <IndexLink className='c-top-nav__logo' to='/'>erik.design</IndexLink>
           </div>
           <div className='c-top-nav__right'>
-            <button className='o-button' onClick={() => baseline ? disableBaseline() : enableBaseline()}>
-              Show Baseline
-            </button>
+
           </div>
         </div>
       </nav>
@@ -29,3 +27,7 @@ TopNav.propTypes = {
 };
 
 export default TopNav;
+
+// <button className='o-button' onClick={() => baseline ? disableBaseline() : enableBaseline()}>
+//               Show Baseline
+//             </button>

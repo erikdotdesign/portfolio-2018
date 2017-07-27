@@ -1,0 +1,23 @@
+.c-cube-wrapper
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+
+.c-cube-wrapper--above
+  z-index: 50
+
+.c-cube
+ +absolute-full
+ transform-style: preserve-3d
+
+.c-cube__face
+  height: 100%
+  left: 0
+  position: absolute
+  border: 1px solid $black
+  top: 0
+  width: 100%
+  opacity: 0.5
