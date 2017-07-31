@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BlockReveal from '../../../components/BlockReveal';
+import BlockReveal from './BlockReveal';
 
 export const DownArrow = () => (
   <div className="c-down-arrow">

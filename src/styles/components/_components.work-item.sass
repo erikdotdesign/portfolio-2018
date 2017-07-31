@@ -1,2 +1,17 @@
 .c-work-item
-  padding-bottom: 5rem
+  padding-top: 4rem
+  padding-bottom: 4rem
+
+.c-work-item__tag-list
+  list-style-type: none
+
+.c-work-item__tag
+  display: inline-block
+
+.typeset
+  .c-work-item__tag-list
+    +sassline(delta, $headingtype, 2, 1, all)
+
+  .c-work-item__tag
+    margin: 0
+    padding: 0

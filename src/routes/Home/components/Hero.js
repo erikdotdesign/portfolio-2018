@@ -1,7 +1,7 @@
 import React from 'react';
 import BlockReveal from '../../../components/BlockReveal';
 import Cube from '../../../components/Cube';
-import DownArrow from './DownArrow';
+import DownArrow from '../../../components/DownArrow';
 
 export const Hero = () => (
   <div className="section c-hero">
