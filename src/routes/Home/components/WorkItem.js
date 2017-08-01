@@ -9,41 +9,45 @@ class WorkItem extends React.Component {
   render () {
     return (
       <div className="section c-work-item">
-        <div className="column column--duo column--mg-b">
-          <HalftoneCharacter className="c-work-item__index" character={this.props.index + 1} />
-          <BlockReveal inline={true} delay={0} duration={0.5} textShift direction="leftRight">
-            <h1>{this.props.name}</h1>
-          </BlockReveal>
-          <div>
-            <BlockReveal inline={true} delay={0.25} duration={0.5} textShift direction="rightLeft">
-              <ul className="c-work-item__tag-list">
-                {
-                  this.props.tags.map((tag, index) =>
-                    <li className={"c-work-item__tag"} key={index}>
-                      {
-                        index == this.props.tags.length - 1
-                        ?
-                        tag
-                        :
-                        `${tag},\u00A0`
-                      }
-                    </li>
-                  )
-                }
-              </ul>
+        <div className="columns-flush">
+          <div className="column column--duo column--mg-b">
+            <HalftoneCharacter className="c-work-item__index" character={this.props.index + 1} />
+            <BlockReveal inline={true} delay={0} duration={0.5} textShift direction="leftRight">
+              <h1>{this.props.name}</h1>
+            </BlockReveal>
+            <div>
+              <BlockReveal inline={true} delay={0.25} duration={0.5} textShift direction="rightLeft">
+                <ul className="c-work-item__tag-list">
+                  {
+                    this.props.tags.map((tag, index) =>
+                      <li className={"c-work-item__tag"} key={index}>
+                        {
+                          index == this.props.tags.length - 1
+                          ?
+                          tag
+                          :
+                          `${tag},\u00A0`
+                        }
+                      </li>
+                    )
+                  }
+                </ul>
+              </BlockReveal>
+            </div>
+            <BlockReveal inline={false} delay={0.25} duration={0.5} textShift direction="rightLeft">
+              <p>{this.props.snippet}</p>
+            </BlockReveal>
+            <BlockReveal inline={true} delay={0.5} duration={0.5} direction="bottomTop">
+              <Link className="button button--outline" to={`/work/${this.props.id}`}>Read more</Link>
             </BlockReveal>
           </div>
-          <BlockReveal inline={false} delay={0.25} duration={0.5} textShift direction="rightLeft">
-            <p>{this.props.snippet}</p>
-          </BlockReveal>
-          <BlockReveal inline={true} delay={0.5} duration={0.5} direction="bottomTop">
-            <Link className="button button--outline" to={`/work/${this.props.id}`}>Read more</Link>
-          </BlockReveal>
         </div>
-        <div className="column column--duo">
-          <BlockReveal inline={false} delay={0.5} duration={0.5} direction="topBottom">
-            <Tablet img="http://via.placeholder.com/1024x768" />
-          </BlockReveal>
+        <div className="columns-flush">
+          <div className="column column--duo">
+            <BlockReveal inline={false} delay={0.5} duration={0.5} direction="topBottom">
+              <Tablet img="http://via.placeholder.com/1024x768" />
+            </BlockReveal>
+          </div>
         </div>
       </div>
     );

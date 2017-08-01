@@ -13,8 +13,8 @@ class TopNav extends React.Component {
           </div>
           <div className='c-top-nav__right'>
             <div className="button-group-flush">
-              <a href="" className="button">LinkedIn</a>
-              <a href="" className="button">Email</a>
+              <a href="https://www.linkedin.com/in/erikmyers" target="_blank" className="button">LinkedIn</a>
+              <a href="mailto:erik@erik.design" className="button">Email</a>
             </div>
           </div>
         </div>
