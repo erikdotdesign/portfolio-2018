@@ -15,7 +15,7 @@ class WorkItem extends React.Component {
             <h1>{this.props.name}</h1>
           </BlockReveal>
           <div>
-            <BlockReveal inline={true} delay={0} duration={0.5} textShift direction="leftRight">
+            <BlockReveal inline={true} delay={0.25} duration={0.5} textShift direction="rightLeft">
               <ul className="c-work-item__tag-list">
                 {
                   this.props.tags.map((tag, index) =>
