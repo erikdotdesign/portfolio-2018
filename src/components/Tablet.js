@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IndexLink, Link } from 'react-router';
 
 class Tablet extends React.Component {
   render () {

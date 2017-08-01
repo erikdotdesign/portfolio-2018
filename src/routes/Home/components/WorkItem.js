@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { IndexLink, Link } from 'react-router';
 import BlockReveal from '../../../components/BlockReveal';
 import Tablet from '../../../components/Tablet';
+import HalftoneCharacter from '../../../components/HalftoneCharacter';
 
 class WorkItem extends React.Component {
   render () {
     return (
       <div className="section c-work-item">
         <div className="column column--duo column--mg-b">
+          <HalftoneCharacter className="c-work-item__index" character={this.props.index + 1} />
           <BlockReveal inline={true} delay={0} duration={0.5} textShift direction="leftRight">
             <h1>{this.props.name}</h1>
           </BlockReveal>

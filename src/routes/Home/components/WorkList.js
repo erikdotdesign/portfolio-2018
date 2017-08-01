@@ -11,6 +11,7 @@ class WorkList extends React.Component {
           this.props.work.map((workItem, index) =>
             <WorkItem id={workItem.id}
                       tags={workItem.tags}
+                      index={index}
                       snippet={workItem.snippet}
                       name={workItem.name}
                       key={index} />
