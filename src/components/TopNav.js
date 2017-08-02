@@ -15,6 +15,7 @@ class TopNav extends React.Component {
             <div className="button-group-flush">
               <a href="https://www.linkedin.com/in/erikmyers" target="_blank" className="button">LinkedIn</a>
               <a href="mailto:erik@erik.design" className="button">Email</a>
+              <button className="button" onClick={() => {baseline ? disableBaseline() : enableBaseline()}}>Baseline</button>
             </div>
           </div>
         </div>

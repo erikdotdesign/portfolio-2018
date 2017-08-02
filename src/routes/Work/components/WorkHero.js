@@ -18,30 +18,26 @@ class WorkHero extends React.Component {
           <Cube faceSize={8} duration={21} above start={{x: '95%', y: '45%', rotateX: 90, rotateY: 47, rotateZ: 23}} end={{x: '-=10', y: '+=10'}} />
           <Cube faceSize={10} duration={28} above start={{x: '90%', y: '10%', rotateX: 38, rotateY: 33, rotateZ: 0}} end={{x: '-=20', y: '+=20'}} />
           <Cube faceSize={10} duration={29} above start={{x: '60%', y: '85%', rotateX: 22, rotateY: 90, rotateZ: 90}} end={{x: '-=20', y: '+=20'}} />
-          <div>
-            <BlockReveal inline={true} delay={0} duration={0.5} textShift>
-              <h1 className='epsilon--display-condensed'>{this.props.title}</h1>
-            </BlockReveal>
-          </div>
-          <div>
-            <BlockReveal inline={true} delay={0.25} duration={0.5} textShift direction="rightLeft">
-              <ul className="c-work-hero__tag-list">
-                {
-                  this.props.tags.map((tag, index) =>
-                    <li className={"c-work-hero__tag"} key={index}>
-                      {
-                        index == this.props.tags.length - 1
-                        ?
-                        tag
-                        :
-                        `${tag},\u00A0`
-                      }
-                    </li>
-                  )
-                }
-              </ul>
-            </BlockReveal>
-          </div>
+          <BlockReveal inline={false} delay={0} duration={0.5}>
+            <h1 className='epsilon--display-condensed'>{this.props.title}</h1>
+          </BlockReveal>
+          <BlockReveal inline={false} delay={0.25} duration={0.5} direction="rightLeft">
+            <ul className="c-work-hero__tag-list">
+              {
+                this.props.tags.map((tag, index) =>
+                  <li className={"c-work-hero__tag"} key={index}>
+                    {
+                      index == this.props.tags.length - 1
+                      ?
+                      tag
+                      :
+                      `${tag},\u00A0`
+                    }
+                  </li>
+                )
+              }
+            </ul>
+          </BlockReveal>
           <DownArrow />
         </div>
       </div>

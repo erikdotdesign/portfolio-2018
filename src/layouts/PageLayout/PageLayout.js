@@ -5,9 +5,9 @@ import TopNav from '../../components/TopNav';
 class PageLayout extends React.Component {
   render() {
     return (
-      <div className={`c-page-layout ${this.props.baseline ? 'c-page-layout--baseline' : ''}`}>
+      <div className="c-page-layout">
         <TopNav disableBaseline={this.props.disableBaseline} enableBaseline={this.props.enableBaseline} baseline={this.props.baseline} />
-        {this.props.children}
+        {React.cloneElement(this.props.children, {...this.props})}
       </div>
     )
   }

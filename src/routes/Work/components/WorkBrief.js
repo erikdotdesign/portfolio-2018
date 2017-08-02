@@ -12,7 +12,7 @@ class WorkBrief extends React.Component {
             <h3>Brief</h3>
             {
               this.props.brief.map((paragraph, index) =>
-                <BlockReveal key={index} inline={false} delay={0} duration={0.5} textShift direction={index % 2 == 0 ? "leftRight" : "rightLeft"}>
+                <BlockReveal key={index} inline={false} delay={0} duration={0.5} direction={index % 2 == 0 ? "leftRight" : "rightLeft"}>
                   <p>
                     {paragraph}
                   </p>
