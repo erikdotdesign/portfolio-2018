@@ -49,7 +49,7 @@ class WorkItem extends React.Component {
             <div className="columns-flush">
               <div className="column column--duo">
                 <HalftoneCharacter className="c-work-item__display-name" character={this.props.name.slice(0, 2)} />
-                <Tablet img="http://via.placeholder.com/1024x768" />
+                <Tablet img="http://via.placeholder.com/1024x768" forcePlay={isVisible} index={this.props.index} />
               </div>
             </div>
           </div>
