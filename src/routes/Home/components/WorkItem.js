@@ -5,6 +5,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import Tablet from '../../../components/Tablet';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import VisibilitySensor from 'react-visibility-sensor';
+import Cube from '../../../components/Cube';
 
 class WorkItem extends React.Component {
   render () {
