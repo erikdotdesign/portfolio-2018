@@ -15,10 +15,10 @@ class WorkItem extends React.Component {
             <div className="columns-flush">
               <div className="column column--duo column--mg-b">
                 <HalftoneCharacter className="c-work-item__index" character={this.props.index + 1} />
-                <BlockReveal inline={false} forcePlay={isVisible} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "leftRight" : "rightLeft"}>
+                <BlockReveal inline={false} blockColor={this.props.hex} forcePlay={isVisible} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "leftRight" : "rightLeft"}>
                   <h1>{this.props.name}</h1>
                 </BlockReveal>
-                <BlockReveal inline={false} forcePlay={isVisible} delay={0.1} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
+                <BlockReveal inline={false} blockColor={this.props.hex} forcePlay={isVisible} delay={0.1} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
                   <ul className="c-work-item__tag-list">
                     {
                       this.props.tags.map((tag, index) =>
@@ -35,11 +35,11 @@ class WorkItem extends React.Component {
                     }
                   </ul>
                 </BlockReveal>
-                <BlockReveal inline={false} forcePlay={isVisible} delay={0.2} duration={0.5} direction={this.props.index % 2 == 0 ? "leftRight" : "rightLeft"}>
+                <BlockReveal inline={false} blockColor={this.props.hex} forcePlay={isVisible} delay={0.2} duration={0.5} direction={this.props.index % 2 == 0 ? "leftRight" : "rightLeft"}>
                   <p>{this.props.snippet}</p>
                 </BlockReveal>
                 <div className="button-outline-align">
-                  <BlockReveal inline={false} forcePlay={isVisible} delay={0.4} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
+                  <BlockReveal inline={false} blockColor={this.props.hex} forcePlay={isVisible} delay={0.4} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
                     <Link className="button button--outline" to={`/work/${this.props.id}`}>Read more</Link>
                   </BlockReveal>
                 </div>
