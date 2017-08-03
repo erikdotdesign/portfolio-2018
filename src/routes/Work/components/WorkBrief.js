@@ -24,6 +24,16 @@ class WorkBrief extends React.Component {
             <Phone img="http://via.placeholder.com/531x945" />
           </div>
         </div>
+        <div className="single single-measure">
+          {
+            this.props.images.map((image, index) =>
+              <BlockReveal key={index} inline={false} delay={0} duration={0.5} direction={index % 2 == 0 ? "leftRight" : "rightLeft"}>
+                <img src={image.url} alt={image.alt} />
+                <p className="caption">{image.alt}</p>
+              </BlockReveal>
+            )
+          }
+        </div>
       </div>
     );
   }

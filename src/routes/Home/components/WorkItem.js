@@ -39,7 +39,7 @@ class WorkItem extends React.Component {
                   <p>{this.props.snippet}</p>
                 </BlockReveal>
                 <div className="button-outline-align">
-                  <BlockReveal inline={false} forcePlay={isVisible} delay={0.4} duration={0.5} direction={this.props.index % 2 == 0 ? "topBottom" : "bottomTop"}>
+                  <BlockReveal inline={false} forcePlay={isVisible} delay={0.4} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
                     <Link className="button button--outline" to={`/work/${this.props.id}`}>Read more</Link>
                   </BlockReveal>
                 </div>

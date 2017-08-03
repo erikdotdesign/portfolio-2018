@@ -11,7 +11,7 @@ class WorkView extends React.Component {
     return (
       <div className="typeset">
         <WorkHero title={work.name} tags={work.tags} />
-        <WorkBrief brief={work.description} />
+        <WorkBrief brief={work.description} images={work.images} />
       </div>
     );
   }
