@@ -70,7 +70,7 @@ class BlockReveal extends React.Component {
   }
   onChange = (isVisible) => {
     if (this.blockAnimation) {
-      isVisible || this.props.forcePlay ? this.playTimeline() : this.pauseTimeline();
+      this.props.forcePlay || isVisible ? this.playTimeline() : this.pauseTimeline();
     }
   }
   playTimeline = () => {

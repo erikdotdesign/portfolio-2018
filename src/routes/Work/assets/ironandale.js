@@ -4,7 +4,21 @@ const ironandale = {
   "name":"Iron & Ale",
   "description": [
     "Iron & Ale is a Dwarven Drinking Card Game created by my brother and a group of his friends. It is a game of mining, fighting monsters, drinking and Dwarven challenges. You are a Dwarven Lord challenging other players to become the true Dwarven King. To do this you must lead your clan to conquer the mountain and challenge other Dwarven Lords at the Meadhall. The Dwarven Lord with the most honor when the Mountain Deck is depleted wins."
-  ]
+  ],
+  "mobile": require("./img/ironandale-mobile.png"),
+  "images": [{
+    "url": require("./img/ironandale1.png"),
+    "alt": "Iron & Ale landing page"
+  },{
+    "url": require("./img/ironandale2.png"),
+    "alt": "Iron & Ale about"
+  },{
+    "url": require("./img/ironandale3.png"),
+    "alt": "Iron & Ale cards"
+  },{
+    "url": require("./img/ironandale4.png"),
+    "alt": "Iron & Ale reviews"
+  }]
 }
 
 export default ironandale;

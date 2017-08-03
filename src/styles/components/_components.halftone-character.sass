@@ -1,6 +1,7 @@
 .c-halftone-character
   z-index: -1
+  position: relative
 
-  &:after
-    +content-block
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIW2NkYGBg+P///38QDQKMyBwUAUZGRrAkhgoAvKwT9VYXn50AAAAASUVORK5CYII=')
+.c-halftone-character__halftone
+  +absolute-full
+

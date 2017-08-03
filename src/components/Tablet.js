@@ -51,19 +51,59 @@ class Tablet extends React.Component {
     return (
       <VisibilitySensor onChange={this.onChange} delayedCall={true} partialVisibility={true}>
         <div className="c-tablet">
-          <svg width="624px" height="429px" viewBox="0 0 624 429" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+          <svg width="624px"
+               height="429px"
+               viewBox="0 0 624 429"
+               version="1.1"
+               xmlns="http://www.w3.org/2000/svg"
+               xmlnsXlink="http://www.w3.org/1999/xlink"
+               aria-labelledby={`#title-${this.props.index}`}
+               role="img"
+               preserveAspectRatio="xMidYMin meet">
+            <title id={`title-${this.props.index}`}>{this.props.image.alt}</title>
             <defs>
-              <rect ref={(screenMask) => {this.screenMask = screenMask}} id={`path-${this.props.index}`} x="0" y="0" width="499" height="374" opacity="0"></rect>
+              <rect id={`path-${this.props.index}`}
+                    x="0"
+                    y="0"
+                    width="499"
+                    height="374">
+              </rect>
             </defs>
-            <g stroke="none" strokeWidth="0" fill="none" fillRule="evenodd">
-              <rect ref={(outline) => {this.outline = outline}} id="outline" stroke="#000000" strokeMiterlimit="30" strokeLinecap="square" strokeWidth="0" x="1" y="1" width="622" height="427" rx="20"></rect>
-              <g id="screen" transform="translate(62.000000, 27.000000)" ref={(screen) => {this.screen = screen}}>
-                <mask id={`mask-${this.props.index}`} fill="white">
-                  <use xlinkHref={`#path-${this.props.index}`}></use>
-                </mask>
-                <image id="ironandale" mask={`url(#mask-${this.props.index})`} x="0" y="0" width="499" height="374.25" xlinkHref={this.props.img}></image>
-                <rect ref={(screenOutline) => {this.screenOutline = screenOutline}} stroke="#000000" strokeMiterlimit="30" strokeLinecap="square" strokeWidth="0" x="0.5" y="0.5" width="498" height="373"></rect>
-              </g>
+            <rect ref={(outline) => {this.outline = outline}}
+                  fill="none"
+                  id="outline"
+                  stroke="#000000"
+                  strokeMiterlimit="30"
+                  strokeLinecap="square"
+                  strokeWidth="0"
+                  x="1"
+                  y="1"
+                  width="622"
+                  height="427"
+                  rx="20">
+            </rect>
+            <g ref={(screen) => {this.screen = screen}} transform="translate(62.000000, 27.000000)">
+              <mask id={`mask-${this.props.index}`} fill="white">
+                <use xlinkHref={`#path-${this.props.index}`}></use>
+              </mask>
+              <image ref={(screenMask) => {this.screenMask = screenMask}}
+                     mask={`url(#mask-${this.props.index})`}
+                     x="0"
+                     y="0"
+                     width="499"
+                     height="374.25"
+                     xlinkHref={this.props.image.url}></image>
+              <rect ref={(screenOutline) => {this.screenOutline = screenOutline}}
+                    fill="none"
+                    stroke="#000000"
+                    strokeMiterlimit="30"
+                    strokeLinecap="square"
+                    strokeWidth="0"
+                    x="0.5"
+                    y="0.5"
+                    width="498"
+                    height="373">
+              </rect>
             </g>
           </svg>
         </div>

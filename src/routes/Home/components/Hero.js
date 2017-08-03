@@ -20,7 +20,7 @@ class Hero extends React.Component {
           <Cube faceSize={10} duration={28} above start={{x: '90%', y: '10%', rotateX: 38, rotateY: 33, rotateZ: 0}} end={{x: '-=20', y: '+=20'}} />
           <Cube faceSize={10} duration={29} above start={{x: '60%', y: '85%', rotateX: 22, rotateY: 90, rotateZ: 90}} end={{x: '-=20', y: '+=20'}} />
           <div className="single single-measure">
-            <HalftoneCharacter className="c-hero__year" character="2017" />
+            <HalftoneCharacter className="c-hero__year" character="17/18" />
             <BlockReveal inline={false} forcePlay={isVisible} delay={0} textShift duration={0.5}>
               <h1 className='epsilon--display-condensed'>Erik Myers</h1>
             </BlockReveal>

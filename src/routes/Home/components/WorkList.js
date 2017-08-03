@@ -15,6 +15,7 @@ class WorkList extends React.Component {
                       index={index}
                       snippet={workItem.snippet}
                       name={workItem.name}
+                      image={workItem.image}
                       key={index} />
           )
         }
