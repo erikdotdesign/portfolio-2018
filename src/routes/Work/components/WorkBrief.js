@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 import Phone from '../../../components/Phone';
-import WorkImages from './WorkImages';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 
 class WorkBrief extends React.Component {

@@ -27,16 +27,9 @@ class Tablet extends React.Component {
       }
     });
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.forcePlay == true && nextProps.forcePlay == false) {
-      return false;
-    } else {
-      return true;
-    }
-  }
   onChange = (isVisible) => {
     if (this.tabletAnimation) {
-      isVisible || this.props.forcePlay ? this.playTimeline() : this.pauseTimeline();
+      isVisible ? this.playTimeline() : this.pauseTimeline();
     }
   }
   playTimeline = () => {

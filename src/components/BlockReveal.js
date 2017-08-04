@@ -61,16 +61,9 @@ class BlockReveal extends React.Component {
       }
     });
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.forcePlay == true && nextProps.forcePlay == false) {
-      return false;
-    } else {
-      return true;
-    }
-  }
   onChange = (isVisible) => {
     if (this.blockAnimation) {
-      this.props.forcePlay || isVisible ? this.playTimeline() : this.pauseTimeline();
+      isVisible ? this.playTimeline() : this.pauseTimeline();
     }
   }
   playTimeline = () => {

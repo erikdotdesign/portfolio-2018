@@ -7,7 +7,7 @@
   }
 
   @include breakpoint(break-3) {
-   padding-bottom: map-get($gutterwidths, medium);
+    padding-bottom: map-get($gutterwidths, medium);
     padding-top: map-get($gutterwidths, medium);
   }
 }

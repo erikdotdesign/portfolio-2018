@@ -8,7 +8,7 @@ class WorkImages extends React.Component {
       <div className="section single">
         {
           this.props.images.map((image, index) =>
-            <WorkImage url={image.url} key={index} alt={image.alt} hex={this.props.hex} />
+            <WorkImage url={image.url} key={index} index={index} alt={image.alt} hex={this.props.hex} />
           )
         }
       </div>

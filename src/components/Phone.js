@@ -26,13 +26,6 @@ class Phone extends React.Component {
       }
     });
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.forcePlay == true && nextProps.forcePlay == false) {
-      return false;
-    } else {
-      return true;
-    }
-  }
   onChange = (isVisible) => {
     if (this.phoneAnimation) {
       isVisible ? this.playTimeline() : this.pauseTimeline();

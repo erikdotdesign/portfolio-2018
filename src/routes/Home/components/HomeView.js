@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import WorkList from './WorkList';
-import Hero from './Hero';
+import HomeHero from './HomeHero';
 
 class HomeView extends React.Component {
   render () {
     return (
       <div className="typeset">
-        <Hero />
+        <HomeHero />
         <WorkList baseline={this.props.baseline} />
       </div>
     );
