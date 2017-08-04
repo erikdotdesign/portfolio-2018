@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WorkImage from './WorkImage';
 
-class WorkImages extends React.Component {
+class ImageList extends React.Component {
   render () {
     return (
       <div className="section single">
@@ -16,8 +16,8 @@ class WorkImages extends React.Component {
   }
 }
 
-WorkImages.propTypes = {
+ImageList.propTypes = {
 
 };
 
-export default WorkImages;
+export default ImageList;

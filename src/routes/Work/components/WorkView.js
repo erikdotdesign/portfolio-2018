@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WorkHero from './WorkHero';
 import WorkBrief from './WorkBrief';
-import WorkImages from './WorkImages';
+import ImageList from './ImageList';
 import workDetail from '../assets/workDetail';
 
 class WorkView extends React.Component {
@@ -13,7 +13,7 @@ class WorkView extends React.Component {
       <div className="typeset">
         <WorkHero title={work.name} tags={work.tags} hex={work.hex} year={work.year} />
         <WorkBrief brief={work.description} title={work.name} mobile={work.mobile} hex={work.hex} />
-        <WorkImages images={work.images} hex={work.hex} />
+        <ImageList images={work.images} hex={work.hex} />
       </div>
     );
   }

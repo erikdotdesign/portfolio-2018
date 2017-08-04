@@ -5,7 +5,7 @@ import BlockReveal from '../../../components/BlockReveal';
 class WorkImage extends React.Component {
   render () {
     return (
-      <div className="c-work-image">
+      <div className="section c-work-image">
         <BlockReveal blockColor={this.props.hex} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "leftRight" : "rightLeft"}>
           <img src={this.props.url} alt={this.props.alt} />
         </BlockReveal>

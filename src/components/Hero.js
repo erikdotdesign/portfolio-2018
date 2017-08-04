@@ -8,7 +8,7 @@ class Hero extends React.Component {
   render () {
     return (
       <div className="section c-hero">
-        <HalftoneCharacter className="c-hero__year" character={this.props.rightHalftoneText} />
+        <HalftoneCharacter className="c-hero__rightHalftone" character={this.props.rightHalftoneText} />
         <Cube faceSize={25} duration={20} above start={{x: '10%', y: '65%', rotateX: 80, rotateY: 45, rotateZ: -90}} end={{x: '+=20', y: '+=20'}} />
         <Cube faceSize={15} duration={25} above start={{x: '80%', y: '70%', rotateX: 47, rotateY: 57, rotateZ: 11}} end={{x: '-=20', y: '+=20'}} />
         <Cube faceSize={25} duration={22} above start={{x: '60%', y: '20%', rotateX: 76, rotateY: 22, rotateZ: 34}} end={{x: '-=20', y: '-=20'}} />
