@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Cube from './Cube';
 import { TimelineMax } from 'gsap';
 import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
@@ -8,7 +7,7 @@ import '../DrawSVGPlugin';
 
 function createAnim({ options }) {
   const tabletTimeline = new TimelineMax();
-  const { outline, screen, screenOutline, screenMask } = options.refs;
+  const { outline, screenOutline, screenMask } = options.refs;
   const { index } = options.props;
   tabletTimeline.fromTo(outline, 0.75, {drawSVG: index % 2 == 0 ? 0 : "50% 50%", strokeWidth: 2}, {drawSVG:"100%", strokeWidth: 2, immediateRender:false}, "+=0.25")
                 .fromTo(screenOutline, 0.75, {drawSVG: index % 2 == 0 ? "50% 50%" : 0, strokeWidth: 1}, {drawSVG:"100%", strokeWidth: 1, immediateRender:false}, "-=0.25")
@@ -23,7 +22,6 @@ class Tablet extends React.Component {
       props: this.props,
       refs: {
         outline: this.outline,
-        screen: this.outline,
         screenOutline: this.screenOutline,
         screenMask: this.screenMask
       }
@@ -57,12 +55,12 @@ class Tablet extends React.Component {
                version="1.1"
                xmlns="http://www.w3.org/2000/svg"
                xmlnsXlink="http://www.w3.org/1999/xlink"
-               aria-labelledby={`#title-${this.props.index}`}
+               aria-labelledby={`#tablet-title-${this.props.index}`}
                role="img"
                preserveAspectRatio="xMidYMin meet">
-            <title id={`title-${this.props.index}`}>{this.props.image.alt}</title>
+            <title id={`tablet-title-${this.props.index}`}>{this.props.image.alt}</title>
             <defs>
-              <rect id={`path-${this.props.index}`}
+              <rect id={`tablet-path-${this.props.index}`}
                     x="0"
                     y="0"
                     width="499"
@@ -71,7 +69,6 @@ class Tablet extends React.Component {
             </defs>
             <rect ref={(outline) => {this.outline = outline}}
                   fill="none"
-                  id="outline"
                   stroke="#000000"
                   strokeMiterlimit="30"
                   strokeLinecap="square"
@@ -82,12 +79,12 @@ class Tablet extends React.Component {
                   height="427"
                   rx="20">
             </rect>
-            <g ref={(screen) => {this.screen = screen}} transform="translate(62.000000, 27.000000)">
-              <mask id={`mask-${this.props.index}`} fill="white">
-                <use xlinkHref={`#path-${this.props.index}`}></use>
+            <g transform="translate(62.000000, 27.000000)">
+              <mask id={`tablet-mask-${this.props.index}`} fill="white">
+                <use xlinkHref={`#tablet-path-${this.props.index}`}></use>
               </mask>
               <image ref={(screenMask) => {this.screenMask = screenMask}}
-                     mask={`url(#mask-${this.props.index})`}
+                     mask={`url(#tablet-mask-${this.props.index})`}
                      x="0"
                      y="0"
                      width="499"

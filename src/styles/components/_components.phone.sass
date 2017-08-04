@@ -1,34 +1,22 @@
-.c-phone-wrapper
-  max-width: 70%
-  margin: auto
-
 .c-phone
-  +aspect(11, 18)
-  z-index: 1
-
-.c-phone__layer
-  +aspect-fill
-
-.c-phone__outline
-  border: 2px solid $black
-  border-radius: 1rem
-
-.c-phone__screen
-  z-index: 2
+  width: 100%
   position: relative
-  background-color: blue
-  height: 80%
-  width: 80%
-  max-height: 80%
-  max-width: 80%
-  margin: auto
-  top: 50%
-  margin-top: (percentage(16/9) * -1 / 2) * 0.8
+  margin: 1rem auto
 
-.c-phone__screen-aspect
-  +aspect(9, 16)
+  +breakpoint(break-0)
+    height: 38rem
 
-.c-phone__screen-img
-  +aspect-fill
-  background-color: yellow
-  border: 1px solid $black
+  +breakpoint(break-1)
+    height: 28rem
+
+  +breakpoint(break-2)
+    height: 30rem
+
+  +breakpoint(break-3)
+    height: 27rem
+
+  +breakpoint(break-4)
+    height: 24rem
+
+  svg
+    width: 100%

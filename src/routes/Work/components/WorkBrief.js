@@ -2,17 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 import Phone from '../../../components/Phone';
+import WorkImages from './WorkImages';
+import HalftoneCharacter from '../../../components/HalftoneCharacter';
 
 class WorkBrief extends React.Component {
   render () {
     return (
       <div className="section c-work-brief">
         <div className='columns-flush'>
-          <div className="column column--main">
-            <h3>Brief</h3>
+          <div className="column column--sidebar">
+            <HalftoneCharacter className="c-work-item__index" character={this.props.title.slice(0,2)} />
+            <Phone image={this.props.mobile} />
+          </div>
+          <div className="column column--main c-work-brief__text">
             {
               this.props.brief.map((paragraph, index) =>
-                <BlockReveal key={index} inline={false} delay={0} duration={0.5} direction={index % 2 == 0 ? "leftRight" : "rightLeft"}>
+                <BlockReveal key={index} blockColor={this.props.hex} inline={false} delay={0} duration={0.5} direction={index % 2 == 0 ? "leftRight" : "rightLeft"}>
                   <p>
                     {paragraph}
                   </p>
@@ -20,19 +25,6 @@ class WorkBrief extends React.Component {
               )
             }
           </div>
-          <div className="column column--sidebar">
-            <Phone img="http://via.placeholder.com/531x945" />
-          </div>
-        </div>
-        <div className="single single-measure">
-          {
-            this.props.images.map((image, index) =>
-              <BlockReveal key={index} inline={false} delay={0} duration={0.5} direction={index % 2 == 0 ? "leftRight" : "rightLeft"}>
-                <img src={image.url} alt={image.alt} />
-                <p className="caption">{image.alt}</p>
-              </BlockReveal>
-            )
-          }
         </div>
       </div>
     );
