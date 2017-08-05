@@ -60,10 +60,11 @@ class BlockReveal extends React.Component {
         block: this.block
       }
     });
+    this.pauseTimeline();
   }
   onChange = (isVisible) => {
-    if (this.blockAnimation) {
-      isVisible ? this.playTimeline() : this.pauseTimeline();
+    if (this.blockAnimation && isVisible) {
+      this.playTimeline();
     }
   }
   playTimeline = () => {
@@ -73,25 +74,16 @@ class BlockReveal extends React.Component {
     this.blockAnimation.pause();
   }
   render () {
-    const baseComponent = (
-      <div className="c-block-reveal">
-        <div className="c-block-reveal__element" ref={element => {this.element = element}}>
-          {this.props.children}
-        </div>
-        <div className="c-block-reveal__block" ref={block => {this.block = block}}></div>
-      </div>
-    );
     return (
       <VisibilitySensor onChange={this.onChange} partialVisibility={true} delayedCall={true}>
-        {
-          this.props.inline
-          ?
-          baseComponent
-          :
-          <div>
-            {baseComponent}
+        <div className={this.props.inline ? 'c-block-reveal-inline' : null}>
+          <div className="c-block-reveal">
+            <div className="c-block-reveal__element" ref={element => {this.element = element}}>
+              {this.props.children}
+            </div>
+            <div className="c-block-reveal__block" ref={block => {this.block = block}}></div>
           </div>
-        }
+        </div>
       </VisibilitySensor>
     );
   }

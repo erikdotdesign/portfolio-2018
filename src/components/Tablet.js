@@ -26,10 +26,11 @@ class Tablet extends React.Component {
         screenMask: this.screenMask
       }
     });
+    this.pauseTimeline();
   }
   onChange = (isVisible) => {
-    if (this.tabletAnimation) {
-      isVisible ? this.playTimeline() : this.pauseTimeline();
+    if (this.tabletAnimation && isVisible) {
+      this.playTimeline();
     }
   }
   playTimeline = () => {

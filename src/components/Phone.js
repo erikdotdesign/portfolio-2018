@@ -25,10 +25,11 @@ class Phone extends React.Component {
         screenMask: this.screenMask
       }
     });
+    this.pauseTimeline();
   }
   onChange = (isVisible) => {
-    if (this.phoneAnimation) {
-      isVisible ? this.playTimeline() : this.pauseTimeline();
+    if (this.phoneAnimation && isVisible) {
+      this.playTimeline();
     }
   }
   playTimeline = () => {
