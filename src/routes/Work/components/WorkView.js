@@ -12,7 +12,7 @@ class WorkView extends React.Component {
     return (
       <div className="typeset">
         <WorkHero title={work.name} tags={work.tags} hex={work.hex} year={work.year} />
-        <WorkBrief brief={work.description} title={work.name} mobile={work.mobile} hex={work.hex} />
+        <WorkBrief brief={work.description} title={work.name} mobile={work.mobile} tablet={work.tablet} hex={work.hex} />
         <ImageList images={work.images} hex={work.hex} />
       </div>
     );
