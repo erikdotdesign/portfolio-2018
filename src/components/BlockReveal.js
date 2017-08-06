@@ -9,39 +9,39 @@ function createAnim({ options }) {
   const { element, block } = options.refs;
   const defaultBlockColor = 'yellow';
 
-  const blockTimeline = new TimelineMax({ delay });
+  const blockTimeline = new TimelineMax({ paused: true });
 
   switch(direction) {
     case 'leftRight':
-      blockTimeline.set(block, {transformOrigin: '0 50%', background: blockColor ? blockColor : defaultBlockColor, left: textShift ? -20 : 0, width: `calc(100% + ${textShift ? '20px' : '0px'})`})
+      blockTimeline.set(block, {transformOrigin: '0 50%', background: blockColor ? blockColor : defaultBlockColor, left: textShift ? -20 : 0, width: `calc(100% + ${textShift ? '20px' : '0px'})`}, `+=${delay}`)
                    .from(block, duration, {transform: 'scale3d(0,1,1)', ease: Quint.easeInOut})
                    .set(element, {opacity: 1})
                    .from(element, duration, {x: textShift ? -20 : 0})
                    .to(block, duration, {transform: 'scale3d(0,1,1)', transformOrigin: '100% 50%', ease: Quint.easeInOut}, `-=${duration}`);
       break;
     case 'rightLeft':
-      blockTimeline.set(block, {transformOrigin: '100% 50%', background: blockColor ? blockColor : defaultBlockColor, right: textShift ? 20 : 0, width: `calc(100% + ${textShift ? '20px' : '0px'})`})
+      blockTimeline.set(block, {transformOrigin: '100% 50%', background: blockColor ? blockColor : defaultBlockColor, right: textShift ? 20 : 0, width: `calc(100% + ${textShift ? '20px' : '0px'})`}, `+=${delay}`)
                    .from(block, duration, {transform: 'scale3d(0,1,1)', ease: Quint.easeInOut})
                    .set(element, {opacity: 1})
                    .from(element, duration, {x: textShift ? 20 : 0})
                    .to(block, duration, {transform: 'scale3d(0,1,1)', transformOrigin: '0 50%', ease: Quint.easeInOut}, `-=${duration}`);
       break;
     case 'topBottom':
-      blockTimeline.set(block, {transformOrigin: '50% 0', background: blockColor ? blockColor : defaultBlockColor, top: textShift ? -20 : 0, height: `calc(100% + ${textShift ? '20px' : '0px'})`})
+      blockTimeline.set(block, {transformOrigin: '50% 0', background: blockColor ? blockColor : defaultBlockColor, top: textShift ? -20 : 0, height: `calc(100% + ${textShift ? '20px' : '0px'})`}, `+=${delay}`)
                    .from(block, duration, {transform: 'scale3d(1,0,1)', ease: Quint.easeInOut})
                    .set(element, {opacity: 1})
                    .from(element, duration, {y: textShift ? -20 : 0})
                    .to(block, duration, {transform: 'scale3d(1,0,1)', transformOrigin: '50% 100%', ease: Quint.easeInOut}, `-=${duration}`);
       break;
     case 'bottomTop':
-      blockTimeline.set(block, {transformOrigin: '50% 100%', background: blockColor ? blockColor : defaultBlockColor, bottom: textShift ? -20 : 0, height: `calc(100% + ${textShift ? '20px' : '0px'})`})
+      blockTimeline.set(block, {transformOrigin: '50% 100%', background: blockColor ? blockColor : defaultBlockColor, bottom: textShift ? -20 : 0, height: `calc(100% + ${textShift ? '20px' : '0px'})`}, `+=${delay}`)
                    .from(block, duration, {transform: 'scale3d(1,0,1)', ease: Quint.easeInOut})
                    .set(element, {opacity: 1})
                    .from(element, duration, {y: textShift ? 20 : 0})
                    .to(block, duration, {transform: 'scale3d(1,0,1)', transformOrigin: '50% 0', ease: Quint.easeInOut}, `-=${duration}`);
       break;
     default:
-      blockTimeline.set(block, {transformOrigin: '0 50%', background: blockColor ? blockColor : defaultBlockColor, left: textShift ? -20 : 0, width: `calc(100% + ${textShift ? '20px' : '0px'})`})
+      blockTimeline.set(block, {transformOrigin: '0 50%', background: blockColor ? blockColor : defaultBlockColor, left: textShift ? -20 : 0, width: `calc(100% + ${textShift ? '20px' : '0px'})`}, `+=${delay}`)
                    .from(block, duration, {transform: 'scale3d(0,1,1)', ease: Quint.easeInOut})
                    .set(element, {opacity: 1})
                    .from(element, duration, {x: textShift ? -20 : 0})
@@ -60,7 +60,18 @@ class BlockReveal extends React.Component {
         block: this.block
       }
     });
-    this.pauseTimeline();
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (!this.props.forcePlay && nextProps.forcePlay) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevProps.forcePlay && this.props.forcePlay) {
+      this.playTimeline();
+    }
   }
   onChange = (isVisible) => {
     if (this.blockAnimation && isVisible) {

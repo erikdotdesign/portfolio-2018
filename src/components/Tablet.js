@@ -6,7 +6,7 @@ import GSAP from 'react-gsap-enhancer';
 import '../DrawSVGPlugin';
 
 function createAnim({ options }) {
-  const tabletTimeline = new TimelineMax();
+  const tabletTimeline = new TimelineMax({ paused: true });
   const { outline, screenOutline, screenMask } = options.refs;
   const { index } = options.props;
   tabletTimeline.fromTo(outline, 0.75, {drawSVG: index % 2 == 0 ? 0 : "50% 50%", strokeWidth: 2}, {drawSVG:"100%", strokeWidth: 2, immediateRender:false}, "+=0.25")
@@ -26,7 +26,6 @@ class Tablet extends React.Component {
         screenMask: this.screenMask
       }
     });
-    this.pauseTimeline();
   }
   onChange = (isVisible) => {
     if (this.tabletAnimation && isVisible) {
