@@ -10,7 +10,7 @@ import WorkButton from './WorkButton';
 class WorkItem extends React.Component {
   render () {
     return (
-      <VisibilitySensor onChange={this.onChange} partialVisibility={true} delayedCall={true}>
+      <VisibilitySensor partialVisibility={true} delayedCall={true}>
         {({isVisible}) =>
           <div className="section c-work-item">
             <div className="columns-flush">

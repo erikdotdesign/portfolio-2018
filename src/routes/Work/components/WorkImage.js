@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 class WorkImage extends React.Component {
   render () {
     return (
-      <VisibilitySensor onChange={this.onChange} partialVisibility={true} delayedCall={true}>
+      <VisibilitySensor partialVisibility={true} delayedCall={true}>
         {({isVisible}) =>
           <div className="c-work-image">
             <HalftoneCharacter className="c-work-item__index" character={this.props.index + 1} />

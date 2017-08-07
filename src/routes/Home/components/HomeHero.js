@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 class HomeHero extends React.Component {
   render () {
     return (
-      <VisibilitySensor onChange={this.onChange} partialVisibility={true} delayedCall={true}>
+      <VisibilitySensor partialVisibility={true} delayedCall={true}>
         {({isVisible}) =>
           <Hero rightHalftoneText="17/18">
             <div className="single single-measure">

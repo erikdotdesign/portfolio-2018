@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 class WorkHero extends React.Component {
   render () {
     return (
-      <VisibilitySensor onChange={this.onChange} partialVisibility={true} delayedCall={true}>
+      <VisibilitySensor partialVisibility={true} delayedCall={true}>
         {({isVisible}) =>
           <Hero rightHalftoneText={this.props.year} arrowRevealColor={this.props.hex}>
             <div className="single single-measure">
