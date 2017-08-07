@@ -27,6 +27,18 @@ class Tablet extends React.Component {
       }
     });
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (!this.props.forcePlay && nextProps.forcePlay) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevProps.forcePlay && this.props.forcePlay) {
+      this.playTimeline();
+    }
+  }
   onChange = (isVisible) => {
     if (this.tabletAnimation && isVisible) {
       this.playTimeline();
@@ -82,7 +94,7 @@ class Tablet extends React.Component {
                      y="0"
                      width="499"
                      height="374.25"
-                     xlinkHref={this.props.image.url}></image>
+                     xlinkHref={this.props.forcePlay ? this.props.image.url : null}></image>
               <rect ref={(screenOutline) => {this.screenOutline = screenOutline}}
                     fill="none"
                     stroke="#000000"

@@ -27,6 +27,18 @@ class Phone extends React.Component {
     });
     this.pauseTimeline();
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (!this.props.forcePlay && nextProps.forcePlay) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevProps.forcePlay && this.props.forcePlay) {
+      this.playTimeline();
+    }
+  }
   onChange = (isVisible) => {
     if (this.phoneAnimation && isVisible) {
       this.playTimeline();
@@ -82,7 +94,7 @@ class Phone extends React.Component {
                      y="1"
                      width="222"
                      height="395"
-                     xlinkHref={this.props.image.url}>
+                     xlinkHref={this.props.forcePlay ? this.props.image.url : null}>
               </image>
               <rect ref={(screenOutline) => {this.screenOutline = screenOutline}}
                     stroke="#000000"
