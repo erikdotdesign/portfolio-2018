@@ -7,7 +7,7 @@ import workListData from '../assets/workListData';
 class WorkList extends React.Component {
   render () {
     return (
-      <div className={`c-work-list ${this.props.baseline ? 'c-page-layout--baseline' : ''}`}>
+      <div className="c-work-list">
         {
           workListData.map((workItem, index) =>
             <WorkItem work={workItem} index={index} key={index} />

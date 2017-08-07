@@ -1,5 +1,5 @@
 // We only need to import the modules necessary for initial render
-import CoreLayout from '../containers/PageLayoutContainer';
+import CoreLayout from '../layouts/PageLayout/PageLayout';
 import Home from './Home';
 import CounterRoute from './Counter';
 import WorkRoute from './Work';

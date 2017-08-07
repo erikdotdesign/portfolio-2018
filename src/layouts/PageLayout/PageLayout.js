@@ -6,8 +6,8 @@ class PageLayout extends React.Component {
   render() {
     return (
       <div className="c-page-layout">
-        <TopNav disableBaseline={this.props.disableBaseline} enableBaseline={this.props.enableBaseline} baseline={this.props.baseline} />
-        {React.cloneElement(this.props.children, {...this.props})}
+        <TopNav />
+        {this.props.children}
       </div>
     )
   }
@@ -15,9 +15,6 @@ class PageLayout extends React.Component {
 
 PageLayout.propTypes = {
   children: PropTypes.node,
-  baseline: PropTypes.bool.isRequired,
-  disableBaseline: PropTypes.func.isRequired,
-  enableBaseline: PropTypes.func.isRequired
 };
 
 export default PageLayout;

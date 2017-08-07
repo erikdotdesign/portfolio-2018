@@ -8,7 +8,7 @@ class HomeView extends React.Component {
     return (
       <div className="typeset">
         <HomeHero />
-        <WorkList baseline={this.props.baseline} />
+        <WorkList />
       </div>
     );
   }
