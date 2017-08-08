@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WorkImage from './WorkImage';
+import WorkGif from './WorkGif';
 
 class ImageList extends React.Component {
   render () {
@@ -8,7 +9,11 @@ class ImageList extends React.Component {
       <div className="section single">
         {
           this.props.images.map((image, index) =>
-            <WorkImage url={image.url} key={index} index={index} alt={image.alt} hex={this.props.hex} />
+            typeof(image.cover) !== 'undefined'
+            ?
+            <WorkGif gif={image} key={index} index={index} hex={this.props.hex} />
+            :
+            <WorkImage image={image} key={index} index={index} hex={this.props.hex} />
           )
         }
       </div>

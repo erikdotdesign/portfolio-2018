@@ -1,0 +1,23 @@
+.c-work-gif
+  position: relative
+  margin-bottom: 2rem
+
+.c-work-gif__aspect
+  +aspect(300, 167)
+  cursor: pointer
+
+.c-work-gif__cover,
+.c-work-gif__image
+  +absolute-full
+
+.c-work-gif__overlay
+  +absolute-full
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: rgba(255,255,255,0.5)
+
+.c-work-image__bg
+  +aspect-fill
+  background: none
+  z-index: -1

@@ -1,5 +1,16 @@
 const workList = [
   {
+    "id":"tsdp",
+    "tags":["Sketch plugin", "Twitch"],
+    "name":"TSDP",
+    "snippet":"Sketch plugin with 17 custom commands to populate layers with live Twitch data.",
+    "hex": "#FEB305",
+    "image": {
+      "url": require("./img/tdp.jpg"),
+      "alt": "Sketch Twitch data populator top games example"
+    }
+  },
+  {
     "id":"electwitch",
     "tags":["Electron","React","Twitch"],
     "name":"Electwitch",

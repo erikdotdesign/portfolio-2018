@@ -11,10 +11,10 @@ class WorkHero extends React.Component {
         {({isVisible}) =>
           <Hero rightHalftoneText={this.props.year} arrowRevealColor={this.props.hex}>
             <div className="single single-measure">
-              <BlockReveal inline={false} blockColor={this.props.hex} delay={0} textShift duration={0.5}>
+              <BlockReveal inline={false} forcePlay={isVisible} blockColor={this.props.hex} delay={0} textShift duration={0.5}>
                 <h1 className='epsilon--display-condensed'>{this.props.title}</h1>
               </BlockReveal>
-              <BlockReveal inline={false} blockColor={this.props.hex} delay={0.2} textShift duration={0.5} direction="rightLeft">
+              <BlockReveal inline={false} forcePlay={isVisible} blockColor={this.props.hex} delay={0.2} textShift duration={0.5} direction="rightLeft">
                 <ul className="c-work-hero__tag-list">
                   {
                     this.props.tags.map((tag, index) =>

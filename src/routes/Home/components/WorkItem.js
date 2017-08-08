@@ -5,7 +5,6 @@ import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import Tablet from '../../../components/Tablet';
 import VisibilitySensor from 'react-visibility-sensor';
-import WorkButton from './WorkButton';
 
 class WorkItem extends React.Component {
   render () {
@@ -41,7 +40,10 @@ class WorkItem extends React.Component {
                 </BlockReveal>
                 <div className="button-outline-align">
                   <BlockReveal inline={false} forcePlay={isVisible} blockColor={this.props.work.hex} delay={0.4} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
-                    <WorkButton id={this.props.work.id} hex={this.props.work.hex} />
+                    <Link className="button button--outline"
+                          to={`/work/${this.props.work.id}`}>
+                          Read more
+                    </Link>
                   </BlockReveal>
                 </div>
               </div>

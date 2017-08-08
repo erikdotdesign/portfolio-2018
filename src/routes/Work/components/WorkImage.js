@@ -13,12 +13,12 @@ class WorkImage extends React.Component {
             <HalftoneCharacter className="c-work-item__index" character={this.props.index + 1} />
             <div className="c-work-image__aspect">
               <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "leftRight" : "rightLeft"}>
-                <img src={isVisible ? this.props.url : null} alt={this.props.alt} />
+                <img src={isVisible ? this.props.image.url : null} alt={this.props.image.alt} />
               </BlockReveal>
               <div className="c-work-image__bg"></div>
             </div>
             <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
-              <p className="caption">{this.props.alt}</p>
+              <p className="caption">{this.props.image.alt}</p>
             </BlockReveal>
           </div>
         }
