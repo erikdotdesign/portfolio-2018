@@ -1,3 +1,11 @@
 .c-work-image
   margin-bottom: 2rem
   position: relative
+
+.c-work-image__aspect
+  +aspect(300, 167)
+
+.c-work-image__bg
+  +aspect-fill
+  background: none
+  z-index: -1
