@@ -70,9 +70,11 @@ class WorkGif extends React.Component {
               </div>
               <div className="c-work-gif__bg"></div>
             </div>
-            <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
-              <p className="caption">{this.props.gif.alt}</p>
-            </BlockReveal>
+            <div className="c-work-gif__caption-wrap">
+              <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "rightLeft" : "leftRight"}>
+                <p className="c-work-gif__caption">{this.props.gif.alt}</p>
+              </BlockReveal>
+            </div>
           </div>
         }
       </VisibilitySensor>

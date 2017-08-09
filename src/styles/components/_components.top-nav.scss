@@ -30,4 +30,8 @@
   position: relative;
   font-weight: 700;
   line-height: 3rem;
+
+  &:hover, &:focus {
+    color: $headingColour;
+  }
 }

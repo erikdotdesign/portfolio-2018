@@ -17,35 +17,37 @@ const electwitch = {
     "alt": "Electwitch application browse games"
   },
   "images": [{
-    "url": require("./img/e-games.jpg"),
+    "url": require("./img/electwitch-1.jpg"),
+    "retina": require("./img/electwitch-1@2x.jpg"),
     "alt": "Browse games"
   },{
-    "url": require("./img/e-game.jpg"),
-    "alt": "Browse games --> Browse Game Streams (Overwatch)"
+    "url": require("./img/electwitch-2.jpg"),
+    "retina": require("./img/electwitch-2@2x.jpg"),
+    "alt": "Search games and channels"
   },{
-    "url": require("./img/e-channels.jpg"),
+    "url": require("./img/electwitch-3.jpg"),
+    "retina": require("./img/electwitch-3@2x.jpg"),
     "alt": "Browse channels"
   },{
-    "url": require("./img/e-following.jpg"),
-    "alt": "Browse following"
-  },{
-    "url": require("./img/e-communities.jpg"),
+    "url": require("./img/electwitch-4.jpg"),
+    "retina": require("./img/electwitch-4@2x.jpg"),
     "alt": "Browse communities"
   },{
-    "url": require("./img/e-community.jpg"),
-    "alt": "Browse communities --> Browse Community Streams (speedrunning)"
-  },{
-    "url": require("./img/e-clips.jpg"),
+    "url": require("./img/electwitch-5.jpg"),
+    "retina": require("./img/electwitch-5@2x.jpg"),
     "alt": "Browse clips"
   },{
-    "url": require("./img/e-login.jpg"),
-    "alt": "User auth"
+    "url": require("./img/electwitch-6.jpg"),
+    "retina": require("./img/electwitch-6@2x.jpg"),
+    "alt": "Link Twitch account and login"
   },{
-    "url": require("./img/e-stream.jpg"),
-    "alt": "Watch/Chat experience"
+    "url": require("./img/electwitch-7.jpg"),
+    "retina": require("./img/electwitch-7@2x.jpg"),
+    "alt": "Browse following"
   },{
-    "url": require("./img/e-search.jpg"),
-    "alt": "Search channels and games"
+    "url": require("./img/electwitch-8.jpg"),
+    "retina": require("./img/electwitch-8@2x.jpg"),
+    "alt": "Watch and chat experience"
   }]
 }
 
