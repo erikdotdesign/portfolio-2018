@@ -16,9 +16,9 @@ function createAnim({ options }) {
   for (var i = 0; i < frames.length + 2; i++) {
     // add the last frame 2 more times so it doesn't get skipped
     if (i > frames.length - 1) {
-      gifTimeline.set(image, {attr:{src: frames[frames.length - 1]}}, i);
+      gifTimeline.set(image, {attr:{src: frames[frames.length - 1]['2x'], srcSet: `${frames[frames.length - 1]['1x']}, ${frames[frames.length - 1]['2x']} 2x`}}, i);
     } else {
-      gifTimeline.set(image, {attr:{src: frames[i]}}, i);
+      gifTimeline.set(image, {attr:{src: frames[i]['2x'], srcSet: `${frames[i]['1x']}, ${frames[i]['2x']} 2x`}}, i);
     }
   }
 
@@ -58,7 +58,7 @@ class WorkGif extends React.Component {
             <div className="c-work-gif__aspect" onClick={() => {this.togglePlay()}}>
               <figure className="c-work-gif__image">
                 <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "leftRight" : "rightLeft"}>
-                  <img src={isVisible ? this.props.gif.cover : null} ref={image => {this.image = image}} />
+                  <img src={isVisible ? this.props.gif.cover['2x'] : null} srcSet={`${this.props.gif.cover['1x']}, ${this.props.gif.cover['2x']} 2x`} ref={image => {this.image = image}} />
                 </BlockReveal>
               </figure>
               <div className="c-work-gif__overlay" ref={overlay => {this.overlay = overlay}}>

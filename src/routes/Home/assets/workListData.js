@@ -6,7 +6,7 @@ const workList = [
     "snippet":"Sketch plugin with 17 custom commands to populate layers with live Twitch data.",
     "hex": "#FEB305",
     "image": {
-      "url": require("./img/tdp.jpg"),
+      "url": require("./img/tsdp.jpg"),
       "alt": "Sketch Twitch data populator top games example"
     }
   },

@@ -17,30 +17,77 @@ const tsdp = {
     "alt": "Twitch Sketch Data Populator top games example"
   },
   "images": [{
-    "cover": require("./img/tsdp-games-1.jpg"),
+    "cover": {
+      "1x": require("./img/tsdp-games-1.jpg"),
+      "2x": require("./img/tsdp-games-1@2x.jpg")
+    },
     "alt": "Twitch Sketch Data Populator top games example",
     "frames": [
-      require("./img/tsdp-games-1.jpg"),
-      require("./img/tsdp-games-2.jpg"),
-      require("./img/tsdp-games-3.jpg"),
-      require("./img/tsdp-games-4.jpg"),
-      require("./img/tsdp-games-5.jpg"),
-      require("./img/tsdp-games-6.jpg"),
-      require("./img/tsdp-games-7.jpg"),
-      require("./img/tsdp-games-8.jpg")
+      {
+        "1x": require("./img/tsdp-games-1.jpg"),
+        "2x": require("./img/tsdp-games-1@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-games-2.jpg"),
+        "2x": require("./img/tsdp-games-2@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-games-3.jpg"),
+        "2x": require("./img/tsdp-games-3@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-games-4.jpg"),
+        "2x": require("./img/tsdp-games-4@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-games-5.jpg"),
+        "2x": require("./img/tsdp-games-5@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-games-6.jpg"),
+        "2x": require("./img/tsdp-games-6@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-games-7.jpg"),
+        "2x": require("./img/tsdp-games-7@2x.jpg")
+      }
     ]
-  },{
-    "cover": require("./img/tsdp-streams-1.jpg"),
+  },
+  {
+    "cover": {
+      "1x": require("./img/tsdp-streams-1.jpg"),
+      "2x": require("./img/tsdp-streams-1@2x.jpg")
+    },
     "alt": "Twitch Sketch Data Populator top streams example",
     "frames": [
-      require("./img/tsdp-streams-1.jpg"),
-      require("./img/tsdp-streams-2.jpg"),
-      require("./img/tsdp-streams-3.jpg"),
-      require("./img/tsdp-streams-4.jpg"),
-      require("./img/tsdp-streams-5.jpg"),
-      require("./img/tsdp-streams-6.jpg"),
-      require("./img/tsdp-streams-7.jpg"),
-      require("./img/tsdp-streams-8.jpg")
+      {
+        "1x": require("./img/tsdp-streams-1.jpg"),
+        "2x": require("./img/tsdp-streams-1@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-streams-2.jpg"),
+        "2x": require("./img/tsdp-streams-2@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-streams-3.jpg"),
+        "2x": require("./img/tsdp-streams-3@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-streams-4.jpg"),
+        "2x": require("./img/tsdp-streams-4@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-streams-5.jpg"),
+        "2x": require("./img/tsdp-streams-5@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-streams-6.jpg"),
+        "2x": require("./img/tsdp-streams-6@2x.jpg")
+      },
+      {
+        "1x": require("./img/tsdp-streams-7.jpg"),
+        "2x": require("./img/tsdp-streams-7@2x.jpg")
+      }
     ]
   }]
 }
