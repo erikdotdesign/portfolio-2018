@@ -7,7 +7,7 @@ import HalftoneCharacter from './HalftoneCharacter';
 class Hero extends React.Component {
   render () {
     return (
-      <div className="section c-hero">
+      <div className={`section c-hero ${this.props.className ? this.props.className : ''}`}>
         <HalftoneCharacter className="c-hero__rightHalftone" character={this.props.rightHalftoneText} />
         <Cube faceSize={25} duration={20} above start={{x: '10%', y: '65%', rotateX: 80, rotateY: 45, rotateZ: -90}} end={{x: '+=20', y: '+=20'}} />
         <Cube faceSize={15} duration={25} above start={{x: '80%', y: '70%', rotateX: 47, rotateY: 57, rotateZ: 11}} end={{x: '-=20', y: '+=20'}} />

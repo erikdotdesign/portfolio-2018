@@ -10,7 +10,7 @@ class WorkHero extends React.Component {
       <VisibilitySensor partialVisibility={true} delayedCall={true}>
         {({isVisible}) =>
           <Hero rightHalftoneText={this.props.year} arrowRevealColor={this.props.hex}>
-            <div className="single single-measure">
+            <div className="single single-measure c-work-hero__content">
               <BlockReveal inline={false} forcePlay={isVisible} blockColor={this.props.hex} delay={0} textShift duration={0.5}>
                 <h1 className='epsilon--display-condensed'>{this.props.title}</h1>
               </BlockReveal>
@@ -32,6 +32,7 @@ class WorkHero extends React.Component {
                 </ul>
               </BlockReveal>
             </div>
+            <div className="c-work-hero__overlay" style={{background: this.props.hex}}></div>
           </Hero>
         }
       </VisibilitySensor>
