@@ -5,6 +5,7 @@ import Phone from '../../../components/Phone';
 import Tablet from '../../../components/Tablet';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import VisibilitySensor from 'react-visibility-sensor';
+import Button from '../../../components/Button';
 
 class WorkBrief extends React.Component {
   render () {
@@ -57,9 +58,7 @@ class WorkBrief extends React.Component {
                   {
                     this.props.links.map((link, index) =>
                       <BlockReveal key={index} blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={index % 2 == 0 ? "rightLeft" : "leftRight"}>
-                        <a className="button button--outline" href={link.url} target="_blank">
-                          {link.text}
-                        </a>
+                        <Button className="button button--outline" link={link.url} text={link.text} hex={this.props.hex}  />
                       </BlockReveal>
                     )
                   }

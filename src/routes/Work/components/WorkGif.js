@@ -5,6 +5,7 @@ import GSAP from 'react-gsap-enhancer';
 import VisibilitySensor from 'react-visibility-sensor';
 import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
+import Button from '../../../components/Button';
 
 function createAnim({ options }) {
   const {cover, image, overlay} = options.refs;
@@ -64,7 +65,7 @@ class WorkGif extends React.Component {
               <div className="c-work-gif__overlay" ref={overlay => {this.overlay = overlay}}>
                 <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? "topBottom" : "bottomTop"}>
                   <div className="c-work-gif__button">
-                    <button className="button button--outline">Play</button>
+                    <Button className="button button--outline" text="Play" hex={this.props.hex}  />
                   </div>
                 </BlockReveal>
               </div>
