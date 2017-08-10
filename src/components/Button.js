@@ -14,10 +14,15 @@ class Button extends React.Component {
   }
   hexToRgba = (hex, alpha) => {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return `rgba(${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}, ${alpha})`;
+    return `rgba(${parseInt(result[1], 16)},
+                 ${parseInt(result[2], 16)},
+                 ${parseInt(result[3], 16)},
+                 ${alpha})`;
   }
   render () {
-    let linkStyle = this.state.hover ? { background: this.hexToRgba(this.props.hex, 0.2) } : { background: 'none' };
+    let linkStyle = this.state.hover
+                    ? { background: this.hexToRgba(this.props.hex, 0.2) }
+                    : { background: 'none' };
     return (
       this.props.router
       ? <Link style={linkStyle}
