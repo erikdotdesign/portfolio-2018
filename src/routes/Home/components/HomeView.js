@@ -6,7 +6,7 @@ import HomeHero from './HomeHero';
 class HomeView extends React.Component {
   render () {
     return (
-      <div className="typeset">
+      <div className='typeset'>
         <HomeHero />
         <WorkList />
       </div>

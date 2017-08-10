@@ -7,24 +7,22 @@ import VisibilitySensor from 'react-visibility-sensor';
 class WorkHero extends React.Component {
   render () {
     return (
-      <VisibilitySensor partialVisibility={true} delayedCall={true}>
-        {({isVisible}) =>
+      <VisibilitySensor partialVisibility delayedCall>
+        {({ isVisible }) =>
           <Hero rightHalftoneText={this.props.year} arrowRevealColor={this.props.hex}>
-            <div className="single single-measure c-work-hero__content">
+            <div className='single single-measure c-work-hero__content'>
               <BlockReveal inline={false} forcePlay={isVisible} blockColor={this.props.hex} delay={0} textShift duration={0.5}>
                 <h1 className='epsilon--display-condensed'>{this.props.title}</h1>
               </BlockReveal>
-              <BlockReveal inline={false} forcePlay={isVisible} blockColor={this.props.hex} delay={0.2} textShift duration={0.5} direction="rightLeft">
-                <ul className="c-work-hero__tag-list">
+              <BlockReveal inline={false} forcePlay={isVisible} blockColor={this.props.hex} delay={0.2} textShift duration={0.5} direction='rightLeft'>
+                <ul className='c-work-hero__tag-list'>
                   {
                     this.props.tags.map((tag, index) =>
-                      <li className={"c-work-hero__tag"} key={index}>
+                      <li className={'c-work-hero__tag'} key={index}>
                         {
                           index == this.props.tags.length - 1
-                          ?
-                          tag
-                          :
-                          `${tag},\u00A0`
+                          ? tag
+                          : `${tag},\u00A0`
                         }
                       </li>
                     )
@@ -32,7 +30,7 @@ class WorkHero extends React.Component {
                 </ul>
               </BlockReveal>
             </div>
-            <div className="c-work-hero__overlay" style={{background: this.props.hex}}></div>
+            <div className='c-work-hero__overlay' style={{ background: this.props.hex }} />
           </Hero>
         }
       </VisibilitySensor>

@@ -12,6 +12,6 @@ const workDetail = [
   docmatter,
   ironandale,
   tsdp
-]
+];
 
 export default workDetail;

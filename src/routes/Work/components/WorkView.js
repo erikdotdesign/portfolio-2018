@@ -8,9 +8,9 @@ import workDetail from '../assets/workDetail';
 class WorkView extends React.Component {
   render () {
     const { workId } = this.props.params;
-    const work = workDetail.find((workItem) => {return workItem.id == workId});
+    const work = workDetail.find((workItem) => { return workItem.id == workId; });
     return (
-      <div className="typeset">
+      <div className='typeset'>
         <WorkHero title={work.name} tags={work.tags} hex={work.hex} year={work.year} />
         <WorkBrief brief={work.description} title={work.name} mobile={work.mobile} tablet={work.tablet} hex={work.hex} links={work.links} />
         <ImageList images={work.images} hex={work.hex} />

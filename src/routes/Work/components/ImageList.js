@@ -6,14 +6,12 @@ import WorkGif from './WorkGif';
 class ImageList extends React.Component {
   render () {
     return (
-      <div className="section single">
+      <div className='section single'>
         {
           this.props.images.map((image, index) =>
-            typeof(image.cover) !== 'undefined'
-            ?
-            <WorkGif gif={image} key={index} index={index} hex={this.props.hex} />
-            :
-            <WorkImage image={image} key={index} index={index} hex={this.props.hex} />
+            typeof (image.cover) !== 'undefined'
+            ? <WorkGif gif={image} key={index} index={index} hex={this.props.hex} />
+            : <WorkImage image={image} key={index} index={index} hex={this.props.hex} />
           )
         }
       </div>
