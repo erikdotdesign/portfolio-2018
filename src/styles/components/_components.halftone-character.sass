@@ -2,6 +2,13 @@
   z-index: -1
   position: relative
 
+  @media all and (-webkit-min-device-pixel-ratio: 1)
+    opacity: 1
+  @media all and (-webkit-min-device-pixel-ratio: 2)
+    opacity: 0.7
+
 .c-halftone-character__halftone
   +absolute-full
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIW2NkYGBg+P///38QDQKMyBwUAUZGRrAkhgoAvKwT9VYXn50AAAAASUVORK5CYII=')
+
 
