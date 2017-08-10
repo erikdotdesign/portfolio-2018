@@ -17,7 +17,10 @@ class App extends React.Component {
     return (
       <Provider store={this.props.store}>
         <div style={{ height: '100%' }}>
-          <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)} children={this.props.routes} />
+          <Router
+          history={browserHistory}
+          onUpdate={() => window.scrollTo(0, 0)}
+          children={this.props.routes} />
         </div>
       </Provider>
     );
