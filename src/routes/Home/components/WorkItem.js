@@ -49,7 +49,7 @@ class WorkItem extends React.Component {
               </div>
               <div className="column column--duo">
                 <HalftoneCharacter className="c-work-item__display-name" character={this.props.work.name.slice(0, 2)} />
-                <Tablet image={this.props.work.image} forcePlay={isVisible} index={this.props.index} />
+                <Tablet className="c-tablet__warp--right" image={this.props.work.image} forcePlay={isVisible} index={this.props.index} />
               </div>
             </div>
           </div>

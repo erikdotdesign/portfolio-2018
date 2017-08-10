@@ -36,7 +36,7 @@ class WorkBrief extends React.Component {
               <div className='columns-flush'>
                 <div className="column column--duo">
                   <HalftoneCharacter className="c-work-item__index" character={this.props.title.slice(0,2)} />
-                  <Tablet image={this.props.tablet} forcePlay={isVisible} index="0" />
+                  <Tablet className="c-tablet__warp--left" image={this.props.tablet} forcePlay={isVisible} index="0" />
                 </div>
                 <div className="column c-work-brief__text column--duo">
                   {
