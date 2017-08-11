@@ -135,19 +135,19 @@ class BlockReveal extends React.Component {
   render () {
     return (
       <VisibilitySensor
-      onChange={this.onChange}
-      partialVisibility
-      delayedCall>
+        onChange={this.onChange}
+        partialVisibility
+        delayedCall>
         <div className={this.props.inline ? 'c-block-reveal-inline' : null}>
           <div className='c-block-reveal'>
             <div
-            className='c-block-reveal__element'
-            ref={element => { this.element = element; }}>
+              className='c-block-reveal__element'
+              ref={element => { this.element = element; }}>
               {this.props.children}
             </div>
             <div
-            className='c-block-reveal__block'
-            ref={block => { this.block = block; }} />
+              className='c-block-reveal__block'
+              ref={block => { this.block = block; }} />
           </div>
         </div>
       </VisibilitySensor>

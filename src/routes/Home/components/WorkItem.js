@@ -16,27 +16,27 @@ class WorkItem extends React.Component {
             <div className='columns-flush'>
               <div className='column column--duo column--mg-b'>
                 <HalftoneCharacter
-                className='c-work-item__index'
-                character={this.props.index + 1} />
+                  className='c-work-item__index'
+                  character={this.props.index + 1} />
                 <BlockReveal
-                inline={false}
-                forcePlay={isVisible}
-                blockColor={this.props.work.hex}
-                delay={0}
-                duration={0.5}
-                direction={
+                  inline={false}
+                  forcePlay={isVisible}
+                  blockColor={this.props.work.hex}
+                  delay={0}
+                  duration={0.5}
+                  direction={
                 this.props.index % 2 == 0
                 ? 'leftRight'
                 : 'rightLeft'}>
                   <h1>{this.props.work.name}</h1>
                 </BlockReveal>
                 <BlockReveal
-                inline={false}
-                forcePlay={isVisible}
-                blockColor={this.props.work.hex}
-                delay={0.1}
-                duration={0.5}
-                direction={
+                  inline={false}
+                  forcePlay={isVisible}
+                  blockColor={this.props.work.hex}
+                  delay={0.1}
+                  duration={0.5}
+                  direction={
                 this.props.index % 2 == 0
                 ? 'rightLeft'
                 : 'leftRight'}>
@@ -55,12 +55,12 @@ class WorkItem extends React.Component {
                   </ul>
                 </BlockReveal>
                 <BlockReveal
-                inline={false}
-                forcePlay={isVisible}
-                blockColor={this.props.work.hex}
-                delay={0.2}
-                duration={0.5}
-                direction={
+                  inline={false}
+                  forcePlay={isVisible}
+                  blockColor={this.props.work.hex}
+                  delay={0.2}
+                  duration={0.5}
+                  direction={
                 this.props.index % 2 == 0
                 ? 'leftRight'
                 : 'rightLeft'}>
@@ -68,31 +68,31 @@ class WorkItem extends React.Component {
                 </BlockReveal>
                 <div className='button-outline-align'>
                   <BlockReveal
-                  inline={false}
-                  forcePlay={isVisible}
-                  blockColor={this.props.work.hex}
-                  delay={0.4}
-                  duration={0.5}
-                  direction={this.props.index % 2 == 0
+                    inline={false}
+                    forcePlay={isVisible}
+                    blockColor={this.props.work.hex}
+                    delay={0.4}
+                    duration={0.5}
+                    direction={this.props.index % 2 == 0
                   ? 'rightLeft'
                   : 'leftRight'}>
                     <Button
-                    text='Read more'
-                    router
-                    link={`/work/${this.props.work.id}`}
-                    hex={this.props.work.hex} />
+                      text='Read more'
+                      router
+                      link={`/work/${this.props.work.id}`}
+                      hex={this.props.work.hex} />
                   </BlockReveal>
                 </div>
               </div>
               <div className='column column--duo'>
                 <HalftoneCharacter
-                className='c-work-item__display-name'
-                character={this.props.work.name.slice(0, 2)} />
+                  className='c-work-item__display-name'
+                  character={this.props.work.name.slice(0, 2)} />
                 <Tablet
-                className='c-tablet__warp--right'
-                image={this.props.work.image}
-                forcePlay={isVisible}
-                index={this.props.index} />
+                  className='c-tablet__warp--right'
+                  image={this.props.work.image}
+                  forcePlay={isVisible}
+                  index={this.props.index} />
               </div>
             </div>
           </div>
