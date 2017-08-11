@@ -28,14 +28,14 @@ class WorkImage extends React.Component {
                 {
                   this.props.image.retina
                   ? <img
-                      src={isVisible ? this.props.image.retina : null}
-                      alt={this.props.image.alt}
-                      srcSet={
+                    src={isVisible ? this.props.image.retina : null}
+                    alt={this.props.image.alt}
+                    srcSet={
                         `${this.props.image.url},
                         ${this.props.image.retina} 2x`} />
                   : <img
-                      src={isVisible ? this.props.image.url : null}
-                      alt={this.props.image.alt} />
+                    src={isVisible ? this.props.image.url : null}
+                    alt={this.props.image.alt} />
                 }
               </BlockReveal>
               <div className='c-work-image__bg' />

@@ -15,8 +15,7 @@ class WorkBrief extends React.Component {
           <div className='section c-work-brief'>
             {
               this.props.mobile
-              ?
-              <div className='columns-flush'>
+              ? <div className='columns-flush'>
                 <div className='column column--sidebar'>
                   <HalftoneCharacter
                     className='c-work-item__index c-work-item__brief'
@@ -27,7 +26,7 @@ class WorkBrief extends React.Component {
                 </div>
                 <div className='column c-work-brief__text column--main'>
                   <div>
-                    <h3 className="top-stroke--strong top-stroke--inline c-block-reveal-wrap">
+                    <h3 className='top-stroke--strong top-stroke--inline c-block-reveal-wrap'>
                       <BlockReveal
                         blockColor={this.props.hex}
                         forcePlay={isVisible}
@@ -61,8 +60,7 @@ class WorkBrief extends React.Component {
                   }
                 </div>
               </div>
-              :
-              <div className='columns-flush'>
+              : <div className='columns-flush'>
                 <div className='column column--duo'>
                   <HalftoneCharacter
                     className='c-work-item__index c-work-item__brief'
@@ -75,7 +73,7 @@ class WorkBrief extends React.Component {
                 </div>
                 <div className='column c-work-brief__text column--duo'>
                   <div>
-                    <h3 className="top-stroke--strong top-stroke--inline c-block-reveal-wrap">
+                    <h3 className='top-stroke--strong top-stroke--inline c-block-reveal-wrap'>
                       <BlockReveal
                         blockColor={this.props.hex}
                         forcePlay={isVisible}

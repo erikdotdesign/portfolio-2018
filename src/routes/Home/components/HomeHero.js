@@ -13,22 +13,22 @@ class HomeHero extends React.Component {
             <div className='single single-measure'>
               <h1 className='epsilon--display-condensed'>
                 <BlockReveal
-                inline={false}
-                forcePlay={isVisible}
-                delay={0}
-                textShift
-                duration={0.5}>
+                  inline={false}
+                  forcePlay={isVisible}
+                  delay={0}
+                  textShift
+                  duration={0.5}>
                   Erik Myers
                 </BlockReveal>
               </h1>
               <h1 className='epsilon--display-condensed'>
                 <BlockReveal
-                inline={false}
-                forcePlay={isVisible}
-                delay={0.2}
-                textShift
-                duration={0.5}
-                direction='rightLeft'>
+                  inline={false}
+                  forcePlay={isVisible}
+                  delay={0.2}
+                  textShift
+                  duration={0.5}
+                  direction='rightLeft'>
                   Design
                 </BlockReveal>
               </h1>

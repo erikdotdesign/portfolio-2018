@@ -31,7 +31,7 @@ class WorkHero extends React.Component {
                   textShift
                   duration={0.5}
                   direction='rightLeft'>
-                {
+                  {
                   this.props.tags.map((tag, index) =>
                     <li className={'c-work-hero__tag'} key={index}>
                       {
