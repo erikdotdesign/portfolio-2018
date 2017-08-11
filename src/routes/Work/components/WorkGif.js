@@ -55,25 +55,60 @@ class WorkGif extends React.Component {
       <VisibilitySensor partialVisibility delayedCall>
         {({ isVisible }) =>
           <div className='c-work-gif'>
-            <HalftoneCharacter className='c-work-item__index' character={this.props.index + 1} />
+            <HalftoneCharacter
+              className='c-work-item__index'
+              character={this.props.index + 1} />
             <div className='c-work-gif__aspect' onClick={() => { this.togglePlay(); }}>
               <figure className='c-work-gif__image'>
-                <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? 'leftRight' : 'rightLeft'}>
-                  <img src={isVisible ? this.props.gif.cover['2x'] : null} srcSet={`${this.props.gif.cover['1x']}, ${this.props.gif.cover['2x']} 2x`} ref={image => { this.image = image; }} />
+                <BlockReveal
+                  blockColor={this.props.hex}
+                  forcePlay={isVisible}
+                  inline={false}
+                  delay={0}
+                  textShift
+                  duration={0.5}
+                  direction={
+                    this.props.index % 2 == 0
+                    ? 'leftRight'
+                    : 'rightLeft'}>
+                  <img
+                    src={isVisible ? this.props.gif.cover['2x'] : null}
+                    srcSet={`${this.props.gif.cover['1x']}, ${this.props.gif.cover['2x']} 2x`}
+                    ref={image => { this.image = image; }} />
                 </BlockReveal>
               </figure>
               <div className='c-work-gif__overlay' ref={overlay => { this.overlay = overlay; }}>
-                <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? 'rightLeft' : 'leftRight'}>
+                <BlockReveal
+                  blockColor={this.props.hex}
+                  forcePlay={isVisible}
+                  inline={false}
+                  textShift
+                  delay={0}
+                  duration={0.5}
+                  direction={
+                    this.props.index % 2 == 0
+                    ? 'rightLeft'
+                    : 'leftRight'}>
                   <Button className='button button--outline' text='Play' hex={this.props.hex} />
                 </BlockReveal>
               </div>
               <div className='c-work-gif__bg' />
             </div>
-            <div className='c-work-gif__caption-wrap'>
-              <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? 'rightLeft' : 'leftRight'}>
-                <p className='c-work-gif__caption'>{this.props.gif.alt}</p>
+            <p className='c-work-gif__caption top-stroke--strong c-block-reveal-wrap top-stroke--inline'>
+              <BlockReveal
+                blockColor={this.props.hex}
+                forcePlay={isVisible}
+                inline={false}
+                textShift
+                delay={0}
+                duration={0.5}
+                direction={
+                  this.props.index % 2 == 0
+                  ? 'rightLeft'
+                  : 'leftRight'}>
+                {this.props.gif.alt}
               </BlockReveal>
-            </div>
+            </p>
           </div>
         }
       </VisibilitySensor>

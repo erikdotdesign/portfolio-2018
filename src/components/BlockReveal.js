@@ -17,13 +17,13 @@ function createAnim ({ options }) {
       .set(block, {
         transformOrigin: '0 50%',
         background: blockColor || defaultBlockColor,
-        left: textShift ? -20 : 0,
-        width: `calc(100% + ${textShift ? '20px' : '0px'})` }, `+=${delay}`)
+        left: textShift ? -10 : 0,
+        width: `calc(100% + ${textShift ? '10px' : '0px'})` }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',
         ease: Quint.easeInOut })
       .set(element, { opacity: 1 })
-      .from(element, duration, { x: textShift ? -20 : 0 })
+      .from(element, duration, { x: textShift ? -10 : 0 })
       .to(block, duration, {
         transform: 'scale3d(0,1,1)',
         transformOrigin: '100% 50%',
@@ -34,13 +34,13 @@ function createAnim ({ options }) {
       .set(block, {
         transformOrigin: '100% 50%',
         background: blockColor || defaultBlockColor,
-        right: textShift ? 20 : 0,
-        width: `calc(100% + ${textShift ? '20px' : '0px'})` }, `+=${delay}`)
+        right: textShift ? -10 : 0,
+        width: `calc(100% + ${textShift ? '10px' : '0px'})` }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',
         ease: Quint.easeInOut })
       .set(element, { opacity: 1 })
-      .from(element, duration, { x: textShift ? 20 : 0 })
+      .from(element, duration, { x: textShift ? 10 : 0 })
       .to(block, duration, {
         transform: 'scale3d(0,1,1)',
         transformOrigin: '0 50%',
@@ -51,13 +51,13 @@ function createAnim ({ options }) {
       .set(block, {
         transformOrigin: '50% 0',
         background: blockColor || defaultBlockColor,
-        top: textShift ? -20 : 0,
-        height: `calc(100% + ${textShift ? '20px' : '0px'})` }, `+=${delay}`)
+        y: textShift ? -10 : 0,
+        height: `calc(100% + ${textShift ? '10px' : '0px'})` }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(1,0,1)',
         ease: Quint.easeInOut })
       .set(element, { opacity: 1 })
-      .from(element, duration, { y: textShift ? -20 : 0 })
+      .from(element, duration, { y: textShift ? -10 : 0 })
       .to(block, duration, {
         transform: 'scale3d(1,0,1)',
         transformOrigin: '50% 100%',
@@ -68,8 +68,8 @@ function createAnim ({ options }) {
       .set(block, {
         transformOrigin: '50% 100%',
         background: blockColor || defaultBlockColor,
-        bottom: textShift ? -20 : 0,
-        height: `calc(100% + ${textShift ? '20px' : '0px'})` }, `+=${delay}`)
+        y: textShift ? -10 : 0,
+        height: `calc(100% + ${textShift ? '10px' : '0px'})` }, `+=${delay}`)
       .from(block, duration, { transform: 'scale3d(1,0,1)', ease: Quint.easeInOut })
       .set(element, { opacity: 1 })
       .from(element, duration, { y: textShift ? 20 : 0 })
@@ -83,13 +83,13 @@ function createAnim ({ options }) {
       .set(block, {
         transformOrigin: '0 50%',
         background: blockColor || defaultBlockColor,
-        left: textShift ? -20 : 0,
-        width: `calc(100% + ${textShift ? '20px' : '0px'})` }, `+=${delay}`)
+        left: textShift ? -10 : 0,
+        width: `calc(100% + ${textShift ? '10px' : '0px'})` }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',
         ease: Quint.easeInOut })
       .set(element, { opacity: 1 })
-      .from(element, duration, { x: textShift ? -20 : 0 })
+      .from(element, duration, { x: textShift ? -10 : 0 })
       .to(block, duration, {
         transform: 'scale3d(0,1,1)',
         transformOrigin: '100% 50%',
@@ -136,20 +136,19 @@ class BlockReveal extends React.Component {
     return (
       <VisibilitySensor
         onChange={this.onChange}
-        partialVisibility
         delayedCall>
-        <div className={this.props.inline ? 'c-block-reveal-inline' : null}>
-          <div className='c-block-reveal'>
-            <div
+        <span className={this.props.inline ? 'c-block-reveal-inline' : null}>
+          <span className='c-block-reveal'>
+            <span
               className='c-block-reveal__element'
               ref={element => { this.element = element; }}>
               {this.props.children}
-            </div>
-            <div
+            </span>
+            <span
               className='c-block-reveal__block'
               ref={block => { this.block = block; }} />
-          </div>
-        </div>
+          </span>
+        </span>
       </VisibilitySensor>
     );
   }

@@ -72,16 +72,18 @@
   }
 
   .epsilon--display-condensed {
+    padding-top: 0 !important;
+
     @include breakpoint(break-0) {
-      @include sassline-display(epsilon, $headingtype, 3, 1.5, all);
+      @include sassline-display(epsilon, $headingtype, 5, 0, all);
     }
 
     @include breakpoint(break-3) {
-       @include sassline-display(epsilon, $headingtype, 4, 1.5, all);
+       @include sassline-display(epsilon, $headingtype, 6, 0, all);
     }
 
     @include breakpoint(break-4) {
-      @include sassline-display(epsilon, $headingtype, 5, 2, all);
+      @include sassline-display(epsilon, $headingtype, 8, 0, all);
     }
   }
 
@@ -108,4 +110,8 @@
 
 .top-stroke--strong {
   @include box-shadow-border(top, 2px, $black);
+}
+
+.top-stroke--inline {
+  display: inline-block;
 }

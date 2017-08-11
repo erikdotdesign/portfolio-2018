@@ -18,29 +18,33 @@ class WorkItem extends React.Component {
                 <HalftoneCharacter
                   className='c-work-item__index'
                   character={this.props.index + 1} />
-                <BlockReveal
-                  inline={false}
-                  forcePlay={isVisible}
-                  blockColor={this.props.work.hex}
-                  delay={0}
-                  duration={0.5}
-                  direction={
-                this.props.index % 2 == 0
-                ? 'leftRight'
-                : 'rightLeft'}>
-                  <h1>{this.props.work.name}</h1>
-                </BlockReveal>
-                <BlockReveal
-                  inline={false}
-                  forcePlay={isVisible}
-                  blockColor={this.props.work.hex}
-                  delay={0.1}
-                  duration={0.5}
-                  direction={
-                this.props.index % 2 == 0
-                ? 'rightLeft'
-                : 'leftRight'}>
-                  <ul className='c-work-item__tag-list'>
+                <h1 className='c-block-reveal-wrap'>
+                  <BlockReveal
+                    inline={false}
+                    forcePlay={isVisible}
+                    blockColor={this.props.work.hex}
+                    textShift
+                    delay={0}
+                    duration={0.5}
+                    direction={
+                    this.props.index % 2 == 0
+                    ? 'leftRight'
+                    : 'rightLeft'}>
+                    {this.props.work.name}
+                  </BlockReveal>
+                </h1>
+                <ul className='c-work-item__tag-list c-block-reveal-wrap'>
+                  <BlockReveal
+                    inline={false}
+                    forcePlay={isVisible}
+                    textShift
+                    blockColor={this.props.work.hex}
+                    delay={0.1}
+                    duration={0.5}
+                    direction={
+                    this.props.index % 2 == 0
+                    ? 'rightLeft'
+                    : 'leftRight'}>
                     {
                       this.props.work.tags.map((tag, index) =>
                         <li className={'c-work-item__tag'} key={index}>
@@ -52,30 +56,34 @@ class WorkItem extends React.Component {
                         </li>
                       )
                     }
-                  </ul>
-                </BlockReveal>
-                <BlockReveal
-                  inline={false}
-                  forcePlay={isVisible}
-                  blockColor={this.props.work.hex}
-                  delay={0.2}
-                  duration={0.5}
-                  direction={
-                this.props.index % 2 == 0
-                ? 'leftRight'
-                : 'rightLeft'}>
-                  <p>{this.props.work.snippet}</p>
-                </BlockReveal>
-                <div className='button-outline-align'>
+                  </BlockReveal>
+                </ul>
+                <p className='c-block-reveal-wrap'>
                   <BlockReveal
                     inline={false}
                     forcePlay={isVisible}
                     blockColor={this.props.work.hex}
+                    delay={0.2}
+                    textShift
+                    duration={0.5}
+                    direction={
+                    this.props.index % 2 == 0
+                    ? 'leftRight'
+                    : 'rightLeft'}>
+                    {this.props.work.snippet}
+                  </BlockReveal>
+                </p>
+                <div className='c-block-reveal-wrap'>
+                  <BlockReveal
+                    inline={false}
+                    forcePlay={isVisible}
+                    textShift
+                    blockColor={this.props.work.hex}
                     delay={0.4}
                     duration={0.5}
                     direction={this.props.index % 2 == 0
-                  ? 'rightLeft'
-                  : 'leftRight'}>
+                    ? 'rightLeft'
+                    : 'leftRight'}>
                     <Button
                       text='Read more'
                       router
