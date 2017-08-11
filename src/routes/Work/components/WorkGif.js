@@ -12,7 +12,7 @@ function createAnim ({ options }) {
   const { frames } = options.props.gif;
   const gifTimeline = new TimelineMax({ paused: true, repeat: -1 });
 
-  gifTimeline.set(overlay, { visibility: 'hidden' }, 0.001);
+  gifTimeline.set(overlay, { display: 'none' }, 0.001);
 
   for (var i = 0; i < frames.length + 2; i++) {
     // add the last frame 2 more times so it doesn't get skipped
@@ -63,10 +63,8 @@ class WorkGif extends React.Component {
                 </BlockReveal>
               </figure>
               <div className='c-work-gif__overlay' ref={overlay => { this.overlay = overlay; }}>
-                <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? 'topBottom' : 'bottomTop'}>
-                  <div className='c-work-gif__button'>
-                    <Button className='button button--outline' text='Play' hex={this.props.hex} />
-                  </div>
+                <BlockReveal blockColor={this.props.hex} forcePlay={isVisible} inline={false} delay={0} duration={0.5} direction={this.props.index % 2 == 0 ? 'rightLeft' : 'leftRight'}>
+                  <Button className='button button--outline' text='Play' hex={this.props.hex} />
                 </BlockReveal>
               </div>
               <div className='c-work-gif__bg' />
