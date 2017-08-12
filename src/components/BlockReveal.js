@@ -160,7 +160,8 @@ BlockReveal.propTypes = {
   delay: PropTypes.number.isRequired,
   duration: PropTypes.number.isRequired,
   textShift: PropTypes.bool,
-  background: PropTypes.string
+  background: PropTypes.string,
+  forcePlay: PropTypes.bool
 };
 
 export default GSAP()(BlockReveal);
