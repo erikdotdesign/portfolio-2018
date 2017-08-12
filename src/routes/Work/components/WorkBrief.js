@@ -15,13 +15,13 @@ export const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images }) 
             {
               mobile
               ? <BriefSidebar
-                  halftoneChar={title.slice(0, 2)}
-                  image={mobile}
-                  forcePlay={isVisible} />
+                halftoneChar={title.slice(0, 2)}
+                image={mobile}
+                forcePlay={isVisible} />
               : <BriefDuo
-                  halftoneChar={title.slice(0, 2)}
-                  image={tablet}
-                  forcePlay={isVisible} />
+                halftoneChar={title.slice(0, 2)}
+                image={tablet}
+                forcePlay={isVisible} />
             }
             <BriefMain
               className={mobile ? 'column--main' : 'column--duo'}

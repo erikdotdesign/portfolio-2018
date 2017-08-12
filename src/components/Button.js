@@ -11,10 +11,10 @@ class Button extends React.Component {
     };
   }
   toggleHover = () => {
-    this.setState({...this.state.state, hover: !this.state.hover });
+    this.setState({ ...this.state.state, hover: !this.state.hover });
   }
   toggleFocus = () => {
-    this.setState({...this.state.state, focus: !this.state.focus });
+    this.setState({ ...this.state.state, focus: !this.state.focus });
   }
   hexToRgba = (hex, alpha) => {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
