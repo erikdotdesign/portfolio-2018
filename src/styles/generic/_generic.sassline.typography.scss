@@ -83,7 +83,7 @@
     }
 
     @include breakpoint(break-4) {
-      @include sassline-display(epsilon, $headingtype, 8, 0, all);
+      @include sassline-display(epsilon, $headingtype, 8, 1, all);
     }
   }
 
