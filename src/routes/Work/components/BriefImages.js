@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import WorkImage from './WorkImage';
 import WorkGif from './WorkGif';
 
-export const ImageList = ({ images, hex }) => (
-  <div className='section single'>
+export const BriefImages = ({ images, hex }) => (
+  <section className='section single'>
     {
       images.map((image, index) =>
         typeof (image.cover) !== 'undefined'
@@ -12,12 +12,12 @@ export const ImageList = ({ images, hex }) => (
         : <WorkImage image={image} key={index} index={index} hex={hex} />
       )
     }
-  </div>
+  </section>
 );
 
-ImageList.propTypes = {
+BriefImages.propTypes = {
   images: PropTypes.array,
   hex: PropTypes.string
 };
 
-export default ImageList;
+export default BriefImages;

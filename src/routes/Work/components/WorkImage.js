@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 export const WorkImage = ({ image, index, hex }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
-      <div className='c-work-image'>
+      <figure className='c-work-image'>
         <HalftoneCharacter
           className='c-work-item__index'
           character={index + 1} />
@@ -38,7 +38,7 @@ export const WorkImage = ({ image, index, hex }) => (
           </BlockReveal>
           <div className='c-work-image__bg' />
         </div>
-        <p className='c-work-image__caption c-block-reveal-wrap top-stroke--strong top-stroke--inline'>
+        <figcaption className='c-work-image__caption c-block-reveal-wrap top-stroke--strong top-stroke--inline'>
           <BlockReveal
             blockColor={hex}
             forcePlay={isVisible}
@@ -52,8 +52,8 @@ export const WorkImage = ({ image, index, hex }) => (
               : 'leftRight'}>
             {image.alt}
           </BlockReveal>
-        </p>
-      </div>
+        </figcaption>
+      </figure>
     }
   </VisibilitySensor>
 );

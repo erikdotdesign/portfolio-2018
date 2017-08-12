@@ -5,7 +5,7 @@ import DownArrow from './DownArrow';
 import HalftoneCharacter from './HalftoneCharacter';
 
 export const Hero = ({ arrowRevealColor, className, children, rightHalftoneText }) => (
-  <div className={`section c-hero ${className}`}>
+  <header className={`section c-hero ${className}`} role='banner'>
     <HalftoneCharacter
       className='c-hero__rightHalftone'
       character={rightHalftoneText} />
@@ -59,7 +59,7 @@ export const Hero = ({ arrowRevealColor, className, children, rightHalftoneText 
       end={{ x: '-=20', y: '+=20' }} />
     {children}
     <DownArrow blockRevealColor={arrowRevealColor} />
-  </div>
+  </header>
 );
 
 Hero.propTypes = {

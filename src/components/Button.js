@@ -6,11 +6,15 @@ class Button extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      hover: false
+      hover: false,
+      focus: false
     };
   }
   toggleHover = () => {
-    this.setState({ hover: !this.state.hover });
+    this.setState({...this.state.state, hover: !this.state.hover });
+  }
+  toggleFocus = () => {
+    this.setState({...this.state.state, focus: !this.state.focus });
   }
   hexToRgba = (hex, alpha) => {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -20,7 +24,7 @@ class Button extends React.Component {
                  ${alpha})`;
   }
   render () {
-    let linkStyle = this.state.hover
+    let linkStyle = this.state.hover || this.state.focus
                     ? { background: this.hexToRgba(this.props.hex, 0.2) }
                     : { background: 'none' };
     return (
@@ -32,7 +36,9 @@ class Button extends React.Component {
         aria-label={this.props.text}
         to={this.props.link}
         onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}>
+        onMouseLeave={this.toggleHover}
+        onFocus={this.toggleFocus}
+        onBlur={this.toggleFocus}>
         {this.props.text}
       </Link>
       : this.props.link
@@ -44,7 +50,9 @@ class Button extends React.Component {
         aria-label={this.props.text}
         target='_blank'
         onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}>
+        onMouseLeave={this.toggleHover}
+        onFocus={this.toggleFocus}
+        onBlur={this.toggleFocus}>
         {this.props.text}
       </a>
       : <button
@@ -53,7 +61,9 @@ class Button extends React.Component {
         role='button'
         aria-label={this.props.text}
         onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}>
+        onMouseLeave={this.toggleHover}
+        onFocus={this.toggleFocus}
+        onBlur={this.toggleFocus}>
         {this.props.text}
       </button>
     );

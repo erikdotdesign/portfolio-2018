@@ -2,7 +2,7 @@ import React from 'react';
 import { IndexLink } from 'react-router';
 
 export const TopNav = () => (
-  <nav className='c-top-nav'>
+  <nav className='c-top-nav' role='navigation'>
     <div className='c-top-nav__content'>
       <div className='c-top-nav__left'>
         <IndexLink

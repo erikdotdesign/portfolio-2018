@@ -9,7 +9,7 @@ import Button from '../../../components/Button';
 export const WorkItem = ({ work, index }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
-      <div className='section c-work-item'>
+      <article className='section c-work-item' role="article">
         <div className='columns-flush'>
           <div className='column column--duo column--mg-b'>
             <HalftoneCharacter
@@ -100,7 +100,7 @@ export const WorkItem = ({ work, index }) => (
               index={index} />
           </div>
         </div>
-      </div>
+      </article>
     }
   </VisibilitySensor>
 );

@@ -67,7 +67,7 @@ class Phone extends React.Component {
   render () {
     return (
       <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
-        <div className='c-phone'>
+        <figure className='c-phone'>
           <svg width='254px'
             height='448px'
             viewBox='0 0 254 448'
@@ -122,7 +122,7 @@ class Phone extends React.Component {
                 height='396' />
             </g>
           </svg>
-        </div>
+        </figure>
       </VisibilitySensor>
     );
   }

@@ -3,13 +3,13 @@ import WorkItem from './WorkItem';
 import workListData from '../assets/workListData';
 
 export const WorkList = () => (
-  <div className='c-work-list'>
+  <main className='c-work-list' role='main'>
     {
       workListData.map((workItem, index) =>
         <WorkItem work={workItem} index={index} key={index} />
       )
     }
-  </div>
+  </main>
 );
 
 export default WorkList;

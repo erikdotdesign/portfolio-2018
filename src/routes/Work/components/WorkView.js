@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WorkHero from './WorkHero';
 import WorkBrief from './WorkBrief';
-import ImageList from './ImageList';
 import workDetail from '../assets/workDetail';
 
 class WorkView extends React.Component {
@@ -22,10 +21,8 @@ class WorkView extends React.Component {
           mobile={work.mobile}
           tablet={work.tablet}
           hex={work.hex}
-          links={work.links} />
-        <ImageList
-          images={work.images}
-          hex={work.hex} />
+          links={work.links}
+          images={work.images} />
       </div>
     );
   }

@@ -1,135 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BlockReveal from '../../../components/BlockReveal';
-import Phone from '../../../components/Phone';
-import Tablet from '../../../components/Tablet';
-import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import VisibilitySensor from 'react-visibility-sensor';
-import Button from '../../../components/Button';
+import BriefSidebar from './BriefSidebar';
+import BriefDuo from './BriefDuo';
+import BriefMain from './BriefMain';
+import BriefImages from './BriefImages';
 
-export const WorkBrief = ({ brief, title, mobile, tablet, hex, links }) => (
+export const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images }) => (
   <VisibilitySensor onChange={this.onChange} partialVisibility delayedCall>
     {({ isVisible }) =>
-      <div className='section c-work-brief'>
-        {
-          mobile
-          ? <div className='columns-flush'>
-            <div className='column column--sidebar'>
-              <HalftoneCharacter
-                className='c-work-item__index c-work-item__brief'
-                character={title.slice(0, 2)} />
-              <Phone
-                image={mobile}
-                forcePlay={isVisible} />
-            </div>
-            <div className='column c-work-brief__text column--main'>
-              <div>
-                <h3 className='top-stroke--strong top-stroke--inline c-block-reveal-wrap'>
-                  <BlockReveal
-                    blockColor={hex}
-                    forcePlay={isVisible}
-                    inline={false}
-                    textShift
-                    delay={0}
-                    duration={0.5}
-                    direction='rightLeft'>
-                    Brief
-                  </BlockReveal>
-                </h3>
-              </div>
-              {
-                brief.map((paragraph, index) =>
-                  <p key={index} className='c-block-reveal-wrap'>
-                    <BlockReveal
-                      blockColor={hex}
-                      forcePlay={isVisible}
-                      inline={false}
-                      delay={0}
-                      textShift
-                      duration={0.5}
-                      direction={
-                        index % 2 === 0
-                        ? 'leftRight'
-                        : 'rightLeft'}>
-                      {paragraph}
-                    </BlockReveal>
-                  </p>
-                )
-              }
-            </div>
+      <main role='main'>
+        <section className='section'>
+          <div className='columns-flush'>
+            {
+              mobile
+              ? <BriefSidebar
+                  halftoneChar={title.slice(0, 2)}
+                  image={mobile}
+                  forcePlay={isVisible} />
+              : <BriefDuo
+                  halftoneChar={title.slice(0, 2)}
+                  image={tablet}
+                  forcePlay={isVisible} />
+            }
+            <BriefMain
+              className={mobile ? 'column--main' : 'column--duo'}
+              brief={brief}
+              forcePlay={isVisible}
+              hex={hex}
+              links={links} />
           </div>
-          : <div className='columns-flush'>
-            <div className='column column--duo'>
-              <HalftoneCharacter
-                className='c-work-item__index c-work-item__brief'
-                character={title.slice(0, 2)} />
-              <Tablet
-                className='c-tablet__warp--left'
-                image={tablet}
-                forcePlay={isVisible}
-                index={0} />
-            </div>
-            <div className='column c-work-brief__text column--duo'>
-              <div>
-                <h3 className='top-stroke--strong top-stroke--inline c-block-reveal-wrap'>
-                  <BlockReveal
-                    blockColor={hex}
-                    forcePlay={isVisible}
-                    inline={false}
-                    delay={0}
-                    textShift
-                    duration={0.5}
-                    direction='rightLeft'>
-                    Brief
-                  </BlockReveal>
-                </h3>
-              </div>
-              {
-                brief.map((paragraph, index) =>
-                  <p key={index} className='c-block-reveal-wrap'>
-                    <BlockReveal
-                      blockColor={hex}
-                      forcePlay={isVisible}
-                      inline={false}
-                      delay={0}
-                      textShift
-                      duration={0.5}
-                      direction={
-                        index % 2 === 0
-                        ? 'leftRight'
-                        : 'rightLeft'}>
-                      {paragraph}
-                    </BlockReveal>
-                  </p>
-                )
-              }
-              {
-                links.map((link, index) =>
-                  <div className='c-block-reveal-wrap' key={index}>
-                    <BlockReveal
-                      blockColor={hex}
-                      forcePlay={isVisible}
-                      inline={false}
-                      delay={0}
-                      textShift
-                      duration={0.5}
-                      direction={
-                        index % 2 === 0
-                        ? 'rightLeft'
-                        : 'leftRight'}>
-                      <Button
-                        className='button button--outline'
-                        link={link.url}
-                        text={link.text}
-                        hex={hex} />
-                    </BlockReveal>
-                  </div>
-                )
-              }
-            </div>
-          </div>
-        }
-      </div>
+        </section>
+        <BriefImages
+          images={images}
+          hex={hex} />
+      </main>
     }
   </VisibilitySensor>
 );
@@ -140,7 +45,8 @@ WorkBrief.propTypes = {
   mobile: PropTypes.object,
   tablet: PropTypes.object,
   hex: PropTypes.string,
-  links: PropTypes.array
+  links: PropTypes.array,
+  images: PropTypes.array
 };
 
 export default WorkBrief;

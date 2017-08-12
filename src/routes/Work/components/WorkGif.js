@@ -63,12 +63,12 @@ class WorkGif extends React.Component {
     return (
       <VisibilitySensor partialVisibility delayedCall>
         {({ isVisible }) =>
-          <div className='c-work-gif'>
+          <figure className='c-work-gif'>
             <HalftoneCharacter
               className='c-work-item__index'
               character={this.props.index + 1} />
             <div className='c-work-gif__aspect' onClick={() => { this.togglePlay(); }}>
-              <figure className='c-work-gif__image'>
+              <div className='c-work-gif__image'>
                 <BlockReveal
                   blockColor={this.props.hex}
                   forcePlay={isVisible}
@@ -85,7 +85,7 @@ class WorkGif extends React.Component {
                     srcSet={`${this.props.gif.cover['1x']}, ${this.props.gif.cover['2x']} 2x`}
                     ref={image => { this.image = image; }} />
                 </BlockReveal>
-              </figure>
+              </div>
               <div className='c-work-gif__overlay' ref={overlay => { this.overlay = overlay; }}>
                 <BlockReveal
                   blockColor={this.props.hex}
@@ -103,7 +103,7 @@ class WorkGif extends React.Component {
               </div>
               <div className='c-work-gif__bg' />
             </div>
-            <p className='c-work-gif__caption top-stroke--strong c-block-reveal-wrap top-stroke--inline'>
+            <figcaption className='c-work-gif__caption top-stroke--strong c-block-reveal-wrap top-stroke--inline'>
               <BlockReveal
                 blockColor={this.props.hex}
                 forcePlay={isVisible}
@@ -117,8 +117,8 @@ class WorkGif extends React.Component {
                   : 'leftRight'}>
                 {this.props.gif.alt}
               </BlockReveal>
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         }
       </VisibilitySensor>
     );

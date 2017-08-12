@@ -69,7 +69,7 @@ class Tablet extends React.Component {
     return (
       <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
         <div className={`c-tablet-wrap ${this.props.className ? this.props.className : null}`}>
-          <div className='c-tablet'>
+          <figure className='c-tablet'>
             <svg width='624px'
               height='429px'
               viewBox='0 0 624 429'
@@ -121,7 +121,7 @@ class Tablet extends React.Component {
                   height='373' />
               </g>
             </svg>
-          </div>
+          </figure>
         </div>
       </VisibilitySensor>
     );
