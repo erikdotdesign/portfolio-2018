@@ -67,7 +67,8 @@ class Button extends React.Component {
 Button.propTypes = {
   router: PropTypes.bool,
   text: PropTypes.string,
-  link: PropTypes.string
+  link: PropTypes.string,
+  hex: PropTypes.string
 };
 
 export default Button;

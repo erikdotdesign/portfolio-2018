@@ -5,7 +5,12 @@ const tsdp = {
   'hex': '#FEB305',
   'year': '2017',
   'description': [
-    'Twitch Sketch Data Populator or TSDP for short is a fork of the Sketch Data Populator plugin. It features Twitch API integration and 17 custom commands for populating layers with live Twitch Data. I developed this plugin as a side project while working at Twitch for a more efficient workflow. It is programmed with a mix of JavaScript and CocoaScript.',
+    `Twitch Sketch Data Populator or TSDP for short is a fork of the
+    Sketch Data Populator plugin. It features Twitch API integration
+    and 17 custom commands for populating layers with live Twitch Data.
+    I developed this plugin as a side project while working at Twitch
+    for a more efficient workflow. It is programmed with a mix of
+    JavaScript and CocoaScript.`
   ],
   'links': [{
     'text': 'View on Github',

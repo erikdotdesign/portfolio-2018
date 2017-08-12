@@ -33,7 +33,7 @@ export const WorkHero = ({ year, hex, title, tags }) => (
               tags.map((tag, index) =>
                 <li className={'c-work-hero__tag'} key={index}>
                   {
-                    index == tags.length - 1
+                    index === tags.length - 1
                     ? tag
                     : `${tag},\u00A0`
                   }

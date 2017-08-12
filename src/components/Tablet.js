@@ -11,7 +11,7 @@ function createAnim ({ options }) {
   const { index } = options.props;
   tabletTimeline
     .fromTo(outline, 0.75, {
-      drawSVG: index % 2 == 0 ? 0 : '50% 50%',
+      drawSVG: index % 2 === 0 ? 0 : '50% 50%',
       strokeWidth: 2
     }, {
       drawSVG:'100%',
@@ -19,7 +19,7 @@ function createAnim ({ options }) {
       immediateRender:false
     }, '+=0.25')
     .fromTo(screenOutline, 0.75, {
-      drawSVG: index % 2 == 0 ? '50% 50%' : 0,
+      drawSVG: index % 2 === 0 ? '50% 50%' : 0,
       strokeWidth: 1
     }, {
       drawSVG:'100%',

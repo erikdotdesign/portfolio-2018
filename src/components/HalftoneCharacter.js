@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const HalftoneCharacter = ({ className, character }) => (
-  <h1 className={`typeset c-halftone-character ${className ? className : ''}`}>
+  <h1 className={`typeset c-halftone-character ${className}`}>
     <span className='c-halftone-character__halftone' />
     {character}
   </h1>

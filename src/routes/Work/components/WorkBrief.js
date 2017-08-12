@@ -48,7 +48,7 @@ export const WorkBrief = ({ brief, title, mobile, tablet, hex, links }) => (
                       textShift
                       duration={0.5}
                       direction={
-                        index % 2 == 0
+                        index % 2 === 0
                         ? 'leftRight'
                         : 'rightLeft'}>
                       {paragraph}
@@ -95,7 +95,7 @@ export const WorkBrief = ({ brief, title, mobile, tablet, hex, links }) => (
                       textShift
                       duration={0.5}
                       direction={
-                        index % 2 == 0
+                        index % 2 === 0
                         ? 'leftRight'
                         : 'rightLeft'}>
                       {paragraph}
@@ -114,7 +114,7 @@ export const WorkBrief = ({ brief, title, mobile, tablet, hex, links }) => (
                       textShift
                       duration={0.5}
                       direction={
-                        index % 2 == 0
+                        index % 2 === 0
                         ? 'rightLeft'
                         : 'leftRight'}>
                       <Button

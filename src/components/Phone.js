@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BlockReveal from './BlockReveal';
 import { TimelineMax } from 'gsap';
 import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
@@ -8,10 +7,25 @@ import '../DrawSVGPlugin';
 
 function createAnim ({ options }) {
   const phoneTimeline = new TimelineMax();
-  const { outline, screen, screenOutline, screenMask } = options.refs;
-  phoneTimeline.fromTo(outline, 0.75, { drawSVG: 0, strokeWidth: 2 }, { drawSVG:'100%', strokeWidth: 2, immediateRender:false }, '+=0.25')
-               .fromTo(screenOutline, 0.75, { drawSVG: '50% 50%', strokeWidth: 1 }, { drawSVG:'100%', strokeWidth: 1, immediateRender:false }, '-=0.25')
-               .fromTo(screenMask, 0.5, { opacity: 0 }, { opacity: 1 });
+  const { outline, screenOutline, screenMask } = options.refs;
+  phoneTimeline
+  .fromTo(outline, 0.75, {
+    drawSVG: 0,
+    strokeWidth: 2
+  }, {
+    drawSVG:'100%',
+    strokeWidth: 2,
+    immediateRender:false
+  }, '+=0.25')
+  .fromTo(screenOutline, 0.75, {
+    drawSVG: '50% 50%',
+    strokeWidth: 1
+  }, {
+    drawSVG:'100%',
+    strokeWidth: 1,
+    immediateRender:false
+  }, '-=0.25')
+  .fromTo(screenMask, 0.5, { opacity: 0 }, { opacity: 1 });
 
   return phoneTimeline;
 }
@@ -71,7 +85,8 @@ class Phone extends React.Component {
                 width='224'
                 height='396' />
             </defs>
-            <rect ref={(outline) => { this.outline = outline; }}
+            <rect
+              ref={(outline) => { this.outline = outline; }}
               stroke='#000000'
               fill='none'
               strokeWidth='0'
@@ -86,14 +101,16 @@ class Phone extends React.Component {
               <mask id='phone-mask' fill='white'>
                 <use xlinkHref='#phone-path' />
               </mask>
-              <image ref={(screenMask) => { this.screenMask = screenMask; }}
+              <image
+                ref={(screenMask) => { this.screenMask = screenMask; }}
                 mask='url(#phone-mask)'
                 x='1'
                 y='1'
                 width='222'
                 height='395'
                 xlinkHref={this.props.forcePlay ? this.props.image.url : null} />
-              <rect ref={(screenOutline) => { this.screenOutline = screenOutline; }}
+              <rect
+                ref={(screenOutline) => { this.screenOutline = screenOutline; }}
                 stroke='#000000'
                 fill='none'
                 strokeWidth='0'
@@ -112,8 +129,8 @@ class Phone extends React.Component {
 }
 
 Phone.propTypes = {
- image: PropTypes.object,
- forcePlay: PropTypes.bool
+  image: PropTypes.object,
+  forcePlay: PropTypes.bool
 };
 
 export default GSAP()(Phone);

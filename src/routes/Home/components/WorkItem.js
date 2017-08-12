@@ -24,7 +24,7 @@ export const WorkItem = ({ work, index }) => (
                 delay={0}
                 duration={0.5}
                 direction={
-                index % 2 == 0
+                index % 2 === 0
                 ? 'leftRight'
                 : 'rightLeft'}>
                 {work.name}
@@ -39,14 +39,14 @@ export const WorkItem = ({ work, index }) => (
                 delay={0.1}
                 duration={0.5}
                 direction={
-                index % 2 == 0
+                index % 2 === 0
                 ? 'rightLeft'
                 : 'leftRight'}>
                 {
                   work.tags.map((tag, index) =>
                     <li className={'c-work-item__tag'} key={index}>
                       {
-                        index == work.tags.length - 1
+                        index === work.tags.length - 1
                         ? tag
                         : `${tag},\u00A0`
                       }
@@ -64,7 +64,7 @@ export const WorkItem = ({ work, index }) => (
                 textShift
                 duration={0.5}
                 direction={
-                index % 2 == 0
+                index % 2 === 0
                 ? 'leftRight'
                 : 'rightLeft'}>
                 {work.snippet}
@@ -78,7 +78,7 @@ export const WorkItem = ({ work, index }) => (
                 blockColor={work.hex}
                 delay={0.4}
                 duration={0.5}
-                direction={index % 2 == 0
+                direction={index % 2 === 0
                 ? 'rightLeft'
                 : 'leftRight'}>
                 <Button

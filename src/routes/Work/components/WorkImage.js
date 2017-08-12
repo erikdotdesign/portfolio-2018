@@ -20,7 +20,7 @@ export const WorkImage = ({ image, index, hex }) => (
             delay={0}
             duration={0.5}
             direction={
-              index % 2 == 0
+              index % 2 === 0
               ? 'leftRight'
               : 'rightLeft'}>
             {
@@ -47,7 +47,7 @@ export const WorkImage = ({ image, index, hex }) => (
             delay={0}
             duration={0.5}
             direction={
-              index % 2 == 0
+              index % 2 === 0
               ? 'rightLeft'
               : 'leftRight'}>
             {image.alt}

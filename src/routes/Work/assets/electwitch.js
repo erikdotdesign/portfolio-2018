@@ -5,7 +5,10 @@ const electwitch = {
   'hex': '#B388FF',
   'year': '2017',
   'description': [
-    'Electwitch is an Electron desktop application I designed and developed as a side project while working at Twitch. The application was created with electron-react-boilerplate and react-md component library. The goal for this project was to create a simple Twitch viewing experience.',
+    `Electwitch is an Electron desktop application I designed and developed
+    as a side project while working at Twitch. The application was created
+    with electron-react-boilerplate and react-md component library. The goal
+    for this project was to create a simple Twitch viewing experience.`
   ],
   'links': [{
     'text': 'View on Github',
