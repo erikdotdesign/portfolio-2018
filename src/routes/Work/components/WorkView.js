@@ -32,7 +32,7 @@ class WorkView extends React.Component {
 }
 
 WorkView.propTypes = {
-
+  params: PropTypes.object
 };
 
 export default WorkView;

@@ -25,32 +25,39 @@ class Button extends React.Component {
                     : { background: 'none' };
     return (
       this.props.router
-      ? <Link style={linkStyle}
-        className='c-button c-button--outline'
-        role='button'
-        aria-label={this.props.text}
-        to={this.props.link}
-        onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}>
+      ?
+      <Link
+          style={linkStyle}
+          className='c-button c-button--outline'
+          role='button'
+          aria-label={this.props.text}
+          to={this.props.link}
+          onMouseEnter={this.toggleHover}
+          onMouseLeave={this.toggleHover}>
         {this.props.text}
       </Link>
-      : this.props.link
-      ? <a style={linkStyle}
-        className='c-button c-button--outline'
-        role='button'
-        href={this.props.link}
-        aria-label={this.props.text}
-        target='_blank'
-        onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}>
+      :
+      this.props.link
+      ?
+      <a
+          style={linkStyle}
+          className='c-button c-button--outline'
+          role='button'
+          href={this.props.link}
+          aria-label={this.props.text}
+          target='_blank'
+          onMouseEnter={this.toggleHover}
+          onMouseLeave={this.toggleHover}>
         {this.props.text}
       </a>
-      : <button style={linkStyle}
-        className='c-button c-button--outline'
-        role='button'
-        aria-label={this.props.text}
-        onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}>
+      :
+      <button
+          style={linkStyle}
+          className='c-button c-button--outline'
+          role='button'
+          aria-label={this.props.text}
+          onMouseEnter={this.toggleHover}
+          onMouseLeave={this.toggleHover}>
         {this.props.text}
       </button>
     );
@@ -58,7 +65,9 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-
+  router: PropTypes.bool,
+  text: PropTypes.string,
+  link: PropTypes.string
 };
 
 export default Button;

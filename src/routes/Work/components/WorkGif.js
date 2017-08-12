@@ -117,7 +117,9 @@ class WorkGif extends React.Component {
 }
 
 WorkGif.propTypes = {
-
+  gif: PropTypes.object,
+  index: PropTypes.number,
+  hex: PropTypes.string
 };
 
 export default GSAP()(WorkGif);

@@ -112,7 +112,8 @@ class Phone extends React.Component {
 }
 
 Phone.propTypes = {
-
+ image: PropTypes.object,
+ forcePlay: PropTypes.bool
 };
 
 export default GSAP()(Phone);

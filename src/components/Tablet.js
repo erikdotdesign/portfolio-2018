@@ -9,9 +9,24 @@ function createAnim ({ options }) {
   const tabletTimeline = new TimelineMax({ paused: true });
   const { outline, screenOutline, screenMask } = options.refs;
   const { index } = options.props;
-  tabletTimeline.fromTo(outline, 0.75, { drawSVG: index % 2 == 0 ? 0 : '50% 50%', strokeWidth: 2 }, { drawSVG:'100%', strokeWidth: 2, immediateRender:false }, '+=0.25')
-                .fromTo(screenOutline, 0.75, { drawSVG: index % 2 == 0 ? '50% 50%' : 0, strokeWidth: 1 }, { drawSVG:'100%', strokeWidth: 1, immediateRender:false }, '-=0.25')
-                .fromTo(screenMask, 0.5, { opacity: 0 }, { opacity: 1 });
+  tabletTimeline
+    .fromTo(outline, 0.75, {
+      drawSVG: index % 2 == 0 ? 0 : '50% 50%',
+      strokeWidth: 2
+    }, {
+      drawSVG:'100%',
+      strokeWidth: 2,
+      immediateRender:false
+    }, '+=0.25')
+    .fromTo(screenOutline, 0.75, {
+      drawSVG: index % 2 == 0 ? '50% 50%' : 0,
+      strokeWidth: 1
+    }, {
+      drawSVG:'100%',
+      strokeWidth: 1,
+      immediateRender:false
+    }, '-=0.25')
+    .fromTo(screenMask, 0.5, { opacity: 0 }, { opacity: 1 });
 
   return tabletTimeline;
 }
@@ -114,7 +129,10 @@ class Tablet extends React.Component {
 }
 
 Tablet.propTypes = {
-
+  image: PropTypes.object,
+  forcePlay: PropTypes.bool,
+  index: PropTypes.number,
+  className: PropTypes.string
 };
 
 export default GSAP()(Tablet);
