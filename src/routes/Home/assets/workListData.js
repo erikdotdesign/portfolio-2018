@@ -1,9 +1,9 @@
 const workList = [
   {
-    'id':'twitchIpr',
+    'id':'twitchIPR',
     'tags':['UI/UX', 'Product', 'Twitch'],
-    'name':'Twitch In-Player Recommendations',
-    'snippet': 'Video recommendations displayed inside the Twitch player after a VOD or live broadcast.',
+    'name':'In-Player Recommendations',
+    'snippet': 'Video recommendations surfaced inside the Twitch player after a live broadcast or video.',
     'hex': '#6441A4',
     'image': {
       'url': require('./img/twitch-ipr.jpg'),
@@ -19,6 +19,17 @@ const workList = [
     'image': {
       'url': require('./img/tsdp.jpg'),
       'alt': 'Sketch Twitch data populator top games example'
+    }
+  },
+  {
+    'id':'twitchDiscover',
+    'tags':['UI/UX', 'Product', 'Twitch'],
+    'name':'Discover',
+    'snippet': 'Twitch directory for live recommendations automated based on viewing behavior.',
+    'hex': '#6441A4',
+    'image': {
+      'url': require('./img/twitch-di.jpg'),
+      'alt': 'Twitch Discover'
     }
   },
   {

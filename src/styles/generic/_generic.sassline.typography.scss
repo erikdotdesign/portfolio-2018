@@ -75,15 +75,19 @@
     padding-top: 0 !important;
 
     @include breakpoint(break-0) {
-      @include sassline-display(epsilon, $headingtype, 5, 0, all);
+      @include sassline-display(epsilon, $headingtype, 5, 1, all);
+    }
+
+    @include breakpoint(break-2) {
+       @include sassline-display(epsilon, $headingtype, 5, 1, all);
     }
 
     @include breakpoint(break-3) {
-       @include sassline-display(epsilon, $headingtype, 6, 0, all);
+       @include sassline-display(epsilon, $headingtype, 6, 1, all);
     }
 
     @include breakpoint(break-4) {
-      @include sassline-display(epsilon, $headingtype, 8, 1, all);
+      @include sassline-display(epsilon, $headingtype, 8, 2, all);
     }
   }
 

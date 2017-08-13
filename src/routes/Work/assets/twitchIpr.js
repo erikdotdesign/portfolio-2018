@@ -1,5 +1,5 @@
 const twitchIpr = {
-  'id':'twitchIpr',
+  'id':'twitchIPR',
   'tags':['UI/UX', 'Product', 'Twitch'],
   'name':'Twitch In-Player Recs',
   'hex': '#6441a4',
@@ -11,45 +11,38 @@ const twitchIpr = {
     within ten seconds. Users can view additional recommendations
     by clicking 'More Videos' or 'Cancel' if autoplay is enabled.`
   ],
-  'mobile': {
-    'url': require('./img/twitch-ipr-mobile.jpg'),
-    'alt': 'Twitch Sketch Data Populator top games example'
+  'mobile': null,
+  'tablet': {
+    'url': require('./img/twitch-ipr.jpg'),
+    'alt': 'Twitch in-player recommendations'
   },
   'images': [{
-    'url': require('./img/electwitch-1.jpg'),
-    'retina': require('./img/electwitch-1@2x.jpg'),
-    'alt': 'Browse games'
+    'url': require('./img/twitch-ipr-wire-1.jpg'),
+    'retina': require('./img/twitch-ipr-wire-1@2x.jpg'),
+    'alt': 'Featured in-player recommendation wireframe'
   }, {
-    'url': require('./img/electwitch-2.jpg'),
-    'retina': require('./img/electwitch-2@2x.jpg'),
-    'alt': 'Search games and channels'
+    'url': require('./img/twitch-ipr-wire-2.jpg'),
+    'retina': require('./img/twitch-ipr-wire-2@2x.jpg'),
+    'alt': 'Featured in-player recommendation with autoplay wireframe'
   }, {
-    'url': require('./img/electwitch-3.jpg'),
-    'retina': require('./img/electwitch-3@2x.jpg'),
-    'alt': 'Browse channels'
+    'url': require('./img/twitch-ipr-wire-3.jpg'),
+    'retina': require('./img/twitch-ipr-wire-3@2x.jpg'),
+    'alt': 'Additional recommendations wireframe'
   }, {
-    'url': require('./img/electwitch-4.jpg'),
-    'retina': require('./img/electwitch-4@2x.jpg'),
-    'alt': 'Browse communities'
+    'url': require('./img/twitch-ipr-mock-1.jpg'),
+    'retina': require('./img/twitch-ipr-mock-1@2x.jpg'),
+    'alt': 'Featured in-player recommendation mockup'
   }, {
-    'url': require('./img/electwitch-5.jpg'),
-    'retina': require('./img/electwitch-5@2x.jpg'),
-    'alt': 'Browse clips'
+    'url': require('./img/twitch-ipr-mock-2.jpg'),
+    'retina': require('./img/twitch-ipr-mock-2@2x.jpg'),
+    'alt': 'Featured in-player recommendation with autoplay mockup'
   }, {
-    'url': require('./img/electwitch-6.jpg'),
-    'retina': require('./img/electwitch-6@2x.jpg'),
-    'alt': 'Link Twitch account and login'
-  }, {
-    'url': require('./img/electwitch-7.jpg'),
-    'retina': require('./img/electwitch-7@2x.jpg'),
-    'alt': 'Browse following'
-  }, {
-    'url': require('./img/electwitch-8.jpg'),
-    'retina': require('./img/electwitch-8@2x.jpg'),
-    'alt': 'Watch and chat experience'
+    'url': require('./img/twitch-ipr-mock-3.jpg'),
+    'retina': require('./img/twitch-ipr-mock-3@2x.jpg'),
+    'alt': 'Additional recommendations mockup'
   }],
   'next': 'ironandale',
-  'prev': 'electwitch'
+  'prev': 'tsdp'
 };
 
 export default twitchIpr;
