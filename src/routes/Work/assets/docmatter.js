@@ -49,7 +49,9 @@ const docmatter = {
   }, {
     'url': require('./img/docmatter4.png'),
     'alt': 'DocMatter signup page'
-  }]
+  }],
+  'next': 'electwitch',
+  'prev': 'betterworks'
 };
 
 export default docmatter;

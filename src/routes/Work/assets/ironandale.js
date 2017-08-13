@@ -29,7 +29,9 @@ const ironandale = {
   }, {
     'url': require('./img/ironandale4.png'),
     'alt': 'Iron & Ale reviews'
-  }]
+  }],
+  'next': 'colledger',
+  'prev': 'tsdp'
 };
 
 export default ironandale;

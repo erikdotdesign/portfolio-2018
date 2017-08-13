@@ -4,7 +4,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import Hero from '../../../components/Hero';
 import VisibilitySensor from 'react-visibility-sensor';
 
-export const WorkHero = ({ year, hex, title, tags }) => (
+const WorkHero = ({ year, hex, title, tags }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <Hero rightHalftoneText={year} arrowRevealColor={hex}>

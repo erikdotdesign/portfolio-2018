@@ -2,7 +2,7 @@ import React from 'react';
 import WorkItem from './WorkItem';
 import workListData from '../assets/workListData';
 
-export const WorkList = () => (
+const WorkList = () => (
   <main className='c-work-list' role='main'>
     {
       workListData.map((workItem, index) =>

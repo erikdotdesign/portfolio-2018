@@ -51,7 +51,9 @@ const electwitch = {
     'url': require('./img/electwitch-8.jpg'),
     'retina': require('./img/electwitch-8@2x.jpg'),
     'alt': 'Watch and chat experience'
-  }]
+  }],
+  'next': 'tsdp',
+  'prev': 'docmatter'
 };
 
 export default electwitch;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '../../../components/Button';
 import BlockReveal from '../../../components/BlockReveal';
 
-export const BriefLinks = ({ links, hex, forcePlay }) => (
+const BriefLinks = ({ links, hex, forcePlay }) => (
   <div>
     {
       links.map((link, index) =>

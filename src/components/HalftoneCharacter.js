@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const HalftoneCharacter = ({ className, character }) => (
+const HalftoneCharacter = ({ className, character }) => (
   <h1 className={`typeset c-halftone-character ${className}`}>
     <span className='c-halftone-character__halftone' />
     {character}

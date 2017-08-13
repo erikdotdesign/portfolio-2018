@@ -94,7 +94,9 @@ const tsdp = {
         '2x': require('./img/tsdp-streams-7@2x.jpg')
       }
     ]
-  }]
+  }],
+  'next': 'ironandale',
+  'prev': 'electwitch'
 };
 
 export default tsdp;

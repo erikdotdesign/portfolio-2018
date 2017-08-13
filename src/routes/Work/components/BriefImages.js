@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import WorkImage from './WorkImage';
 import WorkGif from './WorkGif';
 
-export const BriefImages = ({ images, hex }) => (
+const BriefImages = ({ images, hex }) => (
   <section className='section single'>
     {
       images.map((image, index) =>

@@ -6,7 +6,7 @@ import BriefDuo from './BriefDuo';
 import BriefMain from './BriefMain';
 import BriefImages from './BriefImages';
 
-export const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images }) => (
+const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images }) => (
   <VisibilitySensor onChange={this.onChange} partialVisibility delayedCall>
     {({ isVisible }) =>
       <main role='main'>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from './BlockReveal';
 
-export const DownArrow = ({ blockRevealColor }) => (
+const DownArrow = ({ blockRevealColor }) => (
   <div className='c-down-arrow'>
     <BlockReveal
       inline={false}

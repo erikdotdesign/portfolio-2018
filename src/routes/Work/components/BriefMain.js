@@ -4,7 +4,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import BriefHeader from './BriefHeader';
 import BriefLinks from './BriefLinks';
 
-export const BriefMain = ({ brief, className, forcePlay, hex, links }) => (
+const BriefMain = ({ brief, className, forcePlay, hex, links }) => (
   <div className={`column c-work-brief__text ${className}`}>
     <BriefHeader hex={hex} forcePlay={forcePlay} />
     {

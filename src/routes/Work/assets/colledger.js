@@ -32,7 +32,9 @@ const colledger = {
   }, {
     'url': require('./img/colledger4.png'),
     'alt': 'Colledger compare - tuition'
-  }]
+  }],
+  'next': 'betterworks',
+  'prev': 'ironandale'
 };
 
 export default colledger;

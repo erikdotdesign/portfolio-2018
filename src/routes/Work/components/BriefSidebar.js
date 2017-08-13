@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Phone from '../../../components/Phone';
 import BriefAside from './BriefAside';
 
-export const BriefSidebar = ({ halftoneChar, image, forcePlay }) => (
+const BriefSidebar = ({ halftoneChar, image, forcePlay }) => (
   <BriefAside
     className='column--sidebar'
     halftoneChar={halftoneChar}>

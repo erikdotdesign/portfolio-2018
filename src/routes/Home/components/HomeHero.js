@@ -3,7 +3,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import Hero from '../../../components/Hero';
 import VisibilitySensor from 'react-visibility-sensor';
 
-export const HomeHero = () => (
+const HomeHero = () => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <Hero rightHalftoneText='17/18'>

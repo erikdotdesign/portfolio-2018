@@ -4,7 +4,7 @@ import Cube from './Cube';
 import DownArrow from './DownArrow';
 import HalftoneCharacter from './HalftoneCharacter';
 
-export const Hero = ({ arrowRevealColor, className, children, rightHalftoneText }) => (
+const Hero = ({ arrowRevealColor, className, children, rightHalftoneText }) => (
   <header className={`section c-hero ${className}`} role='banner'>
     <HalftoneCharacter
       className='c-hero__rightHalftone'

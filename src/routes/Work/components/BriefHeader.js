@@ -4,7 +4,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import Tablet from '../../../components/Tablet';
 import BriefAside from './BriefAside';
 
-export const BriefHeader = ({ forcePlay, hex }) => (
+const BriefHeader = ({ forcePlay, hex }) => (
   <div>
     <h3 className='top-stroke--strong top-stroke--inline c-block-reveal-wrap'>
       <BlockReveal

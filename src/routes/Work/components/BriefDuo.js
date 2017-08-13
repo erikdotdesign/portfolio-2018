@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Tablet from '../../../components/Tablet';
 import BriefAside from './BriefAside';
 
-export const BriefDuo = ({ halftoneChar, image, forcePlay }) => (
+const BriefDuo = ({ halftoneChar, image, forcePlay }) => (
   <BriefAside
     className='column--duo'
     halftoneChar={halftoneChar}>

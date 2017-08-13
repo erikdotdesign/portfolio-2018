@@ -4,7 +4,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import VisibilitySensor from 'react-visibility-sensor';
 
-export const WorkImage = ({ image, index, hex }) => (
+const WorkImage = ({ image, index, hex }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <figure className='c-work-image'>

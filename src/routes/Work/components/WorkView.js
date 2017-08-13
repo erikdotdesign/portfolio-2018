@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WorkHero from './WorkHero';
 import WorkBrief from './WorkBrief';
-import workDetail from '../assets/workDetail';
+import WorkItem from '../../Home/components/WorkItem';
+import workDetailData from '../assets/workDetail';
+import workListData from '../../Home/assets/workListData';
 
 class WorkView extends React.Component {
   render () {
     const { workId } = this.props.params;
-    const work = workDetail.find((workItem) => { return workItem.id === workId; });
+    const work = workDetailData.find((item) => { return item.id === workId; });
+    const next = workListData.find((item) => { return item.id === work.next; });
+    const prev = workListData.find((item) => { return item.id === work.prev; });
     return (
       <div className='typeset'>
         <WorkHero
@@ -23,6 +27,8 @@ class WorkView extends React.Component {
           hex={work.hex}
           links={work.links}
           images={work.images} />
+        <WorkItem work={next} index={0} />
+        <WorkItem work={prev} index={1} />
       </div>
     );
   }

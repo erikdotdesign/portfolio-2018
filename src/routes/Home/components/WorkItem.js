@@ -6,7 +6,7 @@ import Tablet from '../../../components/Tablet';
 import VisibilitySensor from 'react-visibility-sensor';
 import Button from '../../../components/Button';
 
-export const WorkItem = ({ work, index }) => (
+const WorkItem = ({ work, index }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <article className='section c-work-item' role='article'>

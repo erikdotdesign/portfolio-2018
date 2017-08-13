@@ -34,7 +34,9 @@ const betterworks = {
   }, {
     'url': require('./img/betterworks4.png'),
     'alt': 'BetterWorks styleguide dashboard modules'
-  }]
+  }],
+  'next': 'docmatter',
+  'prev': 'colledger'
 };
 
 export default betterworks;
