@@ -6,7 +6,7 @@ export const TopNav = () => (
     <div className='c-top-nav__content'>
       <div className='c-top-nav__left'>
         <IndexLink
-          className='c-top-nav__logo'
+          className='c-top-nav__logo c-top-nav__link'
           to='/'
           role='button'
           aria-label='Home'>
@@ -20,14 +20,14 @@ export const TopNav = () => (
             role='button'
             aria-label='My LinkedIn'
             target='_blank'
-            className='c-button'>
+            className='c-button c-top-nav__link'>
             LinkedIn
           </a>
           <a
             href='mailto:erik@erik.design'
             role='button'
             aria-label='Email me'
-            className='c-button'>
+            className='c-button c-top-nav__link'>
             Email
           </a>
         </div>
