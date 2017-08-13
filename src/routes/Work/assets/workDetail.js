@@ -4,6 +4,7 @@ import docmatter from './docmatter';
 import ironandale from './ironandale';
 import electwitch from './electwitch';
 import tsdp from './tsdp';
+import twitchIpr from './twitchIpr';
 
 const workDetail = [
   electwitch,
@@ -11,7 +12,8 @@ const workDetail = [
   colledger,
   docmatter,
   ironandale,
-  tsdp
+  tsdp,
+  twitchIpr
 ];
 
 export default workDetail;

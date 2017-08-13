@@ -1,5 +1,16 @@
 const workList = [
   {
+    'id':'twitchIpr',
+    'tags':['UI/UX', 'Product', 'Twitch'],
+    'name':'Twitch In-Player Recommendations',
+    'snippet': 'Video recommendations displayed inside the Twitch player after a VOD or live broadcast.',
+    'hex': '#6441A4',
+    'image': {
+      'url': require('./img/twitch-ipr.jpg'),
+      'alt': 'Twitch in-player recommendations'
+    }
+  },
+  {
     'id':'tsdp',
     'tags':['Sketch plugin', 'Twitch'],
     'name':'TSDP',
