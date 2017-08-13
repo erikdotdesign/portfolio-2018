@@ -34,7 +34,7 @@ const workList = [
   },
   {
     'id':'electwitch',
-    'tags':['Electron', 'React', 'Twitch'],
+    'tags':['Desktop Application', 'Twitch'],
     'name':'Electwitch',
     'snippet':'A simple Twitch inspired Electron desktop application built with React and Material design.',
     'hex': '#B388FF',
