@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
-import Tablet from '../../../components/Tablet';
-import BriefAside from './BriefAside';
 
 const BriefHeader = ({ forcePlay, hex }) => (
   <div>
