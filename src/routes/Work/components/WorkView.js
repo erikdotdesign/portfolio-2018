@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WorkHero from './WorkHero';
 import WorkBrief from './WorkBrief';
-import WorkItem from '../../Home/components/WorkItem';
 import workDetailData from '../assets/workDetail';
 
 class WorkView extends React.Component {
