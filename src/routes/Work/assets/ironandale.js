@@ -13,6 +13,10 @@ const ironandale = {
     the Meadhall. The Dwarven Lord with the most honor when the Mountain
     Deck is depleted wins.`
   ],
+  'links': [{
+    'text': 'View website',
+    'url': 'http://erik.design/ironandale'
+  }],
   'mobile': {
     'url': require('./img/ironandale-mobile.png'),
     'alt': 'Mobile web Iron & Ale landing page'

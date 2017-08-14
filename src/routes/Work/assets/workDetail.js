@@ -4,8 +4,7 @@ import docmatter from './docmatter';
 import ironandale from './ironandale';
 import electwitch from './electwitch';
 import tsdp from './tsdp';
-import twitchIpr from './twitchIpr';
-import twitchDiscover from './twitchDiscover';
+import twitch from './twitch';
 
 const workDetail = [
   electwitch,
@@ -14,8 +13,7 @@ const workDetail = [
   docmatter,
   ironandale,
   tsdp,
-  twitchIpr,
-  twitchDiscover
+  twitch
 ];
 
 export default workDetail;

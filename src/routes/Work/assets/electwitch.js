@@ -1,13 +1,13 @@
 const electwitch = {
   'id':'electwitch',
-  'tags':['Desktop Application', 'Twitch'],
+  'tags':['Desktop application', 'Side project'],
   'name':'Electwitch',
   'hex': '#B388FF',
   'year': '2017',
   'description': [
-    `Electwitch is an Electron desktop application I designed and developed
-    as a side project while working at Twitch. The application was created
-    with electron, react, and the react-md component library. The goal
+    `Electwitch is a desktop application I designed and developed
+    as a side project while working at Twitch. The application was programmed
+    with Electron, React, Redux, and react-md component library. The goal
     for this project was to create a simple Twitch viewing experience.`
   ],
   'links': [{

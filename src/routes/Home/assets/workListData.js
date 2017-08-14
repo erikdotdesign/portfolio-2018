@@ -1,9 +1,9 @@
 const workList = [
   {
-    'id':'twitchIPR',
-    'tags':['UI/UX', 'Product', 'Twitch'],
-    'name':'In-Player Recommendations',
-    'snippet': 'Video recommendations surfaced inside the Twitch player after a live broadcast or video.',
+    'id':'twitch',
+    'tags':['UI/UX', 'Product'],
+    'name':'Twitch',
+    'snippet': 'A breakdown of my workflow at Twitch and the products I had the oppertunity to worked on.',
     'hex': '#6441A4',
     'image': {
       'url': require('./img/twitch-ipr.jpg'),
@@ -12,9 +12,9 @@ const workList = [
   },
   {
     'id':'tsdp',
-    'tags':['Sketch plugin', 'Twitch'],
+    'tags':['Sketch plugin', 'Side project'],
     'name':'TSDP',
-    'snippet':'Sketch plugin with 17 custom commands to populate layers with live Twitch data.',
+    'snippet':'Sketch plugin with 17 custom commands that populate layers with live Twitch data.',
     'hex': '#FEB305',
     'image': {
       'url': require('./img/tsdp.jpg'),
@@ -22,21 +22,10 @@ const workList = [
     }
   },
   {
-    'id':'twitchDiscover',
-    'tags':['UI/UX', 'Product', 'Twitch'],
-    'name':'Discover',
-    'snippet': 'Twitch directory for live recommendations automated based on viewing behavior.',
-    'hex': '#6441A4',
-    'image': {
-      'url': require('./img/twitch-di.jpg'),
-      'alt': 'Twitch Discover'
-    }
-  },
-  {
     'id':'electwitch',
-    'tags':['Desktop Application', 'Twitch'],
+    'tags':['Desktop application', 'Side project'],
     'name':'Electwitch',
-    'snippet':'A simple Twitch inspired Electron desktop application built with React and Material design.',
+    'snippet':'Twitch desktop application built with Electron, React, Redux, and Material Design.',
     'hex': '#B388FF',
     'image': {
       'url': require('./img/electwitch.jpg'),

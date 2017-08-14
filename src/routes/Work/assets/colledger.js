@@ -16,6 +16,10 @@ const colledger = {
     of a college investment, and in turn spur smarter decisions when
     it comes time to commit.`
   ],
+  'links': [{
+    'text': 'View website',
+    'url': 'http://erik.design/colledger'
+  }],
   'mobile': {
     'url': require('./img/colledger-mobile.png'),
     'alt': 'Mobile web Colledger homepage'

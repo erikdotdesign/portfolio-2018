@@ -33,6 +33,10 @@ const docmatter = {
     mind to be blown. It’s through these moments of discovery that make
     a logo memorable.`
   ],
+  'links': [{
+    'text': 'View website',
+    'url': 'https://www.docmatter.com'
+  }],
   'mobile': {
     'url': require('./img/docmatter-mobile.png'),
     'alt': 'Mobile web DocMatter public website homepage'

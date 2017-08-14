@@ -5,11 +5,14 @@ const twitchIpr = {
   'hex': '#6441a4',
   'year': '2017',
   'description': [
-    `When a broadcaster’s live stream or video finishes,
-    video recommendations are displayed within the player.
-    After a video, the featured recommendation will autoplay
-    within ten seconds. Users can view additional recommendations
-    by clicking 'More Videos' or 'Cancel' if autoplay is enabled.`
+    `When a broadcaster’s live stream or video ends, video recommendations are
+    displayed within the player. The first recommendation surfaced, the featured
+    recommendation, is appended to the player and can take two forms depending on
+    the player type. After a video, the featured recommendation will autoplay within
+    ten seconds. Users can view additional recommendations by clicking ‘Cancel’ or
+    ‘More videos’ if autoplay is disabled as seen after a live broadcast. All
+    recommendations are responsive and adapt to the size of the player. The number of
+    additional recommendations displayed is also dependent on the player size.`
   ],
   'mobile': null,
   'tablet': {
@@ -27,7 +30,7 @@ const twitchIpr = {
   }, {
     'url': require('./img/twitch-ipr-wire-3.jpg'),
     'retina': require('./img/twitch-ipr-wire-3@2x.jpg'),
-    'alt': 'Additional recommendations wireframe'
+    'alt': 'Additional in-player recommendations wireframe'
   }, {
     'url': require('./img/twitch-ipr-mock-1.jpg'),
     'retina': require('./img/twitch-ipr-mock-1@2x.jpg'),
@@ -39,7 +42,7 @@ const twitchIpr = {
   }, {
     'url': require('./img/twitch-ipr-mock-3.jpg'),
     'retina': require('./img/twitch-ipr-mock-3@2x.jpg'),
-    'alt': 'Additional recommendations mockup'
+    'alt': 'Additional in-player recommendations mockup'
   }],
   'next': 'ironandale',
   'prev': 'tsdp'
