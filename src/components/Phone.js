@@ -6,7 +6,7 @@ import GSAP from 'react-gsap-enhancer';
 import '../DrawSVGPlugin';
 
 function createAnim ({ options }) {
-  const phoneTimeline = new TimelineMax();
+  const phoneTimeline = new TimelineMax({ paused: true });
   const { outline, screenOutline, screenMask } = options.refs;
   phoneTimeline
   .fromTo(outline, 0.75, {
@@ -39,18 +39,30 @@ class Phone extends React.Component {
         screenMask: this.screenMask
       }
     });
-    this.pauseTimeline();
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if (!this.props.forcePlay && nextProps.forcePlay) {
+    if (!this.props.forcePlay && nextProps.forcePlay || this.props.blockId !== nextProps.blockId) {
       return true;
-    } else {
+    }
+    else {
       return false;
     }
   }
   componentDidUpdate (prevProps, prevState) {
     if (!prevProps.forcePlay && this.props.forcePlay) {
       this.playTimeline();
+    } else if (this.props.blockId !== prevProps.blockId) {
+      this.phoneAnimation.kill();
+      this.phoneAnimation = this.addAnimation(createAnim, {
+        refs: {
+          outline: this.outline,
+          screenOutline: this.screenOutline,
+          screenMask: this.screenMask
+        }
+      });
+      if (this.props.forcePlay && !prevProps.forcePlay) {
+        this.playTimeline();
+      }
     }
   }
   onChange = (isVisible) => {

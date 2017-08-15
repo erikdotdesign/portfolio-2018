@@ -72,6 +72,7 @@ class WorkGif extends React.Component {
                 <BlockReveal
                   blockColor={this.props.hex}
                   forcePlay={isVisible}
+                  blockId={this.props.blockId}
                   inline={false}
                   delay={0}
                   textShift
@@ -90,6 +91,7 @@ class WorkGif extends React.Component {
                 <BlockReveal
                   blockColor={this.props.hex}
                   forcePlay={isVisible}
+                  blockId={this.props.blockId}
                   inline={false}
                   textShift
                   delay={0}
@@ -107,6 +109,7 @@ class WorkGif extends React.Component {
               <BlockReveal
                 blockColor={this.props.hex}
                 forcePlay={isVisible}
+                blockId={this.props.blockId}
                 inline={false}
                 textShift
                 delay={0}

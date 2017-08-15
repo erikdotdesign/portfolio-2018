@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 
-const BriefHeader = ({ forcePlay, hex }) => (
+const BriefHeader = ({ forcePlay, hex, blockId }) => (
   <div>
     <h3 className='top-stroke--strong top-stroke--inline c-block-reveal-wrap'>
       <BlockReveal
         blockColor={hex}
         forcePlay={forcePlay}
+        blockId={blockId}
         inline={false}
         textShift
         delay={0}

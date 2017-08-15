@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import Tablet from '../../../components/Tablet';
 import BriefAside from './BriefAside';
 
-const BriefDuo = ({ halftoneChar, image, forcePlay }) => (
+const BriefDuo = ({ halftoneChar, image, forcePlay, blockId }) => (
   <BriefAside
     className='column--duo'
     halftoneChar={halftoneChar}>
     <Tablet
       className='c-tablet__warp--left'
       image={image}
+      blockId={blockId}
       forcePlay={forcePlay}
       index={0} />
   </BriefAside>

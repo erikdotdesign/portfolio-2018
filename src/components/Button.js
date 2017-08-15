@@ -10,6 +10,11 @@ class Button extends React.Component {
       focus: false
     };
   }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.blockId !== this.props.blockId) {
+      this.setState({ ...this.state.state, hover: false, focus: false });
+    }
+  }
   toggleHover = () => {
     this.setState({ ...this.state.state, hover: !this.state.hover });
   }

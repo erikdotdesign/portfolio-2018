@@ -6,7 +6,7 @@ import Tablet from '../../../components/Tablet';
 import VisibilitySensor from 'react-visibility-sensor';
 import Button from '../../../components/Button';
 
-const WorkItem = ({ work, index }) => (
+const WorkItem = ({ work, index, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <article className='section c-work-item' role='article'>
@@ -19,6 +19,7 @@ const WorkItem = ({ work, index }) => (
               <BlockReveal
                 inline={false}
                 forcePlay={isVisible}
+                blockId={blockId}
                 blockColor={work.hex}
                 textShift
                 delay={0}
@@ -34,6 +35,7 @@ const WorkItem = ({ work, index }) => (
               <BlockReveal
                 inline={false}
                 forcePlay={isVisible}
+                blockId={blockId}
                 textShift
                 blockColor={work.hex}
                 delay={0.1}
@@ -60,6 +62,7 @@ const WorkItem = ({ work, index }) => (
                 inline={false}
                 forcePlay={isVisible}
                 blockColor={work.hex}
+                blockId={blockId}
                 delay={0.2}
                 textShift
                 duration={0.5}
@@ -74,6 +77,7 @@ const WorkItem = ({ work, index }) => (
               <BlockReveal
                 inline={false}
                 forcePlay={isVisible}
+                blockId={blockId}
                 textShift
                 blockColor={work.hex}
                 delay={0.4}
@@ -85,6 +89,7 @@ const WorkItem = ({ work, index }) => (
                   text='Read more'
                   router
                   link={`/work/${work.id}`}
+                  blockId={blockId}
                   hex={work.hex} />
               </BlockReveal>
             </div>
@@ -96,6 +101,7 @@ const WorkItem = ({ work, index }) => (
             <Tablet
               className='c-tablet__warp--right'
               image={work.image}
+              blockId={blockId}
               forcePlay={isVisible}
               index={index} />
           </div>

@@ -4,7 +4,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import Hero from '../../../components/Hero';
 import VisibilitySensor from 'react-visibility-sensor';
 
-const WorkHero = ({ year, hex, title, tags }) => (
+const WorkHero = ({ year, hex, title, tags, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <Hero rightHalftoneText={year} arrowRevealColor={hex}>
@@ -13,6 +13,7 @@ const WorkHero = ({ year, hex, title, tags }) => (
             <BlockReveal
               inline={false}
               forcePlay={isVisible}
+              blockId={blockId}
               blockColor={hex}
               delay={0}
               textShift
@@ -25,6 +26,7 @@ const WorkHero = ({ year, hex, title, tags }) => (
               inline={false}
               forcePlay={isVisible}
               blockColor={hex}
+              blockId={blockId}
               delay={0.2}
               textShift
               duration={0.5}

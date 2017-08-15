@@ -4,7 +4,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import VisibilitySensor from 'react-visibility-sensor';
 
-const WorkImage = ({ image, index, hex }) => (
+const WorkImage = ({ image, index, hex, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <figure className='c-work-image'>
@@ -15,6 +15,7 @@ const WorkImage = ({ image, index, hex }) => (
           <BlockReveal
             blockColor={hex}
             forcePlay={isVisible}
+            blockId={blockId}
             inline={false}
             textShift
             delay={0}
@@ -42,6 +43,7 @@ const WorkImage = ({ image, index, hex }) => (
           <BlockReveal
             blockColor={hex}
             forcePlay={isVisible}
+            blockId={blockId}
             inline={false}
             textShift
             delay={0}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '../../../components/Button';
 import BlockReveal from '../../../components/BlockReveal';
 
-const BriefLinks = ({ links, hex, forcePlay }) => (
+const BriefLinks = ({ links, hex, forcePlay, blockId }) => (
   <div>
     {
       links.map((link, index) =>
@@ -11,6 +11,7 @@ const BriefLinks = ({ links, hex, forcePlay }) => (
           <BlockReveal
             blockColor={hex}
             forcePlay={forcePlay}
+            blockId={blockId}
             inline={false}
             delay={0}
             textShift
@@ -22,6 +23,7 @@ const BriefLinks = ({ links, hex, forcePlay }) => (
             <Button
               className='button button--outline'
               link={link.url}
+              blockId={blockId}
               text={link.text}
               hex={hex} />
           </BlockReveal>

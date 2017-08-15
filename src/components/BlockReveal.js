@@ -110,15 +110,28 @@ class BlockReveal extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if (!this.props.forcePlay && nextProps.forcePlay) {
+    if (!this.props.forcePlay && nextProps.forcePlay || this.props.blockId !== nextProps.blockId) {
       return true;
-    } else {
+    }
+    else {
       return false;
     }
   }
   componentDidUpdate (prevProps, prevState) {
     if (!prevProps.forcePlay && this.props.forcePlay) {
       this.playTimeline();
+    } else if (this.props.blockId !== prevProps.blockId) {
+      this.blockAnimation.kill();
+      this.blockAnimation = this.addAnimation(createAnim, {
+        props: this.props,
+        refs: {
+          element: this.element,
+          block: this.block
+        }
+      });
+      if (this.props.forcePlay && !prevProps.forcePlay) {
+        this.playTimeline();
+      }
     }
   }
   onChange = (isVisible) => {

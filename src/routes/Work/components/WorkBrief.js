@@ -6,7 +6,7 @@ import BriefDuo from './BriefDuo';
 import BriefMain from './BriefMain';
 import BriefImages from './BriefImages';
 
-const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images }) => (
+const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images, blockId }) => (
   <VisibilitySensor onChange={this.onChange} partialVisibility delayedCall>
     {({ isVisible }) =>
       <main role='main'>
@@ -17,15 +17,18 @@ const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images }) => (
               ? <BriefSidebar
                 halftoneChar={title.slice(0, 2)}
                 image={mobile}
+                blockId={blockId}
                 forcePlay={isVisible} />
               : <BriefDuo
                 halftoneChar={title.slice(0, 2)}
                 image={tablet}
+                blockId={blockId}
                 forcePlay={isVisible} />
             }
             <BriefMain
               className={mobile ? 'column--main' : 'column--duo'}
               brief={brief}
+              blockId={blockId}
               forcePlay={isVisible}
               hex={hex}
               links={links} />
@@ -33,6 +36,7 @@ const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images }) => (
         </section>
         <BriefImages
           images={images}
+          blockId={blockId}
           hex={hex} />
       </main>
     }
