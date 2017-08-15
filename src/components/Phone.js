@@ -43,8 +43,7 @@ class Phone extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     if (!this.props.forcePlay && nextProps.forcePlay || this.props.blockId !== nextProps.blockId) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }

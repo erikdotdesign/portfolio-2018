@@ -16,7 +16,7 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               forcePlay={isVisible}
               blockId={blockId}
               blockColor={hex}
-              header={true}
+              header
               delay={0}
               textShift
               duration={0.5}>
@@ -28,7 +28,7 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               inline={false}
               forcePlay={isVisible}
               blockColor={hex}
-              header={true}
+              header
               blockId={blockId}
               delay={0.2}
               textShift
