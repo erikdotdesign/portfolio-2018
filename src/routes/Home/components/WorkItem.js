@@ -113,6 +113,7 @@ const WorkItem = ({ work, index, blockId }) => (
 
 WorkItem.propTypes = {
   work: PropTypes.object,
+  blockId: PropTypes.string,
   index: PropTypes.number
 };
 

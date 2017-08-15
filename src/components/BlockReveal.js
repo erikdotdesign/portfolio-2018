@@ -110,7 +110,7 @@ class BlockReveal extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if (!this.props.forcePlay && nextProps.forcePlay || this.props.blockId !== nextProps.blockId) {
+    if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
     } else {
       return false;
@@ -170,6 +170,7 @@ BlockReveal.propTypes = {
   children: PropTypes.node.isRequired,
   inline: PropTypes.bool.isRequired,
   delay: PropTypes.number.isRequired,
+  blockId: PropTypes.string,
   duration: PropTypes.number.isRequired,
   textShift: PropTypes.bool,
   background: PropTypes.string,

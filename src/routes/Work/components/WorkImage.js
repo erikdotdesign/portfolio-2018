@@ -62,6 +62,7 @@ const WorkImage = ({ image, index, hex, blockId }) => (
 
 WorkImage.propTypes = {
   image: PropTypes.object,
+  blockId: PropTypes.string,
   index: PropTypes.number,
   hex: PropTypes.string
 };

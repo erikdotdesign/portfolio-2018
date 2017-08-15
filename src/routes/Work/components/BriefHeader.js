@@ -22,6 +22,7 @@ const BriefHeader = ({ forcePlay, hex, blockId }) => (
 
 BriefHeader.propTypes = {
   hex: PropTypes.string,
+  blockId: PropTypes.string,
   forcePlay: PropTypes.bool
 };
 

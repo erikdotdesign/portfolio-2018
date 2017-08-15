@@ -18,6 +18,7 @@ const BriefDuo = ({ halftoneChar, image, forcePlay, blockId }) => (
 
 BriefDuo.propTypes = {
   halftoneChar: PropTypes.string,
+  blockId: PropTypes.string,
   image: PropTypes.object,
   forcePlay: PropTypes.bool
 };

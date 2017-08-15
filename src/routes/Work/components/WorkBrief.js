@@ -47,6 +47,7 @@ WorkBrief.propTypes = {
   brief: PropTypes.array,
   title: PropTypes.string,
   mobile: PropTypes.object,
+  blockId: PropTypes.string,
   tablet: PropTypes.object,
   hex: PropTypes.string,
   links: PropTypes.array,

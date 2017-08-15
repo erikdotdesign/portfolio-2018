@@ -130,6 +130,7 @@ class WorkGif extends React.Component {
 
 WorkGif.propTypes = {
   gif: PropTypes.object,
+  blockId: PropTypes.string,
   index: PropTypes.number,
   hex: PropTypes.string
 };

@@ -48,7 +48,8 @@ const DownArrow = ({ blockRevealColor, blockId }) => (
 );
 
 DownArrow.propTypes = {
-  blockRevealColor: PropTypes.string
+  blockRevealColor: PropTypes.string,
+  blockId: PropTypes.string
 };
 
 export default DownArrow;

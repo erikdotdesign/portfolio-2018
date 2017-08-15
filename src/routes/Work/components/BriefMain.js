@@ -38,6 +38,7 @@ const BriefMain = ({ brief, className, forcePlay, hex, links, blockId }) => (
 BriefMain.propTypes = {
   brief: PropTypes.array,
   className: PropTypes.string,
+  blockId: PropTypes.string,
   forcePlay: PropTypes.bool,
   hex: PropTypes.string,
   links: PropTypes.array

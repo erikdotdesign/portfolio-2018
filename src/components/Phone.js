@@ -41,7 +41,7 @@ class Phone extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if (!this.props.forcePlay && nextProps.forcePlay || this.props.blockId !== nextProps.blockId) {
+    if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
     } else {
       return false;
@@ -141,6 +141,7 @@ class Phone extends React.Component {
 
 Phone.propTypes = {
   image: PropTypes.object,
+  blockId: PropTypes.string,
   forcePlay: PropTypes.bool
 };
 

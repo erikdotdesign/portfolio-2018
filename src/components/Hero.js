@@ -65,6 +65,7 @@ const Hero = ({ arrowRevealColor, className, children, rightHalftoneText, blockI
 Hero.propTypes = {
   arrowRevealColor: PropTypes.string,
   className: PropTypes.string,
+  blockId: PropTypes.string,
   children: PropTypes.node,
   rightHalftoneText: PropTypes.string
 };

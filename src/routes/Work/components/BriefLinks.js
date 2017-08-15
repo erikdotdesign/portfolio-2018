@@ -35,6 +35,7 @@ const BriefLinks = ({ links, hex, forcePlay, blockId }) => (
 
 BriefLinks.propTypes = {
   links: PropTypes.array,
+  blockId: PropTypes.string,
   forcePlay: PropTypes.bool,
   hex: PropTypes.string
 };

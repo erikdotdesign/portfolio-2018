@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 import Hero from '../../../components/Hero';
 import VisibilitySensor from 'react-visibility-sensor';
-import { Link } from 'react-router';
 
 const WorkHero = ({ year, hex, title, tags, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
@@ -57,6 +56,7 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
 WorkHero.propTypes = {
   title: PropTypes.string,
   tags: PropTypes.array,
+  blockId: PropTypes.string,
   hex: PropTypes.string,
   year: PropTypes.string
 };

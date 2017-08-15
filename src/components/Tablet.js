@@ -43,7 +43,7 @@ class Tablet extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if (!this.props.forcePlay && nextProps.forcePlay || this.props.blockId !== nextProps.blockId) {
+    if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
     } else {
       return false;
@@ -144,6 +144,7 @@ class Tablet extends React.Component {
 Tablet.propTypes = {
   image: PropTypes.object,
   forcePlay: PropTypes.bool,
+  blockId: PropTypes.string,
   index: PropTypes.number,
   className: PropTypes.string
 };

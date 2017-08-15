@@ -17,6 +17,7 @@ const BriefImages = ({ images, hex, blockId }) => (
 
 BriefImages.propTypes = {
   images: PropTypes.array,
+  blockId: PropTypes.string,
   hex: PropTypes.string
 };
 

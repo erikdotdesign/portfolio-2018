@@ -16,6 +16,7 @@ const BriefSidebar = ({ halftoneChar, image, forcePlay, blockId }) => (
 
 BriefSidebar.propTypes = {
   halftoneChar: PropTypes.string,
+  blockId: PropTypes.string,
   image: PropTypes.object,
   forcePlay: PropTypes.bool
 };
