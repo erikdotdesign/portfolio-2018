@@ -4,7 +4,7 @@ import Cube from './Cube';
 import DownArrow from './DownArrow';
 import HalftoneCharacter from './HalftoneCharacter';
 
-const Hero = ({ arrowRevealColor, className, children, rightHalftoneText }) => (
+const Hero = ({ arrowRevealColor, className, children, rightHalftoneText, blockId }) => (
   <header className={`section c-hero ${className}`} role='banner'>
     <HalftoneCharacter
       className='c-hero__rightHalftone'
@@ -58,7 +58,7 @@ const Hero = ({ arrowRevealColor, className, children, rightHalftoneText }) => (
       start={{ x: '60%', y: '85%', rotateX: 22, rotateY: 90, rotateZ: 90 }}
       end={{ x: '-=20', y: '+=20' }} />
     {children}
-    <DownArrow blockRevealColor={arrowRevealColor} />
+    <DownArrow blockRevealColor={arrowRevealColor} blockId={blockId} />
   </header>
 );
 

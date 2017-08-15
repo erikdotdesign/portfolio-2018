@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from './BlockReveal';
 
-const DownArrow = ({ blockRevealColor }) => (
+const DownArrow = ({ blockRevealColor, blockId }) => (
   <div className='c-down-arrow'>
     <BlockReveal
       inline={false}
       blockColor={blockRevealColor}
+      blockId={blockId}
       textShift
       delay={0.2}
       duration={0.5}

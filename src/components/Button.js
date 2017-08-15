@@ -3,39 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
 class Button extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      hover: false,
-      focus: false
-    };
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.blockId !== this.props.blockId) {
-      this.setState({ ...this.state.state, hover: false, focus: false });
-    }
-  }
-  toggleHover = () => {
-    this.setState({ ...this.state.state, hover: !this.state.hover });
-  }
-  toggleFocus = () => {
-    this.setState({ ...this.state.state, focus: !this.state.focus });
-  }
-  hexToRgba = (hex, alpha) => {
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return `rgba(${parseInt(result[1], 16)},
-                 ${parseInt(result[2], 16)},
-                 ${parseInt(result[3], 16)},
-                 ${alpha})`;
-  }
   render () {
-    let linkStyle = this.state.hover || this.state.focus
-                    ? { background: this.hexToRgba(this.props.hex, 0.2) }
-                    : { background: 'none' };
     return (
       this.props.router
       ? <Link
-        style={linkStyle}
         className='c-button c-button--outline'
         role='button'
         aria-label={this.props.text}
@@ -48,7 +19,6 @@ class Button extends React.Component {
       </Link>
       : this.props.link
       ? <a
-        style={linkStyle}
         className='c-button c-button--outline'
         role='button'
         href={this.props.link}
@@ -61,7 +31,6 @@ class Button extends React.Component {
         {this.props.text}
       </a>
       : <button
-        style={linkStyle}
         className='c-button c-button--outline'
         role='button'
         aria-label={this.props.text}

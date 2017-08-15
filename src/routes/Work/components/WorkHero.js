@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 const WorkHero = ({ year, hex, title, tags, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
-      <Hero rightHalftoneText={year} arrowRevealColor={hex}>
+      <Hero rightHalftoneText={year} arrowRevealColor={hex} blockId={blockId}>
         <div className='single single-measure c-work-hero__content'>
           <h1 className='epsilon--display-condensed'>
             <BlockReveal
