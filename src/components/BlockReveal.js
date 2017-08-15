@@ -129,7 +129,7 @@ class BlockReveal extends React.Component {
           block: this.block
         }
       });
-      if (this.props.forcePlay && !prevProps.forcePlay) {
+      if (this.props.forcePlay && (!prevProps.forcePlay || this.props.header)) {
         this.playTimeline();
       }
     }

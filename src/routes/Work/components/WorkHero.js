@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 import Hero from '../../../components/Hero';
 import VisibilitySensor from 'react-visibility-sensor';
+import { Link } from 'react-router';
 
 const WorkHero = ({ year, hex, title, tags, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
@@ -15,6 +16,7 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               forcePlay={isVisible}
               blockId={blockId}
               blockColor={hex}
+              header={true}
               delay={0}
               textShift
               duration={0.5}>
@@ -26,6 +28,7 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               inline={false}
               forcePlay={isVisible}
               blockColor={hex}
+              header={true}
               blockId={blockId}
               delay={0.2}
               textShift
