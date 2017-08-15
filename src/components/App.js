@@ -1,5 +1,5 @@
 import React from 'react';
-import { browserHistory, Router } from 'react-router';
+import { hashHistory, Router } from 'react-router';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -18,7 +18,7 @@ class App extends React.Component {
       <Provider store={this.props.store}>
         <div style={{ height: '100%' }}>
           <Router
-            history={browserHistory}
+            history={hashHistory}
             onUpdate={() => window.scrollTo(0, 0)}
             children={this.props.routes} />
         </div>
