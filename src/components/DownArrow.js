@@ -8,7 +8,6 @@ const DownArrow = ({ blockRevealColor, blockId }) => (
       inline={false}
       blockColor={blockRevealColor}
       blockId={blockId}
-      textShift
       delay={0.2}
       duration={0.5}
       direction='topBottom'>

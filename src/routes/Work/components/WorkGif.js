@@ -75,7 +75,6 @@ class WorkGif extends React.Component {
                   blockId={this.props.blockId}
                   inline={false}
                   delay={0}
-                  textShift
                   duration={0.5}
                   direction={
                     this.props.index % 2 === 0
@@ -93,7 +92,6 @@ class WorkGif extends React.Component {
                   forcePlay={isVisible}
                   blockId={this.props.blockId}
                   inline={false}
-                  textShift
                   delay={0}
                   duration={0.5}
                   direction={
@@ -105,13 +103,12 @@ class WorkGif extends React.Component {
               </div>
               <div className='c-work-gif__bg' />
             </div>
-            <figcaption className='c-work-gif__caption top-stroke--strong c-block-reveal-wrap top-stroke--inline'>
+            <figcaption className='c-work-gif__caption top-stroke--strong top-stroke--inline'>
               <BlockReveal
                 blockColor={this.props.hex}
                 forcePlay={isVisible}
                 blockId={this.props.blockId}
                 inline={false}
-                textShift
                 delay={0}
                 duration={0.5}
                 direction={

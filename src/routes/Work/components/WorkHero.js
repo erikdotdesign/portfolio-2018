@@ -17,7 +17,6 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               blockColor={hex}
               header
               delay={0}
-              textShift
               duration={0.5}>
               {title}
             </BlockReveal>
@@ -30,7 +29,6 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               header
               blockId={blockId}
               delay={0.2}
-              textShift
               duration={0.5}
               direction='rightLeft'>
               {

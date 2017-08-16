@@ -7,27 +7,25 @@ const BriefLinks = ({ links, hex, forcePlay, blockId }) => (
   <div>
     {
       links.map((link, index) =>
-        <div className='c-block-reveal-wrap' key={index}>
-          <BlockReveal
-            blockColor={hex}
-            forcePlay={forcePlay}
+        <BlockReveal
+          key={index}
+          blockColor={hex}
+          forcePlay={forcePlay}
+          blockId={blockId}
+          inline={false}
+          delay={0}
+          duration={0.5}
+          direction={
+            index % 2 === 0
+            ? 'rightLeft'
+            : 'leftRight'}>
+          <Button
+            className='button button--outline'
+            link={link.url}
             blockId={blockId}
-            inline={false}
-            delay={0}
-            textShift
-            duration={0.5}
-            direction={
-              index % 2 === 0
-              ? 'rightLeft'
-              : 'leftRight'}>
-            <Button
-              className='button button--outline'
-              link={link.url}
-              blockId={blockId}
-              text={link.text}
-              hex={hex} />
-          </BlockReveal>
-        </div>
+            text={link.text}
+            hex={hex} />
+        </BlockReveal>
       )
     }
   </div>

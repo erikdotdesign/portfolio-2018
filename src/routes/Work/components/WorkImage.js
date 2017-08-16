@@ -17,7 +17,6 @@ const WorkImage = ({ image, index, hex, blockId }) => (
             forcePlay={isVisible}
             blockId={blockId}
             inline={false}
-            textShift
             delay={0}
             duration={0.5}
             direction={
@@ -39,13 +38,12 @@ const WorkImage = ({ image, index, hex, blockId }) => (
           </BlockReveal>
           <div className='c-work-image__bg' />
         </div>
-        <figcaption className='c-work-image__caption c-block-reveal-wrap top-stroke--strong top-stroke--inline'>
+        <figcaption className='c-work-image__caption top-stroke--strong top-stroke--inline'>
           <BlockReveal
             blockColor={hex}
             forcePlay={isVisible}
             blockId={blockId}
             inline={false}
-            textShift
             delay={0}
             duration={0.5}
             direction={

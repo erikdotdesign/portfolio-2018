@@ -13,7 +13,6 @@ const HomeHero = () => (
               inline={false}
               forcePlay={isVisible}
               delay={0}
-              textShift
               duration={0.5}>
               Erik Myers
             </BlockReveal>
@@ -23,7 +22,6 @@ const HomeHero = () => (
               inline={false}
               forcePlay={isVisible}
               delay={0.2}
-              textShift
               duration={0.5}
               direction='rightLeft'>
               Design

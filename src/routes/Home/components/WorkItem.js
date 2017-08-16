@@ -15,13 +15,12 @@ const WorkItem = ({ work, index, blockId }) => (
             <HalftoneCharacter
               className='c-work-item__index'
               character={index + 1} />
-            <h1 className='c-block-reveal-wrap'>
+            <h1>
               <BlockReveal
                 inline={false}
                 forcePlay={isVisible}
                 blockId={blockId}
                 blockColor={work.hex}
-                textShift
                 delay={0}
                 duration={0.5}
                 direction={
@@ -31,12 +30,11 @@ const WorkItem = ({ work, index, blockId }) => (
                 {work.name}
               </BlockReveal>
             </h1>
-            <ul className='c-work-item__tag-list c-block-reveal-wrap'>
+            <ul className='c-work-item__tag-list'>
               <BlockReveal
                 inline={false}
                 forcePlay={isVisible}
                 blockId={blockId}
-                textShift
                 blockColor={work.hex}
                 delay={0.1}
                 duration={0.5}
@@ -57,14 +55,13 @@ const WorkItem = ({ work, index, blockId }) => (
                 }
               </BlockReveal>
             </ul>
-            <p className='c-block-reveal-wrap'>
+            <p>
               <BlockReveal
                 inline={false}
                 forcePlay={isVisible}
                 blockColor={work.hex}
                 blockId={blockId}
                 delay={0.2}
-                textShift
                 duration={0.5}
                 direction={
                 index % 2 === 0
@@ -73,26 +70,23 @@ const WorkItem = ({ work, index, blockId }) => (
                 {work.snippet}
               </BlockReveal>
             </p>
-            <div className='c-block-reveal-wrap'>
-              <BlockReveal
-                inline={false}
-                forcePlay={isVisible}
+            <BlockReveal
+              inline={false}
+              forcePlay={isVisible}
+              blockId={blockId}
+              blockColor={work.hex}
+              delay={0.4}
+              duration={0.5}
+              direction={index % 2 === 0
+              ? 'rightLeft'
+              : 'leftRight'}>
+              <Button
+                text='Read more'
+                router
+                link={`/work/${work.id}`}
                 blockId={blockId}
-                textShift
-                blockColor={work.hex}
-                delay={0.4}
-                duration={0.5}
-                direction={index % 2 === 0
-                ? 'rightLeft'
-                : 'leftRight'}>
-                <Button
-                  text='Read more'
-                  router
-                  link={`/work/${work.id}`}
-                  blockId={blockId}
-                  hex={work.hex} />
-              </BlockReveal>
-            </div>
+                hex={work.hex} />
+            </BlockReveal>
           </div>
           <div className='column column--duo'>
             <HalftoneCharacter

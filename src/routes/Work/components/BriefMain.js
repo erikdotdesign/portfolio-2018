@@ -9,14 +9,13 @@ const BriefMain = ({ brief, className, forcePlay, hex, links, blockId }) => (
     <BriefHeader hex={hex} forcePlay={forcePlay} blockId={blockId} />
     {
       brief.map((paragraph, index) =>
-        <p key={index} className='c-block-reveal-wrap'>
+        <p key={index}>
           <BlockReveal
             blockColor={hex}
             forcePlay={forcePlay}
             blockId={blockId}
             inline={false}
             delay={0}
-            textShift
             duration={0.5}
             direction={
               index % 2 === 0
