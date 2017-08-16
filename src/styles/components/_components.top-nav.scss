@@ -42,6 +42,6 @@
 
   &:hover, &:focus {
     color: $headingColour;
-    outline: none;
+    outline-color: $captionColour;
   }
 }
