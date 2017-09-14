@@ -12,7 +12,7 @@ const twitch = {
     at Twitch are primarily generalists and work on products from start to
     finish. My usual workflow had five steps: research, explorations,
     wireframes, prototypes, and writing the production BEM HTML and SASS.
-    Some major products I helped worked on include: In-player recommendations v1,
+    Some major products I helped work on include: In-player recommendations v1,
     Discover directory v1, Channel page redesign, Video page redesign,
     and Events v1. For this post, I’ll just be talking about in-player recommendations.`,
     `When a broadcaster’s live stream or video ends, video recommendations are displayed
