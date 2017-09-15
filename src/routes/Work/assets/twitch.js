@@ -11,10 +11,10 @@ const twitch = {
     to help envision the future of broadcasting. UI/UX designers
     at Twitch are primarily generalists and work on products from start to
     finish. My usual workflow had five steps: research, explorations,
-    wireframes, prototypes, and writing the production BEM HTML and SASS.
-    Some major products I helped work on include: In-player recommendations v1,
-    Discover directory v1, Channel page redesign, Video page redesign,
-    and Events v1. For this post, I’ll just be talking about in-player recommendations.`,
+    wireframes, prototypes, and writing the production HTML and BEM SASS.
+    Some major products I worked on include: in-player recommendations v1,
+    discover directory v1, channel page redesign, video page redesign,
+    and events v1. For this post I’ll be talking about in-player recommendations.`,
     `When a broadcaster’s live stream or video ends, video recommendations are displayed
     within the player. The first recommendation surfaced, the featured recommendation,
     is appended to the player and can take two forms depending on the player type.
