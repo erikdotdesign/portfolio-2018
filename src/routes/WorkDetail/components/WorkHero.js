@@ -45,7 +45,6 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
             </BlockReveal>
           </ul>
         </div>
-        <div className='c-work-hero__overlay' style={{ background: hex }} />
       </Hero>
     }
   </VisibilitySensor>
