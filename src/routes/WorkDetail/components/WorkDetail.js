@@ -24,6 +24,8 @@ class WorkDetail extends React.Component {
           hex={work.hex}
           links={work.links}
           images={work.images} />
+        <WorkItem work={nextWork} index={0} blockId={params.workId} />
+        <WorkItem work={prevWork} index={1} blockId={params.workId} />
       </div>
     );
   }
@@ -34,7 +36,3 @@ WorkDetail.propTypes = {
 };
 
 export default WorkDetail;
-
-
-// <WorkItem work={nextWork} index={0} blockId={params.workId} />
-// <WorkItem work={prevWork} index={1} blockId={params.workId} />
