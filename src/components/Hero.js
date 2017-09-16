@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DownArrow from './DownArrow';
 import HalftoneCharacter from './HalftoneCharacter';
 
 const Hero = ({ arrowRevealColor, className, children, rightHalftoneText, blockId }) => (
@@ -9,7 +8,6 @@ const Hero = ({ arrowRevealColor, className, children, rightHalftoneText, blockI
       className='c-hero__rightHalftone'
       character={rightHalftoneText} />
     {children}
-    <DownArrow blockRevealColor={arrowRevealColor} blockId={blockId} />
   </header>
 );
 
