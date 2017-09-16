@@ -78,6 +78,10 @@
       @include sassline-display(epsilon, $headingtype, 5, 1, all);
     }
 
+    @include breakpoint(break-1) {
+       @include sassline-display(epsilon, $headingtype, 5, 1, all);
+    }
+
     @include breakpoint(break-2) {
        @include sassline-display(epsilon, $headingtype, 5, 1, all);
     }
