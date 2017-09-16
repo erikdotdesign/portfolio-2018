@@ -6,7 +6,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 const HomeHero = () => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
-      <Hero rightHalftoneText='17/18'>
+      <Hero>
         <div className='single single-measure'>
           <h1 className='epsilon--display-condensed'>
             <BlockReveal
