@@ -4,6 +4,7 @@ const docmatter = {
   'name':'DocMatter',
   'hex': '#962d3e',
   'year': '2016',
+  'snippet':'A complete overhaul of the DocMatter branding, application, and public website.',
   'description': [
     `DocMatter is a healthcare startup focused on creating collaboration
     software for medical professionals. It provides an array of services
@@ -38,20 +39,24 @@ const docmatter = {
     'url': 'https://www.docmatter.com'
   }],
   'mobile': {
-    'url': require('./img/docmatter-mobile.png'),
+    'url': require('../../routes/WorkDetail/assets/img/docmatter-mobile.png'),
     'alt': 'Mobile web DocMatter public website homepage'
   },
+  'tablet': {
+    'url': require('../../routes/WorkDetail/assets/img/docmatter.png'),
+    'alt': 'DocMatter public website landing page'
+  },
   'images': [{
-    'url': require('./img/docmatter1.png'),
+    'url': require('../../routes/WorkDetail/assets/img/docmatter1.png'),
     'alt': 'DocMatter public website homepage'
   }, {
-    'url': require('./img/docmatter2.png'),
+    'url': require('../../routes/WorkDetail/assets/img/docmatter2.png'),
     'alt': 'DocMatter public website about page'
   }, {
-    'url': require('./img/docmatter3.png'),
+    'url': require('../../routes/WorkDetail/assets/img/docmatter3.png'),
     'alt': 'DocMatter application login'
   }, {
-    'url': require('./img/docmatter4.png'),
+    'url': require('../../routes/WorkDetail/assets/img/docmatter4.png'),
     'alt': 'DocMatter signup page'
   }],
   'next': 'electwitch',

@@ -4,6 +4,8 @@ const colledger = {
   'name':'Colledger',
   'hex': '#547DBE',
   'year': '2014',
+  'snippet':`A prototype college search tool created in response to
+    our nation's ever-growing student loan debt crisis.`,
   'description': [
     `Colledger, an interactive college search tool focused heavily
     on data visualization, was created in response to our nation's
@@ -21,20 +23,24 @@ const colledger = {
     'url': 'http://erik.design/colledger'
   }],
   'mobile': {
-    'url': require('./img/colledger-mobile.png'),
+    'url': require('../../routes/WorkDetail/assets/img/colledger-mobile.png'),
     'alt': 'Mobile web Colledger homepage'
   },
+  'tablet': {
+    'url': require('../../routes/WorkDetail/assets/img/colledger.png'),
+    'alt': 'Colledger landing page'
+  },
   'images': [{
-    'url': require('./img/colledger1.png'),
+    'url': require('../../routes/WorkDetail/assets/img/colledger1.png'),
     'alt': 'Colledger homepage'
   }, {
-    'url': require('./img/colledger2.png'),
+    'url': require('../../routes/WorkDetail/assets/img/colledger2.png'),
     'alt': 'Colledger compare - general'
   }, {
-    'url': require('./img/colledger3.png'),
+    'url': require('../../routes/WorkDetail/assets/img/colledger3.png'),
     'alt': 'Colledger compare - campus'
   }, {
-    'url': require('./img/colledger4.png'),
+    'url': require('../../routes/WorkDetail/assets/img/colledger4.png'),
     'alt': 'Colledger compare - tuition'
   }],
   'next': 'betterworks',

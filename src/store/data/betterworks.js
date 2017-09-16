@@ -4,6 +4,8 @@ const betterworks = {
   'name':'BetterWorks',
   'hex': '#5BC0DE',
   'year': '2015',
+  'snippet':`A cohesive styleguide aimed to increase efficiency across
+    all media channels and departments at BetterWorks.`,
   'description': [
     `BetterWorks is an enterprise startup focused on creating
     the easiest way to set and manage goals. Their product takes
@@ -18,21 +20,26 @@ const betterworks = {
     This allows for more maintainable code and visual consistency
     across the entire product.`
   ],
+  'links': null,
   'mobile': {
-    'url': require('./img/betterworks-mobile.png'),
+    'url': require('../../routes/WorkDetail/assets/img/betterworks-mobile.png'),
     'alt': 'Mobile web BetterWorks styleguide'
   },
+  'tablet': {
+    'url': require('../../routes/WorkDetail/assets/img/betterworks.png'),
+    'alt': 'BetterWorks styleguide typography'
+  },
   'images': [{
-    'url': require('./img/betterworks1.png'),
+    'url': require('../../routes/WorkDetail/assets/img/betterworks1.png'),
     'alt': 'BetterWorks styleguide grid'
   }, {
-    'url': require('./img/betterworks2.png'),
+    'url': require('../../routes/WorkDetail/assets/img/betterworks2.png'),
     'alt': 'BetterWorks styleguide colors'
   }, {
-    'url': require('./img/betterworks3.png'),
+    'url': require('../../routes/WorkDetail/assets/img/betterworks3.png'),
     'alt': 'BetterWorks styleguide typography'
   }, {
-    'url': require('./img/betterworks4.png'),
+    'url': require('../../routes/WorkDetail/assets/img/betterworks4.png'),
     'alt': 'BetterWorks styleguide dashboard modules'
   }],
   'next': 'docmatter',

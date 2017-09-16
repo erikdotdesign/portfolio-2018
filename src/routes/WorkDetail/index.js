@@ -8,14 +8,14 @@ export default {
     require.ensure([], (require) => {
       /*  Webpack - use require callback to define
           dependencies for bundling   */
-      const WorkView = require('./components/WorkView').default;
+      const WorkDetail = require('./containers/WorkDetailContainer').default;
       // const reducer = require('./modules/counter').default;
 
       /*  Add the reducer to the store on key 'counter'  */
       // injectReducer(store, { key: 'counter', reducer });
 
       /*  Return getComponent   */
-      cb(null, WorkView);
+      cb(null, WorkDetail);
 
     /* Webpack named bundle   */
     }, 'work');

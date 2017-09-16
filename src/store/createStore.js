@@ -4,7 +4,9 @@ import { hashHistory } from 'react-router';
 import makeRootReducer from './reducers';
 import { updateLocation } from './location';
 
-const createStore = (initialState = {}) => {
+import { workList, workDetail } from './data/workData'
+
+const createStore = (initialState = { workList, workDetail }) => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
