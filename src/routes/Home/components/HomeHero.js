@@ -7,7 +7,7 @@ const HomeHero = () => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <Hero>
-        <div className='single single-measure'>
+        <div className='single single-measure c-work-hero__content'>
           <h1 className='epsilon--display-condensed'>
             <BlockReveal
               inline={false}
