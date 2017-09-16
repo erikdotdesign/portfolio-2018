@@ -22,14 +22,6 @@
   width: 94%;
   margin: 0 auto;
   @include box-shadow-border(bottom, 2px, $black);
-
-  @include breakpoint(break-3) {
-    @include maxwidth(3);
-  }
-
-  @include breakpoint(break-4) {
-    @include maxwidth(4);
-  }
 }
 
 .c-top-nav__logo {
