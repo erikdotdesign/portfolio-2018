@@ -15,15 +15,7 @@ const HomeHero = () => (
               delay={0}
               duration={0.5}>
               Erik Myers
-            </BlockReveal>
-          </h1>
-          <h1 className='epsilon--display-condensed'>
-            <BlockReveal
-              inline={false}
-              forcePlay={isVisible}
-              delay={0.2}
-              duration={0.5}
-              direction='rightLeft'>
+              <br/>
               Design
             </BlockReveal>
           </h1>
