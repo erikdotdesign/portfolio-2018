@@ -2,11 +2,11 @@ import React from 'react';
 import WorkList from './WorkList';
 import HomeHero from './HomeHero';
 
-const HomeView = () => (
+const Home = ({ workList }) => (
   <div className='typeset'>
     <HomeHero />
-    <WorkList />
+    <WorkList workList={workList} />
   </div>
 );
 
-export default HomeView;
+export default Home;

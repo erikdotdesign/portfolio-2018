@@ -6,26 +6,24 @@ import WorkItem from '../../Home/components/WorkItem';
 
 class WorkDetail extends React.Component {
   render () {
-    const { workDetail, nextWork, prevWork, params } = this.props;
+    const { work, nextWork, prevWork, params } = this.props;
     return (
       <div className='typeset'>
         <WorkHero
-          title={workDetail.name}
-          tags={workDetail.tags}
+          title={work.name}
+          tags={work.tags}
           blockId={params.workId}
-          hex={workDetail.hex}
-          year={workDetail.year} />
+          hex={work.hex}
+          year={work.year} />
         <WorkBrief
-          brief={workDetail.description}
-          title={workDetail.name}
-          mobile={workDetail.mobile}
+          brief={work.description}
+          title={work.name}
+          mobile={work.mobile}
           blockId={params.workId}
-          tablet={workDetail.tablet}
-          hex={workDetail.hex}
-          links={workDetail.links}
-          images={workDetail.images} />
-        <WorkItem work={nextWork} index={0} blockId={params.workId} />
-        <WorkItem work={prevWork} index={1} blockId={params.workId} />
+          tablet={work.tablet}
+          hex={work.hex}
+          links={work.links}
+          images={work.images} />
       </div>
     );
   }
@@ -36,3 +34,7 @@ WorkDetail.propTypes = {
 };
 
 export default WorkDetail;
+
+
+// <WorkItem work={nextWork} index={0} blockId={params.workId} />
+// <WorkItem work={prevWork} index={1} blockId={params.workId} />

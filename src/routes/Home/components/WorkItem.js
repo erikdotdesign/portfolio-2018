@@ -94,7 +94,7 @@ const WorkItem = ({ work, index, blockId }) => (
               character={work.name.slice(0, 2)} />
             <Tablet
               className='c-tablet__warp--right'
-              image={work.image}
+              image={work.tablet}
               blockId={blockId}
               forcePlay={isVisible}
               index={index} />

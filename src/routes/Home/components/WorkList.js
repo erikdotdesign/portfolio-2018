@@ -1,11 +1,10 @@
 import React from 'react';
 import WorkItem from './WorkItem';
-import workListData from '../assets/workListData';
 
-const WorkList = () => (
+const WorkList = ({ workList }) => (
   <main className='c-work-list' role='main'>
     {
-      workListData.map((workItem, index) =>
+      workList.map((workItem, index) =>
         <WorkItem work={workItem} index={index} key={index} />
       )
     }
