@@ -4790,6 +4790,10 @@ react-gsap-enhancer@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-gsap-enhancer/-/react-gsap-enhancer-0.3.0.tgz#b9f9fd19315875768c433e0943c2a41eea43b7d2"
 
+react-preload@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/react-preload/-/react-preload-0.5.1.tgz#ab38ec9e004862914d6b6137d057e647410d988c"
+
 react-redux@^5.0.4:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.4.tgz#1563babadcfb2672f57f9ceaa439fb16bf85d55b"
