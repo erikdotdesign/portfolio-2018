@@ -4,3 +4,41 @@
   height: calc(100vh - 3rem)
   position: relative
   margin-bottom: 3rem
+
+.typeset
+  .c-hero__rightHalftone
+    position: absolute
+    width: 100vh
+    color: $black
+    z-index: -1
+    transform: rotate(90deg)
+    transform-origin: bottom left
+    text-align: right
+
+    .c-halftone-character__halftone
+      transform: rotate(180deg)
+
+    +breakpoint(break-0)
+      +sassline-display(alpha, $headingtype, 11, 1, 4)
+      left: calc(100% - 8rem)
+      top: -50vh
+
+    +breakpoint(break-1)
+      +sassline-display(alpha, $headingtype, 11, 1, 4)
+      left: calc(100% - 6rem)
+      top: -50vh
+
+    +breakpoint(break-2)
+      +sassline-display(alpha, $headingtype, 11, 1, 4)
+      left: calc(100% - 6rem)
+      top: -50vh
+
+    +breakpoint(break-3)
+      +sassline-display(alpha, $headingtype, 11, 1, 4)
+      left: calc(100% - 6rem)
+      top: -50vh
+
+    +breakpoint(break-4)
+      +sassline-display(alpha, $headingtype, 11, 1, 4)
+      left: calc(100% - 6rem)
+      top: -50vh

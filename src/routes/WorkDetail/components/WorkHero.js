@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 const WorkHero = ({ year, hex, title, tags, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
-      <Hero>
+      <Hero rightHalftoneText={year}>
         <div className='single single-measure c-work-hero__content'>
           <h1 className='epsilon--display-condensed'>
             <BlockReveal
