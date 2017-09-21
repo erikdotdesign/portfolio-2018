@@ -19,20 +19,21 @@
   position: relative
   border-radius: 50%
   opacity: 1
-  top: 50%
-  transform: translateY(-50%)
   margin: 0 auto
-  width: 32px
-  height: 32px
+  width: 100%
+  height: 100%
 
 .c-work-image__loader:before, .c-work-image__loader:after
   content: ''
   border: 2px solid $black
   border-radius: 50%
-  width: 100%
-  height: 100%
+  width: 32px
+  height: 32px
   position: absolute
-  left: 0px
+  top: 50%
+  left: 50%
+  transform: translateY(-50%) translateX(-50%)
+
 
 .c-work-image__loader:before
   transform: scale(1,1)
