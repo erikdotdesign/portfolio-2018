@@ -110,7 +110,8 @@ class Tablet extends React.Component {
                 y='1'
                 width='622'
                 height='427'
-                rx='20' />
+                rx='20'
+                vectorEffect='non-scaling-stroke' />
               <g transform='translate(62.000000, 27.000000)'>
                 <mask id={`tablet-mask-${this.props.index}`} fill='white'>
                   <use xlinkHref={`#tablet-path-${this.props.index}`} />
@@ -131,7 +132,8 @@ class Tablet extends React.Component {
                   x='0.5'
                   y='0.5'
                   width='498'
-                  height='373' />
+                  height='373'
+                  vectorEffect='non-scaling-stroke' />
               </g>
             </svg>
           </figure>

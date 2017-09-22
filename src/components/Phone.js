@@ -107,7 +107,8 @@ class Phone extends React.Component {
               y='1'
               width='252'
               height='446'
-              rx='20' />
+              rx='20'
+              vectorEffect='non-scaling-stroke' />
             <g transform='translate(15.000000, 25.000000)'>
               <mask id='phone-mask' fill='white'>
                 <use xlinkHref='#phone-path' />
@@ -130,7 +131,8 @@ class Phone extends React.Component {
                 x='0.5'
                 y='0.5'
                 width='223'
-                height='396' />
+                height='396'
+                vectorEffect='non-scaling-stroke' />
             </g>
           </svg>
         </figure>

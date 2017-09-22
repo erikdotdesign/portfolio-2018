@@ -1,1 +1,202 @@
-var _gsScope = typeof module !== 'undefined' && module.exports && typeof global !== 'undefined' ? global : this || window; (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () { 'use strict'; function t (t, e, i, r) { return i = parseFloat(i) - parseFloat(t), r = parseFloat(r) - parseFloat(e), Math.sqrt(i * i + r * r); } function e (t) { return typeof t !== 'string' && t.nodeType || (t = _gsScope.TweenLite.selector(t), t.length && (t = t[0])), t; } function i (t, e, i) { var r, s, n = t.indexOf(' '); return n === -1 ? (r = void 0 !== i ? i + '' : t, s = t) : (r = t.substr(0, n), s = t.substr(n + 1)), r = r.indexOf('%') !== -1 ? parseFloat(r) / 100 * e : parseFloat(r), s = s.indexOf('%') !== -1 ? parseFloat(s) / 100 * e : parseFloat(s), r > s ? [s, r] : [r, s]; } function r (i) { if (!i) return 0; i = e(i); var r, s, n, a, o, l, h, u, f = i.tagName.toLowerCase(); if (f === 'path')o = i.style.strokeDasharray, i.style.strokeDasharray = 'none', r = i.getTotalLength() || 0, i.style.strokeDasharray = o; else if (f === 'rect')s = i.getBBox(), r = 2 * (s.width + s.height); else if (f === 'circle')r = 2 * Math.PI * parseFloat(i.getAttribute('r')); else if (f === 'line')r = t(i.getAttribute('x1'), i.getAttribute('y1'), i.getAttribute('x2'), i.getAttribute('y2')); else if (f === 'polyline' || f === 'polygon') for (n = i.getAttribute('points').split(' '), r = 0, o = n[0].split(','), f === 'polygon' && (n.push(n[0]), n[0].indexOf(',') === -1 && n.push(n[1])), l = 1; n.length > l; l++)a = n[l].split(','), a.length === 1 && (a[1] = n[l++]), a.length === 2 && (r += t(o[0], o[1], a[0], a[1]) || 0, o = a); else f === 'ellipse' && (h = parseFloat(i.getAttribute('rx')), u = parseFloat(i.getAttribute('ry')), r = Math.PI * (3 * (h + u) - Math.sqrt((3 * h + u) * (h + 3 * u)))); return r || 0; } function s (t, i) { if (!t) return [0, 0]; t = e(t), i = i || r(t) + 1; var s = a(t), n = s.strokeDasharray || '', o = parseFloat(s.strokeDashoffset), l = n.indexOf(','); return l < 0 && (l = n.indexOf(' ')), n = l < 0 ? i : parseFloat(n.substr(0, l)) || 1e-5, n > i && (n = i), [Math.max(0, -o), Math.max(0, n - o)]; } var n, a = document.defaultView ? document.defaultView.getComputedStyle : function () {}; n = _gsScope._gsDefine.plugin({ propName:'drawSVG', API:2, version:'0.0.6', global:!0, overwriteProps:['drawSVG'], init:function (t, e) { if (!t.getBBox) return !1; var n, a, o, l = r(t) + 1; return this._style = t.style, e === !0 || e === 'true' ? e = '0 100%' : e ? (e + '').indexOf(' ') === -1 && (e = '0 ' + e) : e = '0 0', n = s(t, l), a = i(e, l, n[0]), this._length = l + 10, n[0] === 0 && a[0] === 0 ? (o = Math.max(1e-5, a[1] - l), this._dash = l + o, this._offset = l - n[1] + o, this._addTween(this, '_offset', this._offset, l - a[1] + o, 'drawSVG')) : (this._dash = n[1] - n[0] || 1e-6, this._offset = -n[0], this._addTween(this, '_dash', this._dash, a[1] - a[0] || 1e-5, 'drawSVG'), this._addTween(this, '_offset', this._offset, -a[0], 'drawSVG')), !0; }, set:function (t) { this._firstPT && (this._super.setRatio.call(this, t), this._style.strokeDashoffset = this._offset, this._style.strokeDasharray = t === 1 || t === 0 ? this._offset < 0.001 && this._length - this._dash <= 10 ? 'none' : this._offset === this._dash ? '0px, 999999px' : this._dash + 'px,' + this._length + 'px' : this._dash + 'px,' + this._length + 'px'); } }), n.getLength = r, n.getPosition = s; }), _gsScope._gsDefine && _gsScope._gsQueue.pop()();
+/*!
+ * VERSION: 0.1.4
+ * DATE: 2017-06-19
+ * UPDATES AND DOCS AT: http://greensock.com
+ *
+ * @license Copyright (c) 2008-2017, GreenSock. All rights reserved.
+ * DrawSVGPlugin is a Club GreenSock membership benefit; You must have a valid membership to use
+ * this code without violating the terms of use. Visit http://greensock.com/club/ to sign up or get more details.
+ * This work is subject to the software agreement that was issued with your membership.
+ *
+ * @author: Jack Doyle, jack@greensock.com
+ */
+var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window; //helps ensure compatibility with AMD/RequireJS and CommonJS/Node
+(_gsScope._gsQueue || (_gsScope._gsQueue = [])).push( function() {
+
+  "use strict";
+
+  var _doc = _gsScope.document,
+    _getComputedStyle = _doc.defaultView ? _doc.defaultView.getComputedStyle : function() {},
+    _numbersExp = /(?:(-|-=|\+=)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/ig,
+    _isEdge = (((_gsScope.navigator || {}).userAgent || "").indexOf("Edge") !== -1), //Microsoft Edge has a bug that causes it not to redraw the path correctly if the stroke-linecap is anything other than "butt" (like "round") and it doesn't match the stroke-linejoin. A way to trigger it is to change the stroke-miterlimit, so we'll only do that if/when we have to (to maximize performance)
+    DrawSVGPlugin;
+
+  function getDistance(x1, y1, x2, y2, scaleX, scaleY) {
+    x2 = (parseFloat(x2 || 0) - parseFloat(x1 || 0)) * scaleX;
+    y2 = (parseFloat(y2 || 0) - parseFloat(y1 || 0)) * scaleY;
+    return Math.sqrt(x2 * x2 + y2 * y2);
+  }
+
+  function unwrap(element) {
+    if (typeof(element) === "string" || !element.nodeType) {
+      element = _gsScope.TweenLite.selector(element);
+      if (element.length) {
+        element = element[0];
+      }
+    }
+    return element;
+  }
+
+  //accepts values like "100%" or "20% 80%" or "20 50" and parses it into an absolute start and end position on the line/stroke based on its length. Returns an an array with the start and end values, like [0, 243]
+  function parse(value, length, defaultStart) {
+    var i = value.indexOf(" "),
+      s, e;
+    if (i === -1) {
+      s = defaultStart !== undefined ? defaultStart + "" : value;
+      e = value;
+    } else {
+      s = value.substr(0, i);
+      e = value.substr(i+1);
+    }
+    s = (s.indexOf("%") !== -1) ? (parseFloat(s) / 100) * length : parseFloat(s);
+    e = (e.indexOf("%") !== -1) ? (parseFloat(e) / 100) * length : parseFloat(e);
+    return (s > e) ? [e, s] : [s, e];
+  }
+
+  function getLength(element) {
+    if (!element) {
+      return 0;
+    }
+    element = unwrap(element);
+    var type = element.tagName.toLowerCase(),
+      scaleX = 1,
+      scaleY = 1,
+      length, bbox, points, prevPoint, i, rx, ry;
+    if (element.getAttribute("vector-effect") === "non-scaling-stroke") { //non-scaling-stroke basically scales the shape and then strokes it at the screen-level (after transforms), thus we need to adjust the length accordingly.
+      scaleY = element.getScreenCTM();
+      scaleX = scaleY.a;
+      scaleY = scaleY.d;
+    }
+    try { //IE bug: calling <path>.getTotalLength() locks the repaint area of the stroke to whatever its current dimensions are on that frame/tick. To work around that, we must call getBBox() to force IE to recalculate things.
+      bbox = element.getBBox(); //solely for fixing bug in IE - we don't actually use the bbox.
+    } catch (e) {
+      //firefox has a bug that throws an error if the element isn't visible.
+    }
+    if ((!bbox || (!bbox.width && !bbox.height)) && (type === "rect" || type === "circle" || type === "ellipse")) { //if the element isn't visible, try to discern width/height using its attributes.
+      bbox = {
+        width: parseFloat( element.getAttribute( (type === "rect") ? "width" : (type === "circle") ? "r" : "rx")),
+        height: parseFloat( element.getAttribute( (type === "rect") ? "height" : (type === "circle") ? "r" : "ry") )
+      };
+      if (type !== "rect") {
+        bbox.width *= 2;
+        bbox.height *= 2;
+      }
+    }
+    if (type === "path") {
+      prevPoint = element.style.strokeDasharray;
+      element.style.strokeDasharray = "none";
+      length = element.getTotalLength() || 0;
+      if (scaleX !== scaleY) {
+        console.log("Warning: <path> length cannot be measured accurately when vector-effect is non-scaling-stroke and the element isn't proportionally scaled.");
+      }
+      length *= (scaleX + scaleY) / 2;
+      element.style.strokeDasharray = prevPoint;
+    } else if (type === "rect") {
+      length = bbox.width * 2 * scaleX + bbox.height * 2 * scaleY;
+    } else if (type === "line") {
+      length = getDistance(element.getAttribute("x1"), element.getAttribute("y1"), element.getAttribute("x2"), element.getAttribute("y2"), scaleX, scaleY);
+    } else if (type === "polyline" || type === "polygon") {
+      points = element.getAttribute("points").match(_numbersExp) || [];
+      if (type === "polygon") {
+        points.push(points[0], points[1]);
+      }
+      length = 0;
+      for (i = 2; i < points.length; i+=2) {
+        length += getDistance(points[i-2], points[i-1], points[i], points[i+1], scaleX, scaleY) || 0;
+      }
+    } else if (type === "circle" || type === "ellipse") {
+      rx = (bbox.width / 2) * scaleX;
+      ry = (bbox.height / 2) * scaleY;
+      length = Math.PI * ( 3 * (rx + ry) - Math.sqrt((3 * rx + ry) * (rx + 3 * ry)) );
+    }
+    return length || 0;
+  }
+
+  function getPosition(element, length) {
+    if (!element) {
+      return [0, 0];
+    }
+    element = unwrap(element);
+    length = length || (getLength(element) + 1);
+    var cs = _getComputedStyle(element),
+      dash = cs.strokeDasharray || "",
+      offset = parseFloat(cs.strokeDashoffset),
+      i = dash.indexOf(",");
+    if (i < 0) {
+      i = dash.indexOf(" ");
+    }
+    dash = (i < 0) ? length : parseFloat(dash.substr(0, i)) || 0.00001;
+    if (dash > length) {
+      dash = length;
+    }
+    return [Math.max(0, -offset), Math.max(0, dash - offset)];
+  }
+
+  DrawSVGPlugin = _gsScope._gsDefine.plugin({
+    propName: "drawSVG",
+    API: 2,
+    version: "0.1.4",
+    global: true,
+    overwriteProps: ["drawSVG"],
+
+    init: function(target, value, tween, index) {
+      if (!target.getBBox) {
+        return false;
+      }
+      var length = getLength(target) + 1,
+        start, end, overage, cs;
+      this._style = target.style;
+      if (typeof(value) === "function") {
+        value = value(index, target);
+      }
+      if (value === true || value === "true") {
+        value = "0 100%";
+      } else if (!value) {
+        value = "0 0";
+      } else if ((value + "").indexOf(" ") === -1) {
+        value = "0 " + value;
+      }
+      start = getPosition(target, length);
+      end = parse(value, length, start[0]);
+      this._length = length + 10;
+      if (start[0] === 0 && end[0] === 0) {
+        overage = Math.max(0.00001, end[1] - length); //allow people to go past the end, like values of 105% because for some paths, Firefox doesn't return an accurate getTotalLength(), so it could end up coming up short.
+        this._dash = length + overage;
+        this._offset = length - start[1] + overage;
+        this._addTween(this, "_offset", this._offset, length - end[1] + overage, "drawSVG");
+      } else {
+        this._dash = (start[1] - start[0]) || 0.000001; //some browsers render artifacts if dash is 0, so we use a very small number in that case.
+        this._offset = -start[0];
+        this._addTween(this, "_dash", this._dash, (end[1] - end[0]) || 0.00001, "drawSVG");
+        this._addTween(this, "_offset", this._offset, -end[0], "drawSVG");
+      }
+      if (_isEdge) { //to work around a bug in Microsoft Edge, animate the stroke-miterlimit by 0.0001 just to trigger the repaint (only necessary if stroke-linecap isn't "butt"; also unnecessary if it's "round" and stroke-linejoin is also "round"). Imperceptible, relatively high-performance, and effective. Another option was to set the "d" <path> attribute to its current value on every tick, but that seems like it'd be much less performant.
+        cs = _getComputedStyle(target);
+        end = cs.strokeLinecap;
+        if (end !== "butt" && end !== cs.strokeLinejoin) {
+          end = parseFloat(cs.strokeMiterlimit);
+          this._addTween(target.style, "strokeMiterlimit", end, end + 0.0001, "strokeMiterlimit");
+        }
+      }
+      return true;
+    },
+
+    //called each time the values should be updated, and the ratio gets passed as the only parameter (typically it's a value between 0 and 1, but it can exceed those when using an ease like Elastic.easeOut or Back.easeOut, etc.)
+    set: function(ratio) {
+      if (this._firstPT) {
+        this._super.setRatio.call(this, ratio);
+        this._style.strokeDashoffset = this._offset;
+        if (ratio === 1 || ratio === 0) {
+          this._style.strokeDasharray = (this._offset < 0.001 && this._length - this._dash <= 10) ? "none" : (this._offset === this._dash) ? "0px, 999999px" : this._dash + "px," + this._length + "px";
+        } else {
+          this._style.strokeDasharray = this._dash + "px," + this._length + "px";
+        }
+      }
+    }
+
+  });
+
+  DrawSVGPlugin.getLength = getLength;
+  DrawSVGPlugin.getPosition = getPosition;
+
+}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
