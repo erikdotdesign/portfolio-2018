@@ -51,7 +51,7 @@ class LazyPhone extends React.Component {
         {
           <Phone
             image={this.props.image}
-            blockId={this.props.image}
+            blockId={this.props.blockId}
             forcePlay={this.props.forcePlay} />
         }
       </Preload>
