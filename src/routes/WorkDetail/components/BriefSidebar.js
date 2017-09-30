@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Phone from '../../../components/Phone';
+import LazyPhone from '../../../components/LazyPhone';
 import BriefAside from './BriefAside';
 
 const BriefSidebar = ({ halftoneChar, image, forcePlay, blockId }) => (
   <BriefAside
     className='column--sidebar'
     halftoneChar={halftoneChar}>
-    <Phone
+    <LazyPhone
       image={image}
       blockId={blockId}
       forcePlay={forcePlay} />

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tablet from '../../../components/Tablet';
+import LazyTablet from '../../../components/LazyTablet';
 import BriefAside from './BriefAside';
 
 const BriefDuo = ({ halftoneChar, image, forcePlay, blockId }) => (
   <BriefAside
     className='column--duo'
     halftoneChar={halftoneChar}>
-    <Tablet
+    <LazyTablet
       className='c-tablet__warp--left'
       image={image}
       blockId={blockId}

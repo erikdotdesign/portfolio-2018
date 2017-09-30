@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import Tablet from '../../../components/Tablet';
+import LazyTablet from '../../../components/LazyTablet';
 import VisibilitySensor from 'react-visibility-sensor';
 import Button from '../../../components/Button';
 
@@ -92,7 +93,7 @@ const WorkItem = ({ work, index, blockId }) => (
             <HalftoneCharacter
               className='c-work-item__display-name'
               character={work.name.slice(0, 2)} />
-            <Tablet
+            <LazyTablet
               className='c-tablet__warp--right'
               image={work.tablet}
               blockId={blockId}
