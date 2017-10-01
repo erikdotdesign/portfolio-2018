@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TimelineMax } from 'gsap';
+import TweenMax from 'gsap/TweenMax';
+import TimelineMax from 'gsap/TimelineMax';
+import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
 import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
-import '../DrawSVGPlugin';
 
 function createAnim ({ options }) {
   const phoneTimeline = new TimelineMax({ paused: true });

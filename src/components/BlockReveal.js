@@ -1,5 +1,6 @@
 import React from 'react';
-import { TimelineMax } from 'gsap';
+import TweenMax from 'gsap/TweenMax';
+import TimelineMax from 'gsap/TimelineMax';
 import PropTypes from 'prop-types';
 import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
