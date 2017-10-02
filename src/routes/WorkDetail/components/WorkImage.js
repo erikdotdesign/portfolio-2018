@@ -4,6 +4,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import VisibilitySensor from 'react-visibility-sensor';
 import LazyImage from '../../../components/LazyImage';
+import Scrambler from '../../../components/Scrambler';
 
 const WorkImage = ({ image, index, hex, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
@@ -25,7 +26,14 @@ const WorkImage = ({ image, index, hex, blockId }) => (
               index % 2 === 0
               ? 'rightLeft'
               : 'leftRight'}>
-            {image.alt}
+            <Scrambler
+              forcePlay={isVisible}
+              blockId={blockId}
+              text={image.alt}
+              duration={0.5}
+              delay={0.6}>
+              {image.alt}
+            </Scrambler>
           </BlockReveal>
         </figcaption>
       </figure>

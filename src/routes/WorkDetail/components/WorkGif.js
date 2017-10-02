@@ -8,6 +8,7 @@ import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import LazyGif from '../../../components/LazyGif';
 import Button from '../../../components/Button';
+import Scrambler from '../../../components/Scrambler';
 
 class WorkGif extends React.Component {
   render () {
@@ -31,7 +32,14 @@ class WorkGif extends React.Component {
                   this.props.index % 2 === 0
                   ? 'rightLeft'
                   : 'leftRight'}>
-                {this.props.gif.alt}
+                <Scrambler
+                  forcePlay={isVisible}
+                  blockId={this.props.blockId}
+                  text={this.props.gif.alt}
+                  duration={0.5}
+                  delay={0.6}>
+                  {this.props.gif.alt}
+                </Scrambler>
               </BlockReveal>
             </figcaption>
           </figure>
