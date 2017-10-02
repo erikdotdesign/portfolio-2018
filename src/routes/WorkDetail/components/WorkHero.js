@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
+import Scrambler from '../../../components/Scrambler';
 import Hero from '../../../components/Hero';
 import VisibilitySensor from 'react-visibility-sensor';
 
@@ -18,7 +19,15 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               header
               delay={0}
               duration={0.5}>
-              {title}
+              <Scrambler
+                forcePlay={isVisible}
+                blockId={blockId}
+                text={title}
+                header
+                duration={0.5}
+                delay={0.6}>
+                {title}
+              </Scrambler>
             </BlockReveal>
           </h1>
           <ul className='c-work-hero__tag-list'>
@@ -34,11 +43,17 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               {
               tags.map((tag, index) =>
                 <li className={'c-work-hero__tag'} key={index}>
-                  {
-                    index === tags.length - 1
-                    ? tag
-                    : `${tag},\u00A0`
-                  }
+                  <Scrambler
+                    forcePlay={isVisible}
+                    blockId={blockId}
+                    header
+                    text={index === tags.length - 1 ? tag : `${tag},\u00A0`}
+                    duration={0.5}
+                    delay={0.75 + (0.1 * index)}>
+                    {
+                      index === tags.length - 1 ? tag : `${tag},\u00A0`
+                    }
+                  </Scrambler>
                 </li>
               )
             }

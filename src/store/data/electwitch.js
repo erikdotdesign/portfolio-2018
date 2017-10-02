@@ -1,6 +1,6 @@
 const electwitch = {
   'id':'electwitch',
-  'tags':['Desktop application', 'Side project'],
+  'tags':['Desktop application'],
   'name':'Electwitch',
   'hex': '#B388FF',
   'year': '2017',

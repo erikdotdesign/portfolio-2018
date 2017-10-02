@@ -23,6 +23,7 @@ const BriefLinks = ({ links, hex, forcePlay, blockId }) => (
             className='button button--outline'
             link={link.url}
             blockId={blockId}
+            forcePlay={forcePlay}
             text={link.text}
             hex={hex} />
         </BlockReveal>

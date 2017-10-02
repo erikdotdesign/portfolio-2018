@@ -1,9 +1,9 @@
 const twitch = {
   'id':'twitch',
-  'tags':['UI/UX', 'Product'],
+  'tags':['Product', 'UI/UX'],
   'name':'Twitch',
   'hex': '#6441a4',
-  'year': '16/17',
+  'year': '2017',
   'snippet': 'A breakdown of my workflow at Twitch and the products I had the oppertunity to worked on.',
   'description': [
     `While at Twitch I was fortunate enough to work on many great products

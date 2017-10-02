@@ -1,6 +1,6 @@
 const docmatter = {
   'id':'docmatter',
-  'tags':['Branding', 'Front-End', 'UI/UX'],
+  'tags':['Branding', 'UI/UX'],
   'name':'DocMatter',
   'hex': '#962d3e',
   'year': '2016',

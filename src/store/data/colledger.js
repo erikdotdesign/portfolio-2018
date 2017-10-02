@@ -1,6 +1,6 @@
 const colledger = {
   'id':'colledger',
-  'tags':['Front-End', 'Product', 'UI/UX'],
+  'tags':['Product', 'UI/UX'],
   'name':'Colledger',
   'hex': '#547DBE',
   'year': '2014',

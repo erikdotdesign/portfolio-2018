@@ -1,6 +1,6 @@
 const tsdp = {
   'id':'tsdp',
-  'tags':['Sketch plugin', 'Side project'],
+  'tags':['Sketch plugin'],
   'name':'TSDP',
   'hex': '#FEB305',
   'year': '2017',

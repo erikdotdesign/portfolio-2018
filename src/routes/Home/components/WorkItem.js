@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import Tablet from '../../../components/Tablet';
+import Scrambler from '../../../components/Scrambler';
 import LazyTablet from '../../../components/LazyTablet';
 import VisibilitySensor from 'react-visibility-sensor';
 import Button from '../../../components/Button';
@@ -28,7 +29,14 @@ const WorkItem = ({ work, index, blockId }) => (
                 index % 2 === 0
                 ? 'leftRight'
                 : 'rightLeft'}>
-                {work.name}
+                <Scrambler
+                  forcePlay={isVisible}
+                  duration={1}
+                  blockId={blockId}
+                  delay={0.5}
+                  text={work.name}>
+                  {work.name}
+                </Scrambler>
               </BlockReveal>
             </h1>
             <ul className='c-work-item__tag-list'>
@@ -83,6 +91,7 @@ const WorkItem = ({ work, index, blockId }) => (
               : 'leftRight'}>
               <Button
                 text='Read more'
+                forcePlay={isVisible}
                 router
                 link={`/work/${work.id}`}
                 blockId={blockId}
