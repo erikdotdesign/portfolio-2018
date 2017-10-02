@@ -8,7 +8,7 @@ import GSAP from 'react-gsap-enhancer';
 function createAnim ({ options }) {
   const { direction, delay, duration, blockColor } = options.props;
   const { element, block } = options.refs;
-  const defaultBlockColor = 'yellow';
+  const defaultBlockColor = '#FF6F63';
 
   const blockTimeline = new TimelineMax({ paused: true });
 
@@ -17,7 +17,7 @@ function createAnim ({ options }) {
       blockTimeline
       .set(block, {
         transformOrigin: '0 50%',
-        background: blockColor || defaultBlockColor,
+        background: defaultBlockColor,
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',
@@ -36,7 +36,7 @@ function createAnim ({ options }) {
       blockTimeline
       .set(block, {
         transformOrigin: '100% 50%',
-        background: blockColor || defaultBlockColor,
+        background: defaultBlockColor,
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',
@@ -55,7 +55,7 @@ function createAnim ({ options }) {
       blockTimeline
       .set(block, {
         transformOrigin: '50% 0',
-        background: blockColor || defaultBlockColor,
+        background: defaultBlockColor,
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(1,0,1)',
@@ -73,7 +73,7 @@ function createAnim ({ options }) {
       blockTimeline
       .set(block, {
         transformOrigin: '50% 100%',
-        background: blockColor || defaultBlockColor,
+        background: defaultBlockColor,
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(1,0,1)',
@@ -92,7 +92,7 @@ function createAnim ({ options }) {
       blockTimeline
       .set(block, {
         transformOrigin: '0 50%',
-        background: blockColor || defaultBlockColor
+        background: defaultBlockColor
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',

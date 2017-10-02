@@ -2,8 +2,8 @@
 
 .section {
   @include breakpoint(break-1) {
-    padding-bottom: map-get($gutterwidths, small);
-    padding-top: map-get($gutterwidths, small);
+    padding-bottom: map-get($gutterwidths, medium);
+    padding-top: map-get($gutterwidths, medium);
   }
 
   @include breakpoint(break-3) {

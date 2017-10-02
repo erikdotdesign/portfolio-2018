@@ -10,7 +10,9 @@
 }
 
 .c-top-nav__link {
-  &:hover, &:focus {
+  font-family: unquote(map-get($headingtype, font-family));
+
+  &:hover {
     @include box-shadow-border(bottom, 4px, $black);
   }
 }
