@@ -6,14 +6,14 @@ const initialState = {
   viewed: false,
   loaded: false,
   error: false
-}
+};
 
 class LazyImage extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = initialState;
   }
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps (nextProps) {
     if ((nextProps.isVisible && !this.props.isVisible) && !this.state.viewed) {
       this.setState({ loaded : false, viewed: true, error: false });
     } else if (nextProps.blockId !== this.props.blockId) {
@@ -28,15 +28,14 @@ class LazyImage extends React.Component {
   }
   _isRetinaDisplay = () => {
     if (window.matchMedia) {
-      var mq = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
+      var mq = window.matchMedia('only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)');
       return (mq && mq.matches || (window.devicePixelRatio > 1));
     }
   }
   render () {
     var loadingIndicator = (
       <div className='c-work-image__loading'>
-        <div className='c-work-image__loader'>
-        </div>
+        <div className='c-work-image__loader' />
       </div>
     );
     var images = this.props.retina && this._isRetinaDisplay() ? [this.props.retina] : [this.props.imgSrc];
@@ -44,14 +43,13 @@ class LazyImage extends React.Component {
       <div className='c-work-image__aspect'>
         {
           this.state.viewed
-          ?
-          <Preload
+          ? <Preload
             loadingIndicator={loadingIndicator}
             images={images}
             onError={this._handleImageLoadError}
             onSuccess={this._handleImageLoadSuccess}
-            resolveOnError={true}
-            mountChildren={true}
+            resolveOnError
+            mountChildren
             >
             {
               <img
@@ -61,8 +59,7 @@ class LazyImage extends React.Component {
                 />
             }
           </Preload>
-          :
-          null
+          : null
         }
       </div>
     );
@@ -74,6 +71,3 @@ LazyImage.propTypes = {
 };
 
 export default LazyImage;
-
-
-
