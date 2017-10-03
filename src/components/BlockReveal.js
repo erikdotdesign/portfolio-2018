@@ -6,9 +6,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
 
 function createAnim ({ options }) {
-  const { direction, delay, duration, blockColor } = options.props;
+  const { direction, delay, duration } = options.props;
   const { element, block } = options.refs;
-  const defaultBlockColor = '#FF6F63';
 
   const blockTimeline = new TimelineMax({ paused: true });
 
@@ -16,8 +15,7 @@ function createAnim ({ options }) {
     case 'leftRight':
       blockTimeline
       .set(block, {
-        transformOrigin: '0 50%',
-        background: defaultBlockColor,
+        transformOrigin: '0 50%'
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',
@@ -35,8 +33,7 @@ function createAnim ({ options }) {
     case 'rightLeft':
       blockTimeline
       .set(block, {
-        transformOrigin: '100% 50%',
-        background: defaultBlockColor,
+        transformOrigin: '100% 50%'
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',
@@ -54,8 +51,7 @@ function createAnim ({ options }) {
     case 'topBottom':
       blockTimeline
       .set(block, {
-        transformOrigin: '50% 0',
-        background: defaultBlockColor,
+        transformOrigin: '50% 0'
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(1,0,1)',
@@ -72,8 +68,7 @@ function createAnim ({ options }) {
     case 'bottomTop':
       blockTimeline
       .set(block, {
-        transformOrigin: '50% 100%',
-        background: defaultBlockColor,
+        transformOrigin: '50% 100%'
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(1,0,1)',
@@ -91,8 +86,7 @@ function createAnim ({ options }) {
     default:
       blockTimeline
       .set(block, {
-        transformOrigin: '0 50%',
-        background: defaultBlockColor
+        transformOrigin: '0 50%'
       }, `+=${delay}`)
       .from(block, duration, {
         transform: 'scale3d(0,1,1)',

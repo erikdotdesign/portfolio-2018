@@ -2,7 +2,6 @@ const docmatter = {
   'id':'docmatter',
   'tags':['Branding', 'UI/UX'],
   'name':'DocMatter',
-  'hex': '#962d3e',
   'year': '2016',
   'snippet':'A complete overhaul of the DocMatter branding, application, and public website.',
   'description': [

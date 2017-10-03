@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Preload from 'react-preload';
 import LazyGifAnim from './LazyGifAnim';
+import LoadingIndicator from './LoadingIndicator';
 
 const initialState = {
   viewed: false,
@@ -36,9 +37,7 @@ class LazyGif extends React.Component {
   render () {
     var loadingIndicator = (
       <div className='c-work-gif__aspect'>
-        <div className='c-work-image__loading'>
-          <div className='c-work-image__loader' />
-        </div>
+        <LoadingIndicator />
       </div>
     );
     const images = this.props.gif.frames.map((image) => {

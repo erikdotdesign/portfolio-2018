@@ -6,17 +6,22 @@ import VisibilitySensor from 'react-visibility-sensor';
 import LazyImage from '../../../components/LazyImage';
 import Scrambler from '../../../components/Scrambler';
 
-const WorkImage = ({ image, index, hex, blockId }) => (
+const WorkImage = ({ image, index, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <figure className='c-work-image'>
         <HalftoneCharacter
           className='c-work-item__index'
           character={index + 1} />
-        <LazyImage imgSrc={image.url} retina={image.retina} isVisible={isVisible} imgAlt={image.alt} blockId={blockId} hex={hex} index={index} />
+        <LazyImage
+          imgSrc={image.url}
+          retina={image.retina}
+          isVisible={isVisible}
+          imgAlt={image.alt}
+          blockId={blockId}
+          index={index} />
         <figcaption className='c-work-image__caption top-stroke--strong top-stroke--inline'>
           <BlockReveal
-            blockColor={hex}
             forcePlay={isVisible}
             blockId={blockId}
             inline={false}
@@ -45,7 +50,6 @@ WorkImage.propTypes = {
   image: PropTypes.object,
   blockId: PropTypes.string,
   index: PropTypes.number,
-  hex: PropTypes.string
 };
 
 export default WorkImage;

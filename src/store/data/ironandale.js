@@ -2,7 +2,6 @@ const ironandale = {
   'id':'ironandale',
   'tags':['Front-End', 'UI/UX'],
   'name':'Iron & Ale',
-  'hex': '#f68f67',
   'year': '2014',
   'snippet':"Single page promotional site developed for my brother's successful kickstarter project, Iron and Ale.",
   'description': [

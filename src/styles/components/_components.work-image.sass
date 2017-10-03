@@ -4,68 +4,12 @@
 .c-work-image__aspect
   +aspect(375, 209)
 
-.c-work-image__loading
-  +aspect-fill
-  background: none
-
 .c-work-image__image
   display: none
 
 .c-work-image__image--loaded
   display: inline-block
   animation: fadeIn 0.5s ease-in
-
-.c-work-image__loader
-  position: relative
-  border-radius: 50%
-  opacity: 1
-  margin: 0 auto
-  width: 100%
-  height: 100%
-
-.c-work-image__loader:before, .c-work-image__loader:after
-  content: ''
-  border: 2px solid $black
-  border-radius: 50%
-  width: 32px
-  height: 32px
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translateY(-50%) translateX(-50%)
-
-
-.c-work-image__loader:before
-  transform: scale(1,1)
-  opacity: 1
-  animation: waveAnimBf 0.6s infinite linear
-
-.c-work-image__loader:after
-  transform: scale(0,0)
-  opacity: 0
-  animation: waveAnimAf 0.6s infinite linear
-
-@keyframes waveAnimAf
-  from
-    transform: scale(0.5,0.5)
-    opacity: 0
-  to
-    transform: scale(1,1)
-    opacity: 1
-
-@keyframes waveAnimBf
-  from
-    transform: scale(1,1)
-    opacity: 1
-  to
-    transform: scale(1.5,1.5)
-    opacity: 0
-
-@keyframes fadeIn
-  from
-    opacity: 0
-  to
-    opacity: 1
 
 .c-work-image__caption
   font-family: unquote(map-get($headingtype, font-family))

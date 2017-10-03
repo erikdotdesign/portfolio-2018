@@ -2,7 +2,6 @@ const colledger = {
   'id':'colledger',
   'tags':['Product', 'UI/UX'],
   'name':'Colledger',
-  'hex': '#547DBE',
   'year': '2014',
   'snippet':`A prototype college search tool created in response to
     our nation's ever-growing student loan debt crisis.`,

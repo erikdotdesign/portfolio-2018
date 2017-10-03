@@ -22,7 +22,6 @@ const WorkItem = ({ work, index, blockId }) => (
                 inline={false}
                 forcePlay={isVisible}
                 blockId={blockId}
-                blockColor={work.hex}
                 delay={0}
                 duration={0.5}
                 direction={
@@ -44,7 +43,6 @@ const WorkItem = ({ work, index, blockId }) => (
                 inline={false}
                 forcePlay={isVisible}
                 blockId={blockId}
-                blockColor={work.hex}
                 delay={0.1}
                 duration={0.5}
                 direction={
@@ -68,7 +66,6 @@ const WorkItem = ({ work, index, blockId }) => (
               <BlockReveal
                 inline={false}
                 forcePlay={isVisible}
-                blockColor={work.hex}
                 blockId={blockId}
                 delay={0.2}
                 duration={0.5}
@@ -83,7 +80,6 @@ const WorkItem = ({ work, index, blockId }) => (
               inline={false}
               forcePlay={isVisible}
               blockId={blockId}
-              blockColor={work.hex}
               delay={0.4}
               duration={0.5}
               direction={index % 2 === 0
@@ -94,8 +90,7 @@ const WorkItem = ({ work, index, blockId }) => (
                 forcePlay={isVisible}
                 router
                 link={`/work/${work.id}`}
-                blockId={blockId}
-                hex={work.hex} />
+                blockId={blockId} />
             </BlockReveal>
           </div>
           <div className='column column--duo'>

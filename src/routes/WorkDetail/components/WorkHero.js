@@ -5,7 +5,7 @@ import Scrambler from '../../../components/Scrambler';
 import Hero from '../../../components/Hero';
 import VisibilitySensor from 'react-visibility-sensor';
 
-const WorkHero = ({ year, hex, title, tags, blockId }) => (
+const WorkHero = ({ year, title, tags, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <Hero rightHalftoneText={year}>
@@ -15,7 +15,6 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
               inline={false}
               forcePlay={isVisible}
               blockId={blockId}
-              blockColor={hex}
               header
               delay={0}
               duration={0.5}>
@@ -34,7 +33,6 @@ const WorkHero = ({ year, hex, title, tags, blockId }) => (
             <BlockReveal
               inline={false}
               forcePlay={isVisible}
-              blockColor={hex}
               header
               blockId={blockId}
               delay={0.2}
@@ -69,7 +67,6 @@ WorkHero.propTypes = {
   title: PropTypes.string,
   tags: PropTypes.array,
   blockId: PropTypes.string,
-  hex: PropTypes.string,
   year: PropTypes.string
 };
 

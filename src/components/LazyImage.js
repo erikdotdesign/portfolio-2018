@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Preload from 'react-preload';
+import LoadingIndicator from './LoadingIndicator';
 
 const initialState = {
   viewed: false,
@@ -34,9 +35,7 @@ class LazyImage extends React.Component {
   }
   render () {
     var loadingIndicator = (
-      <div className='c-work-image__loading'>
-        <div className='c-work-image__loader' />
-      </div>
+      <LoadingIndicator />
     );
     var images = this.props.retina && this._isRetinaDisplay() ? [this.props.retina] : [this.props.imgSrc];
     return (

@@ -2,7 +2,6 @@ const electwitch = {
   'id':'electwitch',
   'tags':['Desktop application'],
   'name':'Electwitch',
-  'hex': '#B388FF',
   'year': '2017',
   'snippet':'Twitch desktop application built with Electron, React, Redux, and Material Design.',
   'description': [

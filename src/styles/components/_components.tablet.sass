@@ -1,6 +1,5 @@
 .c-tablet__wrap
   +aspect(16, 11)
-  margin-bottom: 2rem
 
 .c-tablet
   width: 100%
@@ -13,119 +12,66 @@
 
   +breakpoint(break-0)
     +aspect(16, 11)
-    margin-bottom: 2rem
-    margin-left: 0
+    transform: translateX(0)
     width: 100%
+    margin-bottom: 2rem
 
   +breakpoint(break-1)
     height: 25rem
-    margin-left: -12rem
+    transform: translateX(-12rem)
     overflow: visible
-    padding-bottom: 0
     width: calc(100% + 12rem)
+    margin-bottom: 0
 
   +breakpoint(break-2)
     height: 28rem
-    margin-left: -12rem
+    transform: translateX(-12rem)
     overflow: visible
-    padding-bottom: 0
     width: calc(100% + 12rem)
+    margin-bottom: 0
 
   +breakpoint(break-3)
     +aspect(16, 11)
-    margin-bottom: 0
-    margin-left: 0
+    transform: translateX(0)
     width: 100%
+    margin-bottom: 0
 
   +breakpoint(break-4)
     +aspect(16, 11)
-    margin-bottom: 0
-    margin-left: 0
+    transform: translateX(0)
     width: 100%
+    margin-bottom: 0
 
 .c-tablet__warp--right
-  margin-bottom: 0
 
   +breakpoint(break-0)
     +aspect(16, 11)
-    margin-right: 0
+    transform: translateX(0)
     width: 100%
     margin-top: 2rem
 
   +breakpoint(break-1)
     height: 25rem
-    margin-right: -12rem
+    transform: translateX(4rem)
     overflow: visible
-    padding-bottom: 0
     width: calc(100% + 12rem)
     margin-top: 0
 
   +breakpoint(break-2)
     height: 28rem
-    margin-right: -12rem
+    transform: translateX(4rem)
     overflow: visible
-    padding-bottom: 0
     width: calc(100% + 12rem)
     margin-top: 0
 
   +breakpoint(break-3)
     +aspect(16, 11)
-    margin-right: 0
+    transform: translateX(0)
     width: 100%
     margin-top: 0
 
   +breakpoint(break-4)
     +aspect(16, 11)
-    margin-right: 0
+    transform: translateX(0)
     width: 100%
     margin-top: 0
-
-.c-tablet__loading
-  +aspect-fill
-  background: none
-
-.c-tablet__loader
-  position: relative
-  border-radius: 50%
-  opacity: 1
-  margin: 0 auto
-  width: 100%
-  height: 100%
-
-.c-tablet__loader:before, .c-tablet__loader:after
-  content: ''
-  border: 2px solid $black
-  border-radius: 50%
-  width: 32px
-  height: 32px
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translateY(-50%) translateX(-50%)
-
-
-.c-tablet__loader:before
-  transform: scale(1,1)
-  opacity: 1
-  animation: waveAnimBf 0.6s infinite linear
-
-.c-tablet__loader:after
-  transform: scale(0,0)
-  opacity: 0
-  animation: waveAnimAf 0.6s infinite linear
-
-@keyframes waveAnimAf
-  from
-    transform: scale(0.5,0.5)
-    opacity: 0
-  to
-    transform: scale(1,1)
-    opacity: 1
-
-@keyframes waveAnimBf
-  from
-    transform: scale(1,1)
-    opacity: 1
-  to
-    transform: scale(1.5,1.5)
-    opacity: 0

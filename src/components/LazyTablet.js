@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Preload from 'react-preload';
 import Tablet from './Tablet';
+import LoadingIndicator from './LoadingIndicator';
 
 const initialState = {
   viewed: false,
@@ -29,10 +30,8 @@ class LazyTablet extends React.Component {
   }
   render () {
     var loadingIndicator = (
-      <div className={`c-tablet-wrap ${this.props.className ? this.props.className : null}`}>
-        <div className='c-tablet__loading'>
-          <div className='c-tablet__loader' />
-        </div>
+      <div className={`c-tablet-wrap ${this.props.className}`}>
+        <LoadingIndicator />
       </div>
     );
     var images = [this.props.image.url];

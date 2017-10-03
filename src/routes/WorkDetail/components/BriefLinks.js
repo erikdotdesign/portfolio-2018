@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import Button from '../../../components/Button';
 import BlockReveal from '../../../components/BlockReveal';
 
-const BriefLinks = ({ links, hex, forcePlay, blockId }) => (
+const BriefLinks = ({ links, forcePlay, blockId }) => (
   <div>
     {
       links.map((link, index) =>
         <BlockReveal
           key={index}
-          blockColor={hex}
           forcePlay={forcePlay}
           blockId={blockId}
           inline={false}
@@ -24,8 +23,7 @@ const BriefLinks = ({ links, hex, forcePlay, blockId }) => (
             link={link.url}
             blockId={blockId}
             forcePlay={forcePlay}
-            text={link.text}
-            hex={hex} />
+            text={link.text} />
         </BlockReveal>
       )
     }
@@ -36,7 +34,6 @@ BriefLinks.propTypes = {
   links: PropTypes.array,
   blockId: PropTypes.string,
   forcePlay: PropTypes.bool,
-  hex: PropTypes.string
 };
 
 export default BriefLinks;

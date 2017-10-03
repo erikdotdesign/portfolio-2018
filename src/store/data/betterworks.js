@@ -2,7 +2,6 @@ const betterworks = {
   'id':'betterworks',
   'tags':['Styleguide', 'UI/UX'],
   'name':'BetterWorks',
-  'hex': '#5BC0DE',
   'year': '2015',
   'snippet':`A cohesive styleguide aimed to increase efficiency across
     all media channels and departments at BetterWorks.`,

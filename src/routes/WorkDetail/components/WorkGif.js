@@ -22,7 +22,6 @@ class WorkGif extends React.Component {
             <LazyGif isVisible={isVisible} gif={this.props.gif} />
             <figcaption className='c-work-gif__caption top-stroke--strong top-stroke--inline'>
               <BlockReveal
-                blockColor={this.props.hex}
                 forcePlay={isVisible}
                 blockId={this.props.blockId}
                 inline={false}
@@ -53,7 +52,6 @@ WorkGif.propTypes = {
   gif: PropTypes.object,
   blockId: PropTypes.string,
   index: PropTypes.number,
-  hex: PropTypes.string
 };
 
 export default WorkGif;

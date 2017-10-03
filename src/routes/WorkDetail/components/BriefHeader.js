@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import Scrambler from '../../../components/Scrambler';
 import BlockReveal from '../../../components/BlockReveal';
 
-const BriefHeader = ({ forcePlay, hex, blockId }) => (
+const BriefHeader = ({ forcePlay, blockId }) => (
   <h3 className='top-stroke--strong top-stroke--inline'>
     <BlockReveal
-      blockColor={hex}
       forcePlay={forcePlay}
       blockId={blockId}
       inline={false}
@@ -26,7 +25,6 @@ const BriefHeader = ({ forcePlay, hex, blockId }) => (
 );
 
 BriefHeader.propTypes = {
-  hex: PropTypes.string,
   blockId: PropTypes.string,
   forcePlay: PropTypes.bool
 };

@@ -2,7 +2,6 @@ const tsdp = {
   'id':'tsdp',
   'tags':['Sketch plugin'],
   'name':'TSDP',
-  'hex': '#FEB305',
   'year': '2017',
   'snippet':'Sketch plugin with 17 custom commands that populate layers with live Twitch data.',
   'description': [

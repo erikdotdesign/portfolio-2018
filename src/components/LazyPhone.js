@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Preload from 'react-preload';
 import Phone from './Phone';
+import LoadingIndicator from './LoadingIndicator';
 
 const initialState = {
   viewed: false,
@@ -30,9 +31,7 @@ class LazyPhone extends React.Component {
   render () {
     var loadingIndicator = (
       <div className='c-phone'>
-        <div className='c-phone__loading'>
-          <div className='c-phone__loader' />
-        </div>
+        <LoadingIndicator />
       </div>
     );
     var images = [this.props.image.url];
