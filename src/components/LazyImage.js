@@ -15,7 +15,7 @@ class LazyImage extends React.Component {
     this.state = initialState;
   }
   componentWillReceiveProps (nextProps) {
-    if ((nextProps.isVisible && !this.props.isVisible) && !this.state.viewed) {
+    if ((nextProps.forcePlay && !this.props.forcePlay) && !this.state.viewed) {
       this.setState({ loaded : false, viewed: true, error: false });
     } else if (nextProps.blockId !== this.props.blockId) {
       this.setState(initialState);
@@ -66,7 +66,11 @@ class LazyImage extends React.Component {
 }
 
 LazyImage.propTypes = {
-
+  forcePlay: PropTypes.bool,
+  blockId: PropTypes.string,
+  retina: PropTypes.string,
+  imgAlt: PropTypes.string,
+  imgSrc: PropTypes.string
 };
 
 export default LazyImage;

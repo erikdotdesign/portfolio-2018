@@ -60,7 +60,11 @@ class LazyTablet extends React.Component {
 }
 
 LazyTablet.propTypes = {
-
+  forcePlay: PropTypes.bool,
+  blockId: PropTypes.string,
+  className: PropTypes.string,
+  image: PropTypes.object,
+  index: PropTypes.number
 };
 
 export default LazyTablet;

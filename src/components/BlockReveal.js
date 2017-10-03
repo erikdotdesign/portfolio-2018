@@ -178,8 +178,8 @@ BlockReveal.propTypes = {
   delay: PropTypes.number.isRequired,
   blockId: PropTypes.string,
   duration: PropTypes.number.isRequired,
-  background: PropTypes.string,
-  forcePlay: PropTypes.bool
+  forcePlay: PropTypes.bool,
+  header: PropTypes.bool
 };
 
 export default GSAP()(BlockReveal);

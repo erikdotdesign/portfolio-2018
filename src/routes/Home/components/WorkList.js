@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import WorkItem from './WorkItem';
 
 const WorkList = ({ workList }) => (
@@ -10,5 +11,9 @@ const WorkList = ({ workList }) => (
     }
   </main>
 );
+
+WorkList.propTypes = {
+  workList: PropTypes.array
+};
 
 export default WorkList;

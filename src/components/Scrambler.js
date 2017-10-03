@@ -13,7 +13,7 @@ function createAnim ({ options }) {
   scrambleTimeline.to(element, duration, {
     scrambleText: {
       text: text,
-      chars: '!#$%&?@\^_{|}~',
+      chars: '!#$%&?@^_{|}~',
       ease: Linear.easeNone,
       revealDelay: 0.4,
       speed: 0.3
@@ -70,7 +70,12 @@ class Scrambler extends React.Component {
 }
 
 Scrambler.propTypes = {
-
+  delay: PropTypes.number,
+  duration: PropTypes.number,
+  forcePlay: PropTypes.bool,
+  blockId: PropTypes.string,
+  text: PropTypes.string,
+  header: PropTypes.bool
 };
 
 export default GSAP()(Scrambler);

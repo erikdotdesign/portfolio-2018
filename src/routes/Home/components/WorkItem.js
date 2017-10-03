@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
-import Tablet from '../../../components/Tablet';
 import Scrambler from '../../../components/Scrambler';
 import LazyTablet from '../../../components/LazyTablet';
 import VisibilitySensor from 'react-visibility-sensor';

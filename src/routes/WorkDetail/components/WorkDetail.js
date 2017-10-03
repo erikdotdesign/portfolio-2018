@@ -32,6 +32,9 @@ class WorkDetail extends React.Component {
 }
 
 WorkDetail.propTypes = {
+  work: PropTypes.object,
+  nextWork: PropTypes.object,
+  prevWork: PropTypes.object,
   params: PropTypes.object
 };
 

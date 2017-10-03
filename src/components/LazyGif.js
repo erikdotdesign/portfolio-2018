@@ -16,7 +16,7 @@ class LazyGif extends React.Component {
     this.state = initialState;
   }
   componentWillReceiveProps (nextProps) {
-    if ((nextProps.isVisible && !this.props.isVisible) && !this.state.viewed) {
+    if ((nextProps.forcePlay && !this.props.forcePlay) && !this.state.viewed) {
       this.setState({ loaded : false, viewed: true, error: false });
     } else if (nextProps.blockId !== this.props.blockId) {
       this.setState(initialState);
@@ -67,7 +67,9 @@ class LazyGif extends React.Component {
 }
 
 LazyGif.propTypes = {
-
+  forcePlay: PropTypes.bool,
+  blockId: PropTypes.string,
+  gif: PropTypes.object
 };
 
 export default LazyGif;

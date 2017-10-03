@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import BlockReveal from './BlockReveal';
 
 const DownArrow = () => (
   <div className='c-down-arrow'>
@@ -37,9 +35,5 @@ const DownArrow = () => (
     </div>
   </div>
 );
-
-DownArrow.propTypes = {
-
-};
 
 export default DownArrow;

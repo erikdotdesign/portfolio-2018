@@ -74,6 +74,7 @@ class LazyGifAnim extends React.Component {
 
 LazyGifAnim.propTypes = {
   gif: PropTypes.object,
+  retina: PropTypes.string
 };
 
 export default GSAP()(LazyGifAnim);

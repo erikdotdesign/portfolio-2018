@@ -58,7 +58,9 @@ class LazyPhone extends React.Component {
 }
 
 LazyPhone.propTypes = {
-
+  forcePlay: PropTypes.bool,
+  blockId: PropTypes.string,
+  image: PropTypes.object
 };
 
 export default LazyPhone;

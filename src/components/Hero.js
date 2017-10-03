@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DownArrow from './DownArrow';
 import HalftoneCharacter from './HalftoneCharacter';
 
-const Hero = ({ arrowRevealColor, className, rightHalftoneText, children }) => (
+const Hero = ({ className, rightHalftoneText, children }) => (
   <header className={`section c-hero ${className}`} role='banner'>
     <HalftoneCharacter
       className='c-hero__rightHalftone'

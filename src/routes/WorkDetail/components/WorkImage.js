@@ -16,7 +16,7 @@ const WorkImage = ({ image, index, blockId }) => (
         <LazyImage
           imgSrc={image.url}
           retina={image.retina}
-          isVisible={isVisible}
+          forcePlay={isVisible}
           imgAlt={image.alt}
           blockId={blockId}
           index={index} />

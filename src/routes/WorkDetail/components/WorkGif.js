@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TweenMax from 'gsap/TweenMax';
-import TimelineMax from 'gsap/TimelineMax';
-import GSAP from 'react-gsap-enhancer';
 import VisibilitySensor from 'react-visibility-sensor';
 import BlockReveal from '../../../components/BlockReveal';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import LazyGif from '../../../components/LazyGif';
-import Button from '../../../components/Button';
 import Scrambler from '../../../components/Scrambler';
 
 class WorkGif extends React.Component {
@@ -19,7 +15,7 @@ class WorkGif extends React.Component {
             <HalftoneCharacter
               className='c-work-item__index'
               character={this.props.index + 1} />
-            <LazyGif isVisible={isVisible} gif={this.props.gif} />
+            <LazyGif forcePlay={isVisible} gif={this.props.gif} />
             <figcaption className='c-work-gif__caption top-stroke--strong top-stroke--inline'>
               <BlockReveal
                 forcePlay={isVisible}
