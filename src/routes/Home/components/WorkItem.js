@@ -5,7 +5,7 @@ import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import Scrambler from '../../../components/Scrambler';
 import LazyTablet from '../../../components/LazyTablet';
 import VisibilitySensor from 'react-visibility-sensor';
-import Button from '../../../components/Button';
+import OutlineButton from '../../../components/OutlineButton';
 
 const WorkItem = ({ work, index, blockId }) => (
   <VisibilitySensor partialVisibility delayedCall>
@@ -75,22 +75,13 @@ const WorkItem = ({ work, index, blockId }) => (
                 {work.snippet}
               </BlockReveal>
             </p>
-            <BlockReveal
-              inline={false}
+            <OutlineButton
+              text='Read more'
               forcePlay={isVisible}
-              blockId={blockId}
               delay={0.4}
-              duration={0.5}
-              direction={index % 2 === 0
-              ? 'rightLeft'
-              : 'leftRight'}>
-              <Button
-                text='Read more'
-                forcePlay={isVisible}
-                router
-                link={`/work/${work.id}`}
-                blockId={blockId} />
-            </BlockReveal>
+              router
+              link={`/work/${work.id}`}
+              blockId={blockId} />
           </div>
           <div className='column column--duo'>
             <HalftoneCharacter
@@ -116,3 +107,20 @@ WorkItem.propTypes = {
 };
 
 export default WorkItem;
+
+// <BlockReveal
+//               inline={false}
+//               forcePlay={isVisible}
+//               blockId={blockId}
+//               delay={0.4}
+//               duration={0.5}
+//               direction={index % 2 === 0
+//               ? 'rightLeft'
+//               : 'leftRight'}>
+//               <Button
+//                 text='Read more'
+//                 forcePlay={isVisible}
+//                 router
+//                 link={`/work/${work.id}`}
+//                 blockId={blockId} />
+//             </BlockReveal>

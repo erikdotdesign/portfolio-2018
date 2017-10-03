@@ -12,14 +12,6 @@
   &:focus
     outline-color: $captionColour
 
-.c-button--outline
-  font-family: unquote(map-get($headingtype, font-family))
-  border: 2px solid $black
-  font-weight: 700
-
-  &:hover, &:focus
-    background: rgba(0,0,0,0.05)
-
 .button-group-flush
   margin-left: -0.5rem
   margin-right: -0.5rem
@@ -33,3 +25,24 @@
   position: relative
   margin-top: -2rem
   padding-bottom: 1rem
+
+
+.c-button--outline
+  font-family: unquote(map-get($headingtype, font-family))
+  font-weight: 700
+  position: relative
+  height: 3.2rem
+  padding: 0 1.2rem
+
+  &:hover, &:focus
+    rect
+      fill: rgba(0,0,0,0.05)
+
+  svg
+    +absolute-full
+
+.c-button__text
+  opacity: 0
+
+
+

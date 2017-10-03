@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
 import GSAP from 'react-gsap-enhancer';
-import Button from './Button';
+import OutlineButton from './OutlineButton';
 
 function createAnim ({ options }) {
   const { image, overlay } = options.refs;
@@ -65,7 +65,7 @@ class LazyGifAnim extends React.Component {
             alt={this.props.gif.alt} />
         </div>
         <div className='c-work-gif__overlay' ref={overlay => { this.overlay = overlay; }}>
-          <Button className='button button--outline' text='Play' />
+          <OutlineButton text='Play' />
         </div>
       </div>
     );
@@ -74,7 +74,7 @@ class LazyGifAnim extends React.Component {
 
 LazyGifAnim.propTypes = {
   gif: PropTypes.object,
-  retina: PropTypes.string
+  retina: PropTypes.bool
 };
 
 export default GSAP()(LazyGifAnim);

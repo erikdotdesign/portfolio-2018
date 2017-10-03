@@ -1,30 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../../../components/Button';
+import OutlineButton from '../../../components/OutlineButton';
 import BlockReveal from '../../../components/BlockReveal';
 
 const BriefLinks = ({ links, forcePlay, blockId }) => (
   <div>
     {
       links.map((link, index) =>
-        <BlockReveal
+        <OutlineButton
           key={index}
-          forcePlay={forcePlay}
+          link={link.url}
           blockId={blockId}
-          inline={false}
-          delay={0}
-          duration={0.5}
-          direction={
-            index % 2 === 0
-            ? 'rightLeft'
-            : 'leftRight'}>
-          <Button
-            className='button button--outline'
-            link={link.url}
-            blockId={blockId}
-            forcePlay={forcePlay}
-            text={link.text} />
-        </BlockReveal>
+          forcePlay={forcePlay}
+          text={link.text} />
       )
     }
   </div>
