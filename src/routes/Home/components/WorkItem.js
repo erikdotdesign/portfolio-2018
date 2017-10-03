@@ -107,20 +107,3 @@ WorkItem.propTypes = {
 };
 
 export default WorkItem;
-
-// <BlockReveal
-//               inline={false}
-//               forcePlay={isVisible}
-//               blockId={blockId}
-//               delay={0.4}
-//               duration={0.5}
-//               direction={index % 2 === 0
-//               ? 'rightLeft'
-//               : 'leftRight'}>
-//               <Button
-//                 text='Read more'
-//                 forcePlay={isVisible}
-//                 router
-//                 link={`/work/${work.id}`}
-//                 blockId={blockId} />
-//             </BlockReveal>

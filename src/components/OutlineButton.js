@@ -21,7 +21,7 @@ function createAnim ({ options }) {
     strokeWidth: 2,
     immediateRender:false
   }, `+=${delay}`)
-  .set(textValue, {opacity: 1})
+  .set(textValue, { opacity: 1 })
   .to(textValue, 0.5, {
     scrambleText: {
       text: text,
@@ -84,26 +84,25 @@ class OutlineButton extends React.Component {
     const buttonGuts = (
       <span>
         <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 30 20"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          preserveAspectRatio="none">
+          width='100%'
+          height='100%'
+          viewBox='0 0 30 20'
+          version='1.1'
+          xmlns='http://www.w3.org/2000/svg'
+          xmlnsXlink='http://www.w3.org/1999/xlink'
+          preserveAspectRatio='none'>
           <rect
             ref={(outline) => { this.outline = outline; }}
-            id="Rectangle"
-            stroke="#000000"
-            fill="none"
+            stroke='#000000'
+            fill='none'
             strokeWidth='0'
             strokeMiterlimit='30'
             strokeLinecap='square'
-            x="1"
-            y="1"
-            width="28"
-            height="18"
-            vectorEffect='non-scaling-stroke'></rect>
+            x='1'
+            y='1'
+            width='28'
+            height='18'
+            vectorEffect='non-scaling-stroke' />
         </svg>
         <span
           className='c-button__text'
@@ -145,7 +144,11 @@ class OutlineButton extends React.Component {
 }
 
 OutlineButton.propTypes = {
-
+  router: PropTypes.bool,
+  blockId: PropTypes.string,
+  forcePlay: PropTypes.bool,
+  text: PropTypes.string,
+  link: PropTypes.string
 };
 
-export default GSAP()(OutlineButton);;
+export default GSAP()(OutlineButton);

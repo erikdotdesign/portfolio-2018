@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OutlineButton from '../../../components/OutlineButton';
-import BlockReveal from '../../../components/BlockReveal';
 
 const BriefLinks = ({ links, forcePlay, blockId }) => (
   <div>
