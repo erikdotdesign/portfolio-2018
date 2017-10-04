@@ -4,6 +4,7 @@ import TimelineMax from 'gsap/TimelineMax';
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
 import PropTypes from 'prop-types';
 import GSAP from 'react-gsap-enhancer';
+import VisibilitySensor from 'react-visibility-sensor';
 
 function createAnim ({ options }) {
   const { delay, duration, text } = options.props;
@@ -56,6 +57,11 @@ class Scrambler extends React.Component {
       }
     }
   }
+  onChange = (isVisible) => {
+    if (this.scrambleAnimation && isVisible) {
+      this.playTimeline();
+    }
+  }
   playTimeline = () => {
     this.scrambleAnimation.play();
   }
@@ -64,7 +70,11 @@ class Scrambler extends React.Component {
   }
   render () {
     return (
-      <span ref={element => { this.element = element; }}>{this.props.text}</span>
+      <VisibilitySensor
+        onChange={this.onChange}
+        delayedCall>
+        <span ref={element => { this.element = element; }}>{this.props.text}</span>
+      </VisibilitySensor>
     );
   }
 }
