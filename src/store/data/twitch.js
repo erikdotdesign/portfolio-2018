@@ -3,7 +3,7 @@ const twitch = {
   'tags':['Product', 'UI/UX'],
   'name':'Twitch',
   'year': '2017',
-  'snippet': 'A breakdown of my workflow at Twitch and the products I had the oppertunity to worked on.',
+  'snippet': 'A breakdown of my workflow at Twitch and an overview of my process for In-Player Recommendations.',
   'description': [
     `While at Twitch I was fortunate enough to work on many great products
     and features. As a UI/UX designer for the live video team, I worked
