@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className='c-footer section' role='contentinfo'>
     <div className='columns-flush'>
       <div className='column column--duo'>
-        <p>&copy; Erik Myers Design 2018</p>
+        <p>Erik Myers Design 2019</p>
         <a
           className='c-footer__link'
           title='Github Repo'

@@ -24,22 +24,6 @@ const HomeHero = () => (
               </Scrambler>
             </BlockReveal>
           </h1>
-          {/* <h1 className='epsilon--display-condensed'>
-            <BlockReveal
-              inline={false}
-              forcePlay={isVisible}
-              delay={0.15}
-              duration={0.5}
-              direction='rightLeft'>
-              <Scrambler
-                forcePlay={isVisible}
-                duration={0.5}
-                delay={0.75}
-                text='Design'>
-                Design
-              </Scrambler>
-            </BlockReveal>
-          </h1> */}
           <span className='c-hero__subtitle'>
             <BlockReveal
               inline={false}
