@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Space+Mono:400,700');
 @import '~sassline/assets/sass/sassline-base/variables';
 
 $bodytype: (
-  font-family: 'Roboto, Helvetica, sans-serif',
+  font-family: 'Space Mono, Helvetica, sans-serif',
   regular: 400,
   bold: 700,
   italic: italic,
@@ -10,7 +10,7 @@ $bodytype: (
 );
 
 $headingtype: (
-  font-family: 'Roboto Mono, Helvetica, sans-serif',
+  font-family: 'Space Mono, Helvetica, sans-serif',
   regular: 400,
   bold: 700,
   cap-height: 0.72
