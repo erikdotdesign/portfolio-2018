@@ -51,11 +51,17 @@ const WorkItem = ({ work, index, blockId }) => (
                 {
                   work.tags.map((tag, index) =>
                     <li className={'c-work-item__tag'} key={index}>
-                      {
-                        index === work.tags.length - 1
-                        ? tag
-                        : `${tag},\u00A0`
-                      }
+                      <Scrambler
+                        forcePlay={isVisible}
+                        blockId={blockId}
+                        header
+                        text={index === work.tags.length - 1 ? tag : `${tag},\u00A0`}
+                        duration={0.5}
+                        delay={0.75 + (0.1 * index)}>
+                        {
+                          index === work.tags.length - 1 ? tag : `${tag},\u00A0`
+                        }
+                      </Scrambler>
                     </li>
                   )
                 }
