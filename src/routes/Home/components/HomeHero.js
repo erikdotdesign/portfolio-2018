@@ -17,7 +17,7 @@ const HomeHero = () => (
               duration={0.5}>
               <Scrambler
                 forcePlay={isVisible}
-                duration={0.5}
+                duration={1}
                 delay={0.6}
                 text='Erik Myers'>
                 Erik Myers
@@ -33,7 +33,7 @@ const HomeHero = () => (
               direction='rightLeft'>
               <Scrambler
                 forcePlay={isVisible}
-                duration={0.5}
+                duration={1}
                 delay={0.8}
                 text='Full Stack Design'>
                 Full Stack Design

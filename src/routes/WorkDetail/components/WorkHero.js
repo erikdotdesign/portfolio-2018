@@ -23,7 +23,7 @@ const WorkHero = ({ year, title, tags, blockId }) => (
                 blockId={blockId}
                 text={title}
                 header
-                duration={0.5}
+                duration={1}
                 delay={0.6}>
                 {title}
               </Scrambler>
@@ -46,8 +46,8 @@ const WorkHero = ({ year, title, tags, blockId }) => (
                     blockId={blockId}
                     header
                     text={index === tags.length - 1 ? tag : `${tag},\u00A0`}
-                    duration={0.5}
-                    delay={0.75 + (0.1 * index)}>
+                    duration={1}
+                    delay={0.75 + (0.2 * index)}>
                     {
                       index === tags.length - 1 ? tag : `${tag},\u00A0`
                     }

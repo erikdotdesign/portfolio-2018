@@ -22,10 +22,10 @@ function createAnim ({ options }) {
     immediateRender:false
   }, `+=${delay}`)
   .set(textValue, { opacity: 1 })
-  .to(textValue, 0.5, {
+  .to(textValue, 1, {
     scrambleText: {
       text: text,
-      chars: '!#$%&?@^_{|}~',
+      chars: '!#$%&?@*+=-',
       ease: Linear.easeNone,
       revealDelay: 0.4,
       speed: 0.3
