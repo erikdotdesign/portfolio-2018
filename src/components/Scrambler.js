@@ -14,7 +14,7 @@ function createAnim ({ options }) {
   scrambleTimeline.to(element, duration, {
     scrambleText: {
       text: text,
-      chars: '!#$%&?@*+=-',
+      chars: '!#}$%&?@{*+=-',
       ease: Linear.easeNone,
       revealDelay: 0.4,
       speed: 0.3

@@ -84,9 +84,9 @@ class Tablet extends React.Component {
       <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
         <div className={`c-tablet-wrap ${this.props.className ? this.props.className : null}`}>
           <figure className='c-tablet'>
-            <svg width='550px'
-              height='425px'
-              viewBox='0 0 550 425'
+            <svg width='1104px'
+              height='854px'
+              viewBox='0 0 1104 854'
               version='1.1'
               xmlns='http://www.w3.org/2000/svg'
               xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -96,44 +96,46 @@ class Tablet extends React.Component {
               <title id={`tablet-title-${this.props.index}`}>{this.props.image.alt}</title>
               <defs>
                 <rect id={`tablet-path-${this.props.index}`}
-                  x='25.5'
-                  y='25.5'
-                  width='499'
-                  height='374' />
+                  x='51.5'
+                  y='51.5'
+                  width='997'
+                  height='747' />
               </defs>
-              <rect ref={(outline) => { this.outline = outline; }}
-                fill='none'
-                stroke='#000000'
-                strokeMiterlimit='30'
-                strokeLinecap='square'
-                strokeWidth='0'
-                x='1'
-                y='1'
-                width='548'
-                height='423'
-                rx='20'
-                vectorEffect='non-scaling-stroke' />
-              <mask id={`tablet-mask-${this.props.index}`} fill='white'>
-                <use xlinkHref={`#tablet-path-${this.props.index}`} />
-              </mask>
-              <image ref={(screenMask) => { this.screenMask = screenMask; }}
-                mask={`url(#tablet-mask-${this.props.index})`}
-                x='25'
-                y='25'
-                width='500'
-                height='375'
-                xlinkHref={this.props.forcePlay ? this.props.image.url : null} />
-              <rect ref={(screenOutline) => { this.screenOutline = screenOutline; }}
-                fill='none'
-                stroke='#000000'
-                strokeMiterlimit='30'
-                strokeLinecap='square'
-                strokeWidth='0'
-                x='25.5'
-                y='25.5'
-                width='499'
-                height='374'
-                vectorEffect='non-scaling-stroke' />
+              <g transform='translate(2.000000, 2.000000)'>
+                <rect ref={(outline) => { this.outline = outline; }}
+                  fill='none'
+                  stroke='#000000'
+                  strokeMiterlimit='30'
+                  strokeLinecap='square'
+                  strokeWidth='0'
+                  x='1'
+                  y='1'
+                  width='1098'
+                  height='848'
+                  rx='20'
+                  vectorEffect='non-scaling-stroke' />
+                <mask id={`tablet-mask-${this.props.index}`} fill='white'>
+                  <use xlinkHref={`#tablet-path-${this.props.index}`} />
+                </mask>
+                <image ref={(screenMask) => { this.screenMask = screenMask; }}
+                  mask={`url(#tablet-mask-${this.props.index})`}
+                  x='51'
+                  y='51'
+                  width='998'
+                  height='748'
+                  xlinkHref={this.props.forcePlay ? this.props.image.url : null} />
+                <rect ref={(screenOutline) => { this.screenOutline = screenOutline; }}
+                  fill='none'
+                  stroke='#000000'
+                  strokeMiterlimit='30'
+                  strokeLinecap='square'
+                  strokeWidth='0'
+                  x='51.5'
+                  y='51.5'
+                  width='997'
+                  height='747'
+                  vectorEffect='non-scaling-stroke' />
+              </g>
             </svg>
           </figure>
         </div>

@@ -13,9 +13,9 @@ const WorkItem = ({ work, index, blockId }) => (
       <article className='section c-work-item' role='article'>
         <div className='columns-flush'>
           <div className='column column--duo column--mg-b'>
-            <HalftoneCharacter
+            {/* <HalftoneCharacter
               className='c-work-item__index'
-              character={index + 1} />
+              character={index + 1} /> */}
             <h1>
               <BlockReveal
                 inline={false}
@@ -82,7 +82,7 @@ const WorkItem = ({ work, index, blockId }) => (
               </BlockReveal>
             </p>
             <OutlineButton
-              text='Read more'
+              text='Read More'
               forcePlay={isVisible}
               delay={0.4}
               router
@@ -90,9 +90,9 @@ const WorkItem = ({ work, index, blockId }) => (
               blockId={blockId} />
           </div>
           <div className='column column--duo'>
-            <HalftoneCharacter
+            {/* <HalftoneCharacter
               className='c-work-item__display-name'
-              character={work.name.slice(0, 2)} />
+              character={work.name.slice(0, 2)} /> */}
             <LazyTablet
               className='c-tablet__warp--right'
               image={work.tablet}
