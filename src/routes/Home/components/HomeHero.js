@@ -19,7 +19,10 @@ const HomeHero = () => (
                 forcePlay={isVisible}
                 duration={1}
                 delay={0.6}
-                text='erik.design'>
+                text='erik.design'
+                secondStep
+                secondStepText='2014 – 2019'
+                secondStepDelay={1}>
                 erik.design
               </Scrambler>
             </BlockReveal>
@@ -35,7 +38,10 @@ const HomeHero = () => (
                 forcePlay={isVisible}
                 duration={1}
                 delay={0.6}
-                text='Erik Myers Design'>
+                text='Erik Myers Design'
+                secondStep
+                secondStepText='Full Stack Design'
+                secondStepDelay={1}>
                 Erik Myers Design
               </Scrambler>
             </BlockReveal>

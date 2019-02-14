@@ -7,19 +7,41 @@ import GSAP from 'react-gsap-enhancer';
 import VisibilitySensor from 'react-visibility-sensor';
 
 function createAnim ({ options }) {
-  const { delay, duration, text } = options.props;
+  const { delay, duration, text, secondStep, secondStepText, secondStepDelay } = options.props;
   const { element } = options.refs;
+
   const scrambleTimeline = new TimelineMax({ paused: true });
+
+  const scramblerConstants = {
+    chars: '!#}$%&?@{*+=-',
+    ease: Linear.easeNone,
+    revealDelay: 0.4,
+    speed: 0.3
+  };
 
   scrambleTimeline.to(element, duration, {
     scrambleText: {
       text: text,
-      chars: '!#}$%&?@{*+=-',
-      ease: Linear.easeNone,
-      revealDelay: 0.4,
-      speed: 0.3
+      ...scramblerConstants
     }
   }, `+=${delay}`);
+
+  if (secondStep) {
+    const scrambleTimelineChild = new TimelineMax({
+      paused: false,
+      repeat: -1,
+      repeatDelay: 2,
+      yoyo: true
+    });
+    scrambleTimelineChild.to(element, duration, {
+      scrambleText: {
+        text: secondStepText,
+        ...scramblerConstants
+      }
+    }, `+=${secondStepDelay}`);
+
+    scrambleTimeline.add([scrambleTimelineChild]);
+  }
 
   return scrambleTimeline;
 }
@@ -85,7 +107,10 @@ Scrambler.propTypes = {
   forcePlay: PropTypes.bool,
   blockId: PropTypes.string,
   text: PropTypes.string,
-  header: PropTypes.bool
+  header: PropTypes.bool,
+  secondStep: PropTypes.bool,
+  secondStepText: PropTypes.string,
+  secondStepDelay: PropTypes.number
 };
 
 export default GSAP()(Scrambler);
