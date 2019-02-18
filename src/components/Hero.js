@@ -1,22 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DownArrow from './DownArrow';
-import HalftoneCharacter from './HalftoneCharacter';
 
-const Hero = ({ className, rightHalftoneText, children }) => (
+const Hero = ({ className, rightHalftoneText, children, forcePlay }) => (
   <header className={`section c-hero ${className}`} role='banner'>
-    <HalftoneCharacter
-      className='c-hero__rightHalftone'
-      character={rightHalftoneText} />
     {children}
-    <DownArrow />
+    <DownArrow forcePlay={forcePlay} />
   </header>
 );
 
 Hero.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  rightHalftoneText: PropTypes.string
+  forcePlay: PropTypes.bool
 };
 
 export default Hero;

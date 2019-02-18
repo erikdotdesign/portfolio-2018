@@ -12,10 +12,18 @@ const WorkItem = ({ work, index, blockId }) => (
     {({ isVisible }) =>
       <article className='section c-work-item' role='article'>
         <div className='columns-flush'>
+          <div className='column column--duo'>
+            <LazyTablet
+              className='c-tablet__warp--left'
+              image={work.tablet}
+              blockId={blockId}
+              forcePlay={isVisible}
+              index={index} />
+          </div>
           <div className='column column--duo column--mg-b'>
-            {/* <HalftoneCharacter
+            <HalftoneCharacter
               className='c-work-item__index'
-              character={index + 1} /> */}
+              character={index + 1} />
             <h1>
               <BlockReveal
                 inline={false}
@@ -88,17 +96,6 @@ const WorkItem = ({ work, index, blockId }) => (
               router
               link={`/work/${work.id}`}
               blockId={blockId} />
-          </div>
-          <div className='column column--duo'>
-            {/* <HalftoneCharacter
-              className='c-work-item__display-name'
-              character={work.name.slice(0, 2)} /> */}
-            <LazyTablet
-              className='c-tablet__warp--right'
-              image={work.tablet}
-              blockId={blockId}
-              forcePlay={isVisible}
-              index={index} />
           </div>
         </div>
       </article>

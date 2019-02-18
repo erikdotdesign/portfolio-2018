@@ -1,39 +1,130 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import TweenMax from 'gsap/TweenMax';
+import TimelineMax from 'gsap/TimelineMax';
+import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
+import VisibilitySensor from 'react-visibility-sensor';
+import GSAP from 'react-gsap-enhancer';
 
-const DownArrow = () => (
-  <div className='c-down-arrow'>
-    <div className='c-down-arrow__svg c-down-arrow__svg--lg'>
-      <svg
-        width='36px'
-        height='64px'
-        viewBox='0 0 36 64'
-        version='1.1'
-        xmlns='http://www.w3.org/2000/svg'
-        xmlnsXlink='http://www.w3.org/1999/xlink'>
-        <path
-          fill='#000000'
-          d={`M17,60.0857864 L1.70710678,44.7928932 L0.292893219,
-            46.2071068 L18,63.9142136 L35.7071068,46.2071068 L34.2928932,
-            44.7928932 L19,60.0857864 L19,0.5 L17,0.5 L17,60.0857864 Z`} />
-      </svg>
-    </div>
-    <div className='c-down-arrow__svg c-down-arrow__svg--sm'>
-      <svg
-        width='20px'
-        height='36px'
-        viewBox='0 0 20 36'
-        version='1.1'
-        xmlns='http://www.w3.org/2000/svg'
-        xmlnsXlink='http://www.w3.org/1999/xlink'>
-        <path
-          fill='#000000'
-          d={`M8.77419355,31.3277219 L1.70710678,24.2606352 L0.292893219,
-            25.6748487 L9.77419355,35.156149 L19.2554939,25.6748487 L17.8412803,
-            24.2606352 L10.7741935,31.3277219 L10.7741935,0.258064516 L8.77419355,
-            0.258064516 L8.77419355,31.3277219 Z`} />
-      </svg>
-    </div>
-  </div>
-);
+function createAnim ({ options }) {
+  const arrowTimeline = new TimelineMax({ paused: true });
+  const { chevron, stem, arrowGroup } = options.refs;
 
-export default DownArrow;
+  arrowTimeline.set(arrowGroup, {visibility: 'visible'});
+  arrowTimeline.set(stem, {drawSVG: 0});
+  arrowTimeline.set(chevron, {drawSVG: '50% 50%'});
+
+  arrowTimeline
+    .to(stem, 0.5, {
+      drawSVG: true,
+      immediateRender: false
+    })
+    .to(chevron, 0.5, {
+      drawSVG: true,
+      immediateRender: false
+    });
+
+  const arrowTimelineChild = new TimelineMax({
+    paused: false,
+    repeat: -1,
+    yoyo: true
+  });
+
+  arrowTimelineChild
+    .to(arrowGroup, 1, {
+      y: -20
+    });
+
+  arrowTimeline.add([arrowTimelineChild]);
+
+  return arrowTimeline;
+}
+
+class DownArrow extends React.Component {
+  componentDidMount () {
+    this.arrowAnimation = this.addAnimation(createAnim, {
+      props: this.props,
+      refs: {
+        chevron: this.chevron,
+        stem: this.stem,
+        arrowGroup: this.arrowGroup
+      }
+    });
+  }
+  shouldComponentUpdate (nextProps, nextState) {
+    if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate (prevProps, prevState) {
+    if (!prevProps.forcePlay && this.props.forcePlay) {
+      this.playTimeline();
+    } else if (this.props.blockId !== prevProps.blockId) {
+      this.arrowAnimation.kill();
+      this.arrowAnimation = this.addAnimation(createAnim, {
+        props: this.props,
+        refs: {
+          chevron: this.chevron,
+          stem: this.stem,
+          arrowGroup: this.arrowGroup
+        }
+      });
+      if (this.props.forcePlay && !prevProps.forcePlay) {
+        this.playTimeline();
+      }
+    }
+  }
+  onChange = (isVisible) => {
+    if (this.arrowAnimation && isVisible) {
+      this.playTimeline();
+    }
+  }
+  playTimeline = () => {
+    this.arrowAnimation.play();
+  }
+  pauseTimeline = () => {
+    this.arrowAnimation.pause();
+  }
+  render () {
+    return (
+      <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
+        <div className='c-down-arrow'>
+          <svg
+            ref={(arrowGroup) => { this.arrowGroup = arrowGroup; }}
+            visibility="hidden"
+            width="36px"
+            height="55px"
+            viewBox="0 0 36 55"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <g
+              transform="translate(1.000000, 1.000000)"
+              stroke="#000000"
+              stroke-width="2">
+              <polyline
+                ref={(chevron) => { this.chevron = chevron; }}
+                fill="none"
+                transform="translate(17.000000, 41.500000) rotate(-180.000000) translate(-17.000000, -41.500000)"
+                points="0 52 17 31 17 31 34 52">
+              </polyline>
+              <path
+                ref={(stem) => { this.stem = stem; }}
+                d="M17,0 L17,50"
+                stroke-linecap="square">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </VisibilitySensor>
+    );
+  }
+}
+
+DownArrow.propTypes = {
+  forcePlay: PropTypes.bool,
+  blockId: PropTypes.string
+};
+
+export default GSAP()(DownArrow);

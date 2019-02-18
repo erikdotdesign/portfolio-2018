@@ -4,7 +4,7 @@ import Scrambler from '../../../components/Scrambler';
 import BlockReveal from '../../../components/BlockReveal';
 
 const BriefHeader = ({ forcePlay, blockId }) => (
-  <h3 className='top-stroke--strong top-stroke--inline'>
+  <h3>
     <BlockReveal
       forcePlay={forcePlay}
       blockId={blockId}
@@ -15,7 +15,7 @@ const BriefHeader = ({ forcePlay, blockId }) => (
       <Scrambler
         forcePlay={forcePlay}
         blockId={blockId}
-        duration={0.5}
+        duration={1}
         delay={0.6}
         text='Brief'>
         Brief

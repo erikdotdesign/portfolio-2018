@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 const HomeHero = () => (
   <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
-      <Hero>
+      <Hero forcePlay={isVisible}>
         <div className='single c-work-hero__content'>
           <h1 className='epsilon--display-condensed'>
             <BlockReveal
@@ -22,7 +22,7 @@ const HomeHero = () => (
                 text='erik.design'
                 secondStep
                 secondStepText='2014 – 2019'
-                secondStepDelay={1}>
+                secondStepDelay={2}>
                 erik.design
               </Scrambler>
             </BlockReveal>
@@ -41,7 +41,7 @@ const HomeHero = () => (
                 text='Erik Myers Design'
                 secondStep
                 secondStepText='Full Stack Design'
-                secondStepDelay={1}>
+                secondStepDelay={2.5}>
                 Erik Myers Design
               </Scrambler>
             </BlockReveal>
