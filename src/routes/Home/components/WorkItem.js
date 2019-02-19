@@ -21,9 +21,9 @@ const WorkItem = ({ work, index, blockId }) => (
               index={index} />
           </div>
           <div className='column column--duo column--mg-b'>
-            <HalftoneCharacter
+            {/* <HalftoneCharacter
               className='c-work-item__index'
-              character={index + 1} />
+              character={index + 1} /> */}
             <h1>
               <BlockReveal
                 inline={false}
