@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DownArrow from './DownArrow';
 
-const Hero = ({ className, rightHalftoneText, children, forcePlay }) => (
+const Hero = ({ className, children, forcePlay }) => (
   <header className={`section c-hero ${className}`} role='banner'>
     {children}
     <DownArrow forcePlay={forcePlay} />

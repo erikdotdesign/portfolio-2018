@@ -98,6 +98,7 @@ class Tablet extends React.Component {
                 <rect id={`tablet-path-${this.props.index}`}
                   x='51.5'
                   y='51.5'
+                  rx='10'
                   width='997'
                   height='747' />
               </defs>
@@ -112,7 +113,7 @@ class Tablet extends React.Component {
                   y='1'
                   width='1098'
                   height='848'
-                  rx='20'
+                  rx='40'
                   vectorEffect='non-scaling-stroke' />
                 <mask id={`tablet-mask-${this.props.index}`} fill='white'>
                   <use xlinkHref={`#tablet-path-${this.props.index}`} />
@@ -134,6 +135,7 @@ class Tablet extends React.Component {
                   y='51.5'
                   width='997'
                   height='747'
+                  rx='10'
                   vectorEffect='non-scaling-stroke' />
               </g>
             </svg>

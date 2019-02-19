@@ -80,9 +80,9 @@ class Phone extends React.Component {
     return (
       <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
         <figure className='c-phone'>
-          <svg width='254px'
-            height='448px'
-            viewBox='0 0 254 448'
+          <svg width='280px'
+            height='464px'
+            viewBox='0 0 280 464'
             version='1.1'
             aria-labelledby='#phone-title'
             role='img'
@@ -92,35 +92,36 @@ class Phone extends React.Component {
             <title id='phone-title'>{this.props.image.alt}</title>
             <defs>
               <rect id='phone-path'
-                x='0'
-                y='0'
-                width='224'
-                height='396' />
+                x='20'
+                y='20'
+                rx='10'
+                width='236'
+                height='420' />
             </defs>
-            <rect
-              ref={(outline) => { this.outline = outline; }}
-              stroke='#000000'
-              fill='none'
-              strokeWidth='0'
-              strokeMiterlimit='30'
-              strokeLinecap='square'
-              x='1'
-              y='1'
-              width='252'
-              height='446'
-              rx='20'
-              vectorEffect='non-scaling-stroke' />
-            <g transform='translate(15.000000, 25.000000)'>
+            <g transform='translate(2.000000, 2.000000)'>
+              <rect
+                ref={(outline) => { this.outline = outline; }}
+                stroke='#000000'
+                fill='none'
+                strokeWidth='0'
+                strokeMiterlimit='30'
+                strokeLinecap='square'
+                x='-1'
+                y='-1'
+                width='278'
+                height='462'
+                rx='25'
+                vectorEffect='non-scaling-stroke' />
               <mask id='phone-mask' fill='white'>
                 <use xlinkHref='#phone-path' />
               </mask>
               <image
                 ref={(screenMask) => { this.screenMask = screenMask; }}
                 mask='url(#phone-mask)'
-                x='1'
-                y='1'
-                width='222'
-                height='395'
+                x='20'
+                y='20'
+                width='236'
+                height='420'
                 xlinkHref={this.props.forcePlay ? this.props.image.url : null} />
               <rect
                 ref={(screenOutline) => { this.screenOutline = screenOutline; }}
@@ -129,10 +130,11 @@ class Phone extends React.Component {
                 strokeWidth='0'
                 strokeMiterlimit='30'
                 strokeLinecap='square'
-                x='0.5'
-                y='0.5'
-                width='223'
-                height='396'
+                x='19.5'
+                y='19.5'
+                width='237'
+                height='421'
+                rx='10'
                 vectorEffect='non-scaling-stroke' />
             </g>
           </svg>
