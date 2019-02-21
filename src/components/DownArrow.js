@@ -102,7 +102,7 @@ class DownArrow extends React.Component {
             <g
               transform="translate(1.000000, 1.000000)"
               stroke="#000000"
-              stroke-width="2">
+              strokeWidth="2">
               <polyline
                 ref={(chevron) => { this.chevron = chevron; }}
                 fill="none"
@@ -112,7 +112,7 @@ class DownArrow extends React.Component {
               <path
                 ref={(stem) => { this.stem = stem; }}
                 d="M17,0 L17,50"
-                stroke-linecap="square">
+                strokeLinecap="square">
               </path>
             </g>
           </svg>

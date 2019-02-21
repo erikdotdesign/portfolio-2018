@@ -56,14 +56,14 @@ class Scrambler extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
+    if ((this.props.forcePlay !== nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
     } else {
       return false;
     }
   }
   componentDidUpdate (prevProps, prevState) {
-    if (!prevProps.forcePlay && this.props.forcePlay) {
+    if (this.props.forcePlay) {
       this.playTimeline();
     } else if (this.props.blockId !== prevProps.blockId) {
       this.scrambleAnimation.kill();
@@ -74,15 +74,22 @@ class Scrambler extends React.Component {
           element: this.element
         }
       });
-      if (this.props.forcePlay && (!prevProps.forcePlay || this.props.header)) {
-        this.playTimeline();
-      }
     }
-  }
-  onChange = (isVisible) => {
-    if (this.scrambleAnimation && isVisible) {
-      this.playTimeline();
-    }
+    // if (!prevProps.forcePlay && this.props.forcePlay) {
+    //   this.playTimeline();
+    // } else if (this.props.blockId !== prevProps.blockId) {
+    //   this.scrambleAnimation.kill();
+    //   this.element.textContent = this.props.text;
+    //   this.scrambleAnimation = this.addAnimation(createAnim, {
+    //     props: this.props,
+    //     refs: {
+    //       element: this.element
+    //     }
+    //   });
+    //   if (this.props.forcePlay && (!prevProps.forcePlay || this.props.header)) {
+    //     this.playTimeline();
+    //   }
+    // }
   }
   playTimeline = () => {
     this.scrambleAnimation.play();
@@ -92,11 +99,7 @@ class Scrambler extends React.Component {
   }
   render () {
     return (
-      <VisibilitySensor
-        onChange={this.onChange}
-        delayedCall>
-        <span ref={element => { this.element = element; }}>{this.props.text}</span>
-      </VisibilitySensor>
+      <span ref={element => { this.element = element; }}>{this.props.text}</span>
     );
   }
 }

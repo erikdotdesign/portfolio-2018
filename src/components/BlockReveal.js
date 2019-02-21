@@ -2,7 +2,6 @@ import React from 'react';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
 import PropTypes from 'prop-types';
-import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
 
 function createAnim ({ options }) {
@@ -116,14 +115,14 @@ class BlockReveal extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
+    if ((this.props.forcePlay !== nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
     } else {
       return false;
     }
   }
   componentDidUpdate (prevProps, prevState) {
-    if (!prevProps.forcePlay && this.props.forcePlay) {
+    if (this.props.forcePlay) {
       this.playTimeline();
     } else if (this.props.blockId !== prevProps.blockId) {
       this.blockAnimation.kill();
@@ -134,14 +133,6 @@ class BlockReveal extends React.Component {
           block: this.block
         }
       });
-      if (this.props.forcePlay && (!prevProps.forcePlay || this.props.header)) {
-        this.playTimeline();
-      }
-    }
-  }
-  onChange = (isVisible) => {
-    if (this.blockAnimation && isVisible) {
-      this.playTimeline();
     }
   }
   playTimeline = () => {
@@ -152,22 +143,18 @@ class BlockReveal extends React.Component {
   }
   render () {
     return (
-      <VisibilitySensor
-        onChange={this.onChange}
-        delayedCall>
-        <span className={this.props.inline ? 'c-block-reveal-inline' : null}>
-          <span className='c-block-reveal'>
-            <span
-              className='c-block-reveal__element'
-              ref={element => { this.element = element; }}>
-              {this.props.children}
-            </span>
-            <span
-              className='c-block-reveal__block'
-              ref={block => { this.block = block; }} />
+      <span className={this.props.inline ? 'c-block-reveal-inline' : null}>
+        <span className='c-block-reveal'>
+          <span
+            className='c-block-reveal__element'
+            ref={element => { this.element = element; }}>
+            {this.props.children}
           </span>
+          <span
+            className='c-block-reveal__block'
+            ref={block => { this.block = block; }} />
         </span>
-      </VisibilitySensor>
+      </span>
     );
   }
 }

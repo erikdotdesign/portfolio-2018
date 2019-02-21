@@ -5,23 +5,22 @@ import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
 import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
-import VisibilitySensor from 'react-visibility-sensor';
 import { Link } from 'react-router';
 
 function createAnim ({ options }) {
-  const { text, delay } = options.props;
+  const { text } = options.props;
   const buttonTimeline = new TimelineMax({ paused: true });
   const { outline, textValue } = options.refs;
   buttonTimeline
-  .fromTo(outline, 0.5, {
+  .fromTo(outline, 0.75, {
     drawSVG: 0,
     strokeWidth: 2
   }, {
     drawSVG:'100%',
     strokeWidth: 2,
     immediateRender:false
-  }, `+=${delay}`)
-  .set(textValue, { opacity: 1 })
+  })
+  .set(textValue, { opacity: 1 }, `-=0.25`)
   .to(textValue, 1, {
     scrambleText: {
       text: text,
@@ -30,7 +29,7 @@ function createAnim ({ options }) {
       revealDelay: 0.4,
       speed: 0.3
     }
-  }, '-=0.15');
+  }, `-=0.25`);
 
   return buttonTimeline;
 }
@@ -46,31 +45,14 @@ class OutlineButton extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
+    if (this.props.forcePlay !== nextProps.forcePlay) {
       return true;
     } else {
       return false;
     }
   }
   componentDidUpdate (prevProps, prevState) {
-    if (!prevProps.forcePlay && this.props.forcePlay) {
-      this.playTimeline();
-    } else if (this.props.blockId !== prevProps.blockId) {
-      this.buttonAnimation.kill();
-      this.buttonAnimation = this.addAnimation(createAnim, {
-        props: this.props,
-        refs: {
-          outline: this.outline,
-          textValue: this.textValue
-        }
-      });
-      if (this.props.forcePlay && !prevProps.forcePlay) {
-        this.playTimeline();
-      }
-    }
-  }
-  onChange = (isVisible) => {
-    if (this.buttonAnimation && isVisible) {
+    if (this.props.forcePlay) {
       this.playTimeline();
     }
   }
@@ -112,33 +94,29 @@ class OutlineButton extends React.Component {
       </span>
     );
     return (
-      <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
-        {
-          this.props.router
-          ? <Link
-            className='c-button c-button--outline'
-            role='button'
-            aria-label={this.props.text}
-            to={this.props.link}>
-            {buttonGuts}
-          </Link>
-          : this.props.link
-          ? <a
-            className='c-button c-button--outline'
-            role='button'
-            href={this.props.link}
-            aria-label={this.props.text}
-            target='_blank'>
-            {buttonGuts}
-          </a>
-          : <button
-            className='c-button c-button--outline'
-            role='button'
-            aria-label={this.props.text}>
-            {buttonGuts}
-          </button>
-        }
-      </VisibilitySensor>
+      this.props.router
+      ? <Link
+        className='c-button c-button--outline'
+        role='button'
+        aria-label={this.props.text}
+        to={this.props.link}>
+        {buttonGuts}
+      </Link>
+      : this.props.link
+      ? <a
+        className='c-button c-button--outline'
+        role='button'
+        href={this.props.link}
+        aria-label={this.props.text}
+        target='_blank'>
+        {buttonGuts}
+      </a>
+      : <button
+        className='c-button c-button--outline'
+        role='button'
+        aria-label={this.props.text}>
+        {buttonGuts}
+      </button>
     );
   }
 }

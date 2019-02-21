@@ -11,6 +11,7 @@ const TopNav = () => (
       aria-label='Home'>
       <Logo />
     </IndexLink>
+    <div className='c-top-nav__block' />
   </nav>
 );
 

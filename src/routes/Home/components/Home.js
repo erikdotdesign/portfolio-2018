@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WorkList from './WorkList';
-import HomeHero from './HomeHero';
+import Hero from '../../../components/Hero';
 
 const Home = ({ workList }) => (
   <div className='typeset'>
-    <HomeHero />
+    <Hero
+      title='erik.design'
+      subtitle='Erik Myers Design'
+      secondStep
+      titleTwo='2014 – 2019'
+      subtitleTwo='Full Stack Design' />
     <WorkList workList={workList} />
   </div>
 );

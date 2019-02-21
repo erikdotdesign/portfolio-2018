@@ -2,20 +2,16 @@
   margin-top: 7rem
   margin-bottom: 7rem
 
-.c-work-item__tag-list
-  list-style-type: none
-
-.c-work-item__tag
-  display: inline-block
-
 .typeset
   .c-work-item__tag-list
     font-family: unquote(map-get($headingtype, font-family))
     +sassline(delta, $headingtype, 2, 1, all)
+    font-weight: 400
 
-  .c-work-item__tag
-    margin: 0
-    padding: 0
+  .c-work-item__meta
+    font-family: unquote(map-get($headingtype, font-family))
+    +sassline(zeta, $headingtype, 2, 1, all)
+    font-weight: 400
 
   .c-work-item__display-name
     position: absolute

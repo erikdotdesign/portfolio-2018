@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import WorkHero from './WorkHero';
 import WorkBrief from './WorkBrief';
 import WorkItem from '../../Home/components/WorkItem';
+import Hero from '../../../components/Hero';
 
 class WorkDetail extends React.Component {
   render () {
     const { work, nextWork, prevWork, params } = this.props;
     return (
       <div className='typeset'>
-        <WorkHero
+        <Hero
           title={work.name}
-          tags={work.tags}
-          blockId={params.workId}
-          hex={work.hex}
-          year={work.year} />
+          subtitle={work.tags.join(', ')} />
         <WorkBrief
           brief={work.description}
           title={work.name}
