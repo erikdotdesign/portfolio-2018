@@ -31,6 +31,7 @@ class WorkItem extends React.Component {
   }
   render () {
     const tagList = this.props.work.tags.join(', ');
+    const itemIndex = this.props.workDetail ? `${this.props.workDetail} • ${this.props.work.year}` : `0${this.props.index + 1} • ${this.props.work.year}`;
     return (
       <VisibilitySensor delayedCall onChange={this.onChange}>
         <article className='section section--flex c-work-item' role='article'>
@@ -64,10 +65,10 @@ class WorkItem extends React.Component {
                   <Scrambler
                     forcePlay={this.state.isExposed}
                     blockId={this.props.work.id}
-                    text={`0${this.props.index + 1} • ${this.props.work.year}`}
+                    text={itemIndex}
                     duration={1}
                     delay={0.50}>
-                    {`0${this.props.index + 1} • ${this.props.work.year}`}
+                    {itemIndex}
                   </Scrambler>
                 </BlockReveal>
               </h6>

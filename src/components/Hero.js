@@ -41,7 +41,7 @@ class Hero extends React.Component {
                 <Scrambler
                   forcePlay={this.state.isExposed}
                   duration={1}
-                  delay={0.6}
+                  delay={0.5}
                   text={this.props.title}
                   secondStep={this.props.secondStep}
                   secondStepText={this.props.titleTwo}
@@ -54,13 +54,13 @@ class Hero extends React.Component {
               <BlockReveal
                 inline={false}
                 forcePlay={this.state.isExposed}
-                delay={0.15}
+                delay={0}
                 duration={0.5}
                 direction='rightLeft'>
                 <Scrambler
                   forcePlay={this.state.isExposed}
                   duration={1}
-                  delay={0.6}
+                  delay={0.5}
                   text={this.props.subtitle}
                   secondStep={this.props.secondStep}
                   secondStepText={this.props.subtitleTwo}
