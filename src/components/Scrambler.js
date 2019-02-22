@@ -63,7 +63,7 @@ class Scrambler extends React.Component {
     }
   }
   componentDidUpdate (prevProps, prevState) {
-    if (this.props.forcePlay) {
+    if (!prevProps.forcePlay && this.props.forcePlay) {
       this.playTimeline();
     } else if (this.props.blockId !== prevProps.blockId) {
       this.scrambleAnimation.kill();
@@ -74,6 +74,9 @@ class Scrambler extends React.Component {
           element: this.element
         }
       });
+      if (this.props.header) {
+        this.playTimeline();
+      }
     }
     // if (!prevProps.forcePlay && this.props.forcePlay) {
     //   this.playTimeline();

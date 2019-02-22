@@ -122,7 +122,7 @@ class BlockReveal extends React.Component {
     }
   }
   componentDidUpdate (prevProps, prevState) {
-    if (this.props.forcePlay) {
+    if (!prevProps.forcePlay && this.props.forcePlay) {
       this.playTimeline();
     } else if (this.props.blockId !== prevProps.blockId) {
       this.blockAnimation.kill();
@@ -133,6 +133,9 @@ class BlockReveal extends React.Component {
           block: this.block
         }
       });
+      if (this.props.header) {
+        this.playTimeline();
+      }
     }
   }
   playTimeline = () => {
@@ -143,17 +146,15 @@ class BlockReveal extends React.Component {
   }
   render () {
     return (
-      <span className={this.props.inline ? 'c-block-reveal-inline' : null}>
-        <span className='c-block-reveal'>
-          <span
-            className='c-block-reveal__element'
-            ref={element => { this.element = element; }}>
-            {this.props.children}
-          </span>
-          <span
-            className='c-block-reveal__block'
-            ref={block => { this.block = block; }} />
+      <span className='c-block-reveal'>
+        <span
+          className='c-block-reveal__element'
+          ref={element => { this.element = element; }}>
+          {this.props.children}
         </span>
+        <span
+          className='c-block-reveal__block'
+          ref={block => { this.block = block; }} />
       </span>
     );
   }
@@ -161,7 +162,6 @@ class BlockReveal extends React.Component {
 
 BlockReveal.propTypes = {
   children: PropTypes.node.isRequired,
-  inline: PropTypes.bool.isRequired,
   delay: PropTypes.number.isRequired,
   blockId: PropTypes.string,
   duration: PropTypes.number.isRequired,

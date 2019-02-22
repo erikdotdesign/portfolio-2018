@@ -45,15 +45,24 @@ class OutlineButton extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if (this.props.forcePlay !== nextProps.forcePlay) {
+    if ((this.props.forcePlay !== nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
     } else {
       return false;
     }
   }
   componentDidUpdate (prevProps, prevState) {
-    if (this.props.forcePlay) {
+    if (!prevProps.forcePlay && this.props.forcePlay) {
       this.playTimeline();
+    } else if (this.props.blockId !== prevProps.blockId) {
+      this.buttonAnimation.kill();
+      this.buttonAnimation = this.addAnimation(createAnim, {
+        props: this.props,
+        refs: {
+          outline: this.outline,
+          textValue: this.textValue
+        }
+      });
     }
   }
   playTimeline = () => {

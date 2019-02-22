@@ -70,7 +70,6 @@ class Logo extends React.Component {
           width="37px"
           height="23px"
           viewBox="0 0 37 23"
-          transform='translate(0.000000, 0.000000)'
           version="1.1"
           xmlns="http://www.w3.org/2000/svg">
           <rect
@@ -99,7 +98,6 @@ class Logo extends React.Component {
           <rect
             ref={(mLeft) => { this.mLeft = mLeft; }}
             fill="#fcfcfc"
-            transform='translate(0.5, 0.0)'
             x="20"
             y="7"
             width="3"
@@ -107,7 +105,6 @@ class Logo extends React.Component {
           <rect
             ref={(mRight) => { this.mRight = mRight; }}
             fill="#fcfcfc"
-            transform='translate(-0.5, 0.0)'
             x="27"
             y="7"
             width="3"

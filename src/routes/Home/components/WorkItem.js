@@ -11,15 +11,22 @@ class WorkItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isExposed: false,
-      isVisible: false
+      isExposed: false
     };
   }
+  shouldComponentUpdate (nextProps, nextState) {
+    if ((this.props.work.id !== nextProps.work.id) || (this.state.isExposed !== nextState.isExposed)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate (prevProps, prevState) {
+    if (this.props.work.id !== prevProps.work.id) {
+      this.unExpose();
+    }
+  }
   onChange = (isVisible) => {
-    this.setState({
-      ...this.state,
-      isVisible
-    });
     if (isVisible && !this.state.isExposed) {
       this.setExposed();
     }
@@ -27,6 +34,11 @@ class WorkItem extends React.Component {
   setExposed = () => {
     this.setState({
       isExposed: true
+    });
+  }
+  unExpose = () => {
+    this.setState({
+      isExposed: false
     });
   }
   render () {

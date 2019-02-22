@@ -9,15 +9,22 @@ class Hero extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isExposed: false,
-      isVisible: false
+      isExposed: false
     };
   }
+  shouldComponentUpdate (nextProps, nextState) {
+    if ((this.props.blockId !== nextProps.blockId) || (this.state.isExposed !== nextState.isExposed)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate (prevProps, prevState) {
+    if (this.props.blockId !== prevProps.blockId) {
+      this.unExpose();
+    }
+  }
   onChange = (isVisible) => {
-    this.setState({
-      ...this.state,
-      isVisible
-    });
     if (isVisible && !this.state.isExposed) {
       this.setExposed();
     }
@@ -25,6 +32,11 @@ class Hero extends React.Component {
   setExposed = () => {
     this.setState({
       isExposed: true
+    });
+  }
+  unExpose = () => {
+    this.setState({
+      isExposed: false
     });
   }
   render () {
@@ -36,11 +48,15 @@ class Hero extends React.Component {
               <BlockReveal
                 inline={false}
                 forcePlay={this.state.isExposed}
+                blockId={this.props.blockId}
+                header
                 delay={0}
                 duration={0.5}>
                 <Scrambler
                   forcePlay={this.state.isExposed}
+                  blockId={this.props.blockId}
                   duration={1}
+                  header
                   delay={0.5}
                   text={this.props.title}
                   secondStep={this.props.secondStep}
@@ -54,12 +70,16 @@ class Hero extends React.Component {
               <BlockReveal
                 inline={false}
                 forcePlay={this.state.isExposed}
+                blockId={this.props.blockId}
+                header
                 delay={0}
                 duration={0.5}
                 direction='rightLeft'>
                 <Scrambler
                   forcePlay={this.state.isExposed}
+                  blockId={this.props.blockId}
                   duration={1}
+                  header
                   delay={0.5}
                   text={this.props.subtitle}
                   secondStep={this.props.secondStep}

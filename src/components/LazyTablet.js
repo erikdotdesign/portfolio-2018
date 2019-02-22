@@ -54,7 +54,8 @@ class LazyTablet extends React.Component {
             index={this.props.index} />
         }
       </Preload>
-      : null
+      :
+      <div className={`c-tablet-wrap ${this.props.className}`}></div>
     );
   }
 }

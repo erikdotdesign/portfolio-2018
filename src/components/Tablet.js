@@ -27,7 +27,7 @@ function createAnim ({ options }) {
       strokeWidth: 1,
       immediateRender:false
     }, '-=0.5')
-    .fromTo(screenMask, 0.5, { opacity: 0 }, { opacity: 1 });
+    .fromTo(screenMask, 0.3, { opacity: 0 }, { opacity: 1 });
 
   return tabletTimeline;
 }
