@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Preload from 'react-preload';
 import LazyGifAnim from './LazyGifAnim';
 import LoadingIndicator from './LoadingIndicator';
+import HalftoneCharacter from './HalftoneCharacter';
 
 const initialState = {
   viewed: false,
@@ -48,24 +49,34 @@ class LazyGif extends React.Component {
       }
     });
     return (
-      this.state.viewed
-      ? <Preload
-        loadingIndicator={loadingIndicator}
-        images={images}
-        onError={this._handleImageLoadError}
-        onSuccess={this._handleImageLoadSuccess}
-        resolveOnError
-        mountChildren
-        >
+      <div className='c-work-gif__aspect'>
+        <div className='halftone-wrap'>
+          <HalftoneCharacter
+            className='c-work-item__index'
+            character={`0${this.props.index + 1}`} />
+        </div>
         {
-          <LazyGifAnim
-            gif={this.props.gif}
-            retina={this._isRetinaDisplay()}
-            forcePlay={this.props.forcePlay}
-            blockId={this.props.blockId} />
+          this.state.viewed
+          ? <Preload
+            loadingIndicator={loadingIndicator}
+            images={images}
+            onError={this._handleImageLoadError}
+            onSuccess={this._handleImageLoadSuccess}
+            resolveOnError
+            mountChildren
+            >
+            {
+              <LazyGifAnim
+                gif={this.props.gif}
+                retina={this._isRetinaDisplay()}
+                forcePlay={this.props.forcePlay}
+                blockId={this.props.blockId}
+                index={this.props.index} />
+            }
+          </Preload>
+          : null
         }
-      </Preload>
-      : <div className='c-work-gif__aspect' />
+      </div>
     );
   }
 }

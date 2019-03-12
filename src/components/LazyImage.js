@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Preload from 'react-preload';
 import LoadingIndicator from './LoadingIndicator';
+import HalftoneCharacter from './HalftoneCharacter';
 
 const initialState = {
   viewed: false,
@@ -40,6 +41,11 @@ class LazyImage extends React.Component {
     var images = this.props.retina && this._isRetinaDisplay() ? [this.props.retina] : [this.props.imgSrc];
     return (
       <div className='c-work-image__aspect'>
+        <div className='halftone-wrap'>
+          <HalftoneCharacter
+            className='c-work-item__index'
+            character={`${this.props.index + 1 > 9 ? '' : '0'}${this.props.index + 1}`} />
+        </div>
         {
           this.state.viewed
           ? <Preload

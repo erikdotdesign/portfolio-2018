@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VisibilitySensor from 'react-visibility-sensor';
 import BlockReveal from '../../../components/BlockReveal';
-import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import LazyGif from '../../../components/LazyGif';
 import Scrambler from '../../../components/Scrambler';
 
@@ -10,12 +9,7 @@ const WorkGif = ({ gif, index, blockId }) => (
   <VisibilitySensor delayedCall partialVisibility minTopValue={300}>
     {({ isVisible }) =>
       <figure className='c-work-gif'>
-        <div className='halftone-wrap'>
-          <HalftoneCharacter
-            className='c-work-item__index'
-            character={`0${index + 1}`} />
-        </div>
-        <LazyGif forcePlay={isVisible} gif={gif} blockId={blockId} />
+        <LazyGif forcePlay={isVisible} gif={gif} blockId={blockId} index={index} />
         <figcaption className='c-work-gif__caption'>
           <BlockReveal
             forcePlay={isVisible}

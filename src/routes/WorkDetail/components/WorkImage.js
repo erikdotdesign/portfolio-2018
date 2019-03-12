@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BlockReveal from '../../../components/BlockReveal';
-import HalftoneCharacter from '../../../components/HalftoneCharacter';
 import VisibilitySensor from 'react-visibility-sensor';
 import LazyImage from '../../../components/LazyImage';
 import Scrambler from '../../../components/Scrambler';
@@ -10,11 +9,6 @@ const WorkImage = ({ image, index, blockId }) => (
   <VisibilitySensor delayedCall partialVisibility minTopValue={300}>
     {({ isVisible }) =>
       <figure className='c-work-image'>
-        <div className='halftone-wrap'>
-          <HalftoneCharacter
-            className='c-work-item__index'
-            character={`${index + 1 > 9 ? '' : '0'}${index + 1}`} />
-        </div>
         <LazyImage
           imgSrc={image.url}
           retina={image.retina}
