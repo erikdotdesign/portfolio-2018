@@ -7,7 +7,7 @@ import LazyGif from '../../../components/LazyGif';
 import Scrambler from '../../../components/Scrambler';
 
 const WorkGif = ({ gif, index, blockId }) => (
-  <VisibilitySensor delayedCall>
+  <VisibilitySensor delayedCall partialVisibility minTopValue={300}>
     {({ isVisible }) =>
       <figure className='c-work-gif'>
         <div className='halftone-wrap'>

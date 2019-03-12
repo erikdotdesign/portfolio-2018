@@ -7,13 +7,13 @@ import LazyImage from '../../../components/LazyImage';
 import Scrambler from '../../../components/Scrambler';
 
 const WorkImage = ({ image, index, blockId }) => (
-  <VisibilitySensor delayedCall>
+  <VisibilitySensor delayedCall partialVisibility minTopValue={300}>
     {({ isVisible }) =>
       <figure className='c-work-image'>
         <div className='halftone-wrap'>
           <HalftoneCharacter
             className='c-work-item__index'
-            character={`0${index + 1}`} />
+            character={`${index + 1 > 9 ? '' : '0'}${index + 1}`} />
         </div>
         <LazyImage
           imgSrc={image.url}
@@ -36,10 +36,10 @@ const WorkImage = ({ image, index, blockId }) => (
             <Scrambler
               forcePlay={isVisible}
               blockId={blockId}
-              text={image.alt}
+              text={`${index + 1}. ${image.alt}`}
               duration={0.5}
               delay={0.6}>
-              {image.alt}
+              {`${index + 1}. ${image.alt}`}
             </Scrambler>
           </BlockReveal>
         </figcaption>

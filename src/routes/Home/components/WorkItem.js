@@ -8,7 +8,7 @@ import LazyTablet from '../../../components/LazyTablet';
 import OutlineButton from '../../../components/OutlineButton';
 
 const WorkItem = ({work, index, workDetail}) => (
-  <VisibilitySensor delayedCall>
+  <VisibilitySensor delayedCall partialVisibility minTopValue={300}>
     {({isVisible}) =>
       <article className='section c-work-item' role='article'>
         <div className='columns-flush'>
