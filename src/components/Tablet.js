@@ -44,7 +44,7 @@ class Tablet extends React.Component {
     });
   }
   shouldComponentUpdate (nextProps, nextState) {
-    if (this.props.forcePlay !== nextProps.forcePlay) {
+    if ((this.props.forcePlay !== nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
     } else {
       return false;
@@ -53,23 +53,17 @@ class Tablet extends React.Component {
   componentDidUpdate (prevProps, prevState) {
     if (this.props.forcePlay) {
       this.playTimeline();
+    } else if (this.props.blockId !== prevProps.blockId) {
+      this.tabletAnimation.kill();
+      this.tabletAnimation = this.addAnimation(createAnim, {
+        props: this.props,
+        refs: {
+          outline: this.outline,
+          screenOutline: this.screenOutline,
+          screenMask: this.screenMask
+        }
+      });
     }
-    // if (!prevProps.forcePlay && this.props.forcePlay) {
-    //   this.playTimeline();
-    // } else if (this.props.blockId !== prevProps.blockId) {
-    //   this.tabletAnimation.kill();
-    //   this.tabletAnimation = this.addAnimation(createAnim, {
-    //     props: this.props,
-    //     refs: {
-    //       outline: this.outline,
-    //       screenOutline: this.screenOutline,
-    //       screenMask: this.screenMask
-    //     }
-    //   });
-    //   if (this.props.forcePlay && !prevProps.forcePlay) {
-    //     this.playTimeline();
-    //   }
-    // }
   }
   playTimeline = () => {
     this.tabletAnimation.play();
@@ -121,7 +115,7 @@ class Tablet extends React.Component {
                 y='51'
                 width='998'
                 height='748'
-                xlinkHref={this.props.forcePlay ? this.props.image.url : null} />
+                xlinkHref={this.props.image.url} />
               <rect ref={(screenOutline) => { this.screenOutline = screenOutline; }}
                 fill='none'
                 stroke='#000000'

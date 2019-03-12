@@ -14,7 +14,7 @@ class WorkDetail extends React.Component {
           blockId={params.workId}
           title={work.name}
           subtitle={work.tags.join(', ')} />
-        {/* <WorkBrief
+        <WorkBrief
           brief={work.description}
           title={work.name}
           mobile={work.mobile}
@@ -22,7 +22,7 @@ class WorkDetail extends React.Component {
           tablet={work.tablet}
           hex={work.hex}
           links={work.links}
-          images={work.images} /> */}
+          images={work.images} />
         <WorkItem work={nextWork} index={0} workDetail='Next' blockId={params.workId} />
         <WorkItem work={prevWork} index={1} workDetail='Prev' blockId={params.workId} />
       </div>

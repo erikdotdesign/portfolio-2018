@@ -76,11 +76,6 @@ class DownArrow extends React.Component {
       }
     }
   }
-  onChange = (isVisible) => {
-    if (this.arrowAnimation && isVisible) {
-      this.playTimeline();
-    }
-  }
   playTimeline = () => {
     this.arrowAnimation.play();
   }
@@ -89,35 +84,33 @@ class DownArrow extends React.Component {
   }
   render () {
     return (
-      <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
-        <div className='c-down-arrow'>
-          <svg
-            ref={(arrowGroup) => { this.arrowGroup = arrowGroup; }}
-            visibility="hidden"
-            width="36px"
-            height="55px"
-            viewBox="0 0 36 55"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
-            <g
-              transform="translate(1.000000, 1.000000)"
-              stroke="#000000"
-              strokeWidth="2">
-              <polyline
-                ref={(chevron) => { this.chevron = chevron; }}
-                fill="none"
-                transform="translate(17.000000, 41.500000) rotate(-180.000000) translate(-17.000000, -41.500000)"
-                points="0 52 17 31 17 31 34 52">
-              </polyline>
-              <path
-                ref={(stem) => { this.stem = stem; }}
-                d="M17,0 L17,50"
-                strokeLinecap="square">
-              </path>
-            </g>
-          </svg>
-        </div>
-      </VisibilitySensor>
+      <div className='c-down-arrow'>
+        <svg
+          ref={(arrowGroup) => { this.arrowGroup = arrowGroup; }}
+          visibility="hidden"
+          width="36px"
+          height="55px"
+          viewBox="0 0 36 55"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+          <g
+            transform="translate(1.000000, 1.000000)"
+            stroke="#000000"
+            strokeWidth="2">
+            <polyline
+              ref={(chevron) => { this.chevron = chevron; }}
+              fill="none"
+              transform="translate(17.000000, 41.500000) rotate(-180.000000) translate(-17.000000, -41.500000)"
+              points="0 52 17 31 17 31 34 52">
+            </polyline>
+            <path
+              ref={(stem) => { this.stem = stem; }}
+              d="M17,0 L17,50"
+              strokeLinecap="square">
+            </path>
+          </g>
+        </svg>
+      </div>
     );
   }
 }

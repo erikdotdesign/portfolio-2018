@@ -14,6 +14,11 @@
 
 .columns-flush {
 
+  .column--duo,
+  .column--sidebar {
+    position: relative;
+  }
+
   @include breakpoint(break-1) {
     margin-left: -#{map-get($gutterwidths, small)};
     margin-right: -#{map-get($gutterwidths, small)};

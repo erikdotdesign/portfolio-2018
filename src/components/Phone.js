@@ -80,9 +80,9 @@ class Phone extends React.Component {
     return (
       <VisibilitySensor onChange={this.onChange} delayedCall partialVisibility>
         <figure className='c-phone'>
-          <svg width='280px'
-            height='464px'
-            viewBox='0 0 280 464'
+          <svg width='260px'
+            height='444px'
+            viewBox='0 0 260 444'
             version='1.1'
             aria-labelledby='#phone-title'
             role='img'
@@ -92,13 +92,13 @@ class Phone extends React.Component {
             <title id='phone-title'>{this.props.image.alt}</title>
             <defs>
               <rect id='phone-path'
-                x='20'
-                y='20'
+                x='11'
+                y='11'
                 rx='10'
                 width='236'
                 height='420' />
             </defs>
-            <g transform='translate(2.000000, 2.000000)'>
+            <g transform='translate(1.000000, 1.000000)'>
               <rect
                 ref={(outline) => { this.outline = outline; }}
                 stroke='#000000'
@@ -106,11 +106,11 @@ class Phone extends React.Component {
                 strokeWidth='0'
                 strokeMiterlimit='30'
                 strokeLinecap='square'
-                x='-1'
-                y='-1'
-                width='278'
-                height='462'
-                rx='25'
+                x='0'
+                y='0'
+                width='258'
+                height='442'
+                rx='18'
                 vectorEffect='non-scaling-stroke' />
               <mask id='phone-mask' fill='white'>
                 <use xlinkHref='#phone-path' />
@@ -118,8 +118,8 @@ class Phone extends React.Component {
               <image
                 ref={(screenMask) => { this.screenMask = screenMask; }}
                 mask='url(#phone-mask)'
-                x='20'
-                y='20'
+                x='11'
+                y='11'
                 width='236'
                 height='420'
                 xlinkHref={this.props.forcePlay ? this.props.image.url : null} />
@@ -130,8 +130,8 @@ class Phone extends React.Component {
                 strokeWidth='0'
                 strokeMiterlimit='30'
                 strokeLinecap='square'
-                x='19.5'
-                y='19.5'
+                x='10.5'
+                y='10.5'
                 width='237'
                 height='421'
                 rx='10'

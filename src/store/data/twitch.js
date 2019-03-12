@@ -1,7 +1,7 @@
 const twitch = {
   'id':'twitch',
   'tags':['Product', 'UI/UX'],
-  'name':'Twitch',
+  'name':'Twitch.tv',
   'year': '2017',
   'snippet': 'A breakdown of my workflow at Twitch and an overview of my process for In-Player Recommendations.',
   'description': [
@@ -70,7 +70,7 @@ const twitch = {
     'retina': require('../../routes/WorkDetail/assets/img/twitch-ipr-mock-3@2x.jpg'),
     'alt': 'Additional recommendations mockup'
   }],
-  'next': 'ironandale',
+  'next': 'caffeineAbout',
   'prev': 'tsdp'
 };
 

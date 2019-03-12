@@ -57,7 +57,7 @@ class LazyGifAnim extends React.Component {
   }
   render () {
     return (
-      <div className='c-work-gif__aspect' onClick={() => { this.togglePlay(); }}>
+      <div className='c-work-gif__aspect c-work-gif__aspect--loaded' onClick={() => { this.togglePlay(); }}>
         <div className='c-work-gif__image'>
           <img
             src={this.props.retina ? this.props.gif.cover['2x'] : this.props.gif.cover['1x']}
@@ -65,7 +65,7 @@ class LazyGifAnim extends React.Component {
             alt={this.props.gif.alt} />
         </div>
         <div className='c-work-gif__overlay' ref={overlay => { this.overlay = overlay; }}>
-          <OutlineButton text='Play' />
+          <OutlineButton gifForcePlay blockId={'tspd'} text='Play' />
         </div>
       </div>
     );

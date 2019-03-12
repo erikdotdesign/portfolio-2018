@@ -7,11 +7,11 @@ import BriefMain from './BriefMain';
 import BriefImages from './BriefImages';
 
 const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images, blockId }) => (
-  <VisibilitySensor onChange={this.onChange} partialVisibility delayedCall>
+  <VisibilitySensor partialVisibility delayedCall>
     {({ isVisible }) =>
       <main role='main'>
         <section className='section'>
-          <div className='columns-flush'>
+          {/* <div className='columns-flush'>
             {
               mobile
               ? <BriefSidebar
@@ -32,7 +32,14 @@ const WorkBrief = ({ brief, title, mobile, tablet, hex, links, images, blockId }
               forcePlay={isVisible}
               hex={hex}
               links={links} />
-          </div>
+          </div> */}
+          <BriefMain
+            className='single'
+            brief={brief}
+            blockId={blockId}
+            forcePlay={isVisible}
+            hex={hex}
+            links={links} />
         </section>
         <BriefImages
           images={images}

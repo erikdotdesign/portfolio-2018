@@ -17,62 +17,93 @@
     position: absolute
     color: $black
     z-index: -1
-    transform: rotate(90deg)
-    transform-origin: bottom left
-
-    .c-halftone-character__halftone
-      transform: rotate(180deg)
 
     +breakpoint(break-0)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: calc(100% - 8rem)
-      top: 7rem
+      left: 0
+      top: -2rem
 
     +breakpoint(break-1)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: calc(100% - 6rem)
+      left: 0
       top: -2rem
 
     +breakpoint(break-2)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: calc(100% - 6rem)
+      left: 0
       top: -2rem
 
     +breakpoint(break-3)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: calc(100% - 6rem)
+      left: 0
       top: -2rem
 
     +breakpoint(break-4)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: calc(100% - 6rem)
-      top: 0
+      left: 0
+      top: -4rem
+
+  .halftone-wrap
+    +absolute-full
+    display: flex
+    align-items: center
+    justify-content: center
 
   .c-work-item__index
-    position: absolute
+    position: relative
+    text-align: center
     color: $black
 
     +breakpoint(break-0)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: -2rem
-      top: 0
+      top: -0.5rem
 
     +breakpoint(break-1)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: -4.25rem
-      top: 0
+      top: -0.5rem
 
     +breakpoint(break-2)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: -4.25rem
-      top: 0
+      top: -0.5rem
 
     +breakpoint(break-3)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: -4.25rem
-      top: 0
+      top: -0.5rem
 
     +breakpoint(break-4)
       +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: -4.25rem
-      top: 0
+      top: -0.5rem
+
+.c-work-item
+  .columns-flush
+
+    +breakpoint(break-1)
+      height: initial
+      display: flex
+
+    +breakpoint(break-2)
+      height: initial
+      display: flex
+
+    +breakpoint(break-3)
+      height: initial
+      display: flex
+
+    +breakpoint(break-4)
+      height: initial
+      display: flex
+
+    .column--content
+      display: flex
+      flex-flow: row wrap
+      align-content: center
+
+      & > *
+        flex: 1 100%
+        position: relative
+        top: -0.25rem
+
+      .c-button--outline
+        flex-basis: initial
+        flex-grow: 0
+

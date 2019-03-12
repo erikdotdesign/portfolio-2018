@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import HalftoneCharacter from '../../../components/HalftoneCharacter';
 
 const BriefAside = ({ children, className, halftoneChar }) => (
-  <aside className={`column ${className}`} role='complementary'>
-    <HalftoneCharacter
-      className='c-work-item__index c-work-item__brief'
-      character={halftoneChar} />
+  <aside className={`column c-work-brief__aside ${className}`} role='complementary'>
+    <div className='halftone-wrap'>
+      <HalftoneCharacter
+        className='c-work-item__index'
+        character={halftoneChar} />
+    </div>
     {children}
   </aside>
 );

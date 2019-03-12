@@ -4,6 +4,7 @@
 .c-work-gif__aspect
   +aspect(300, 167)
   cursor: pointer
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15)
 
 .c-work-gif__cover,
 .c-work-gif__image
@@ -21,8 +22,10 @@
   background: none
   z-index: -1
 
+.c-work-gif__aspect--loaded
+  animation: fadeIn 0.5s ease-in
+
 .c-work-gif__caption
   font-family: unquote(map-get($headingtype, font-family))
   +baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all)
-  +box-shadow-border(top, 2px, $black)
-  margin-top: 2rem
+  margin-top: 1rem

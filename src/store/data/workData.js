@@ -5,8 +5,12 @@ import ironandale from './ironandale';
 import electwitch from './electwitch';
 import tsdp from './tsdp';
 import twitch from './twitch';
+import caffeineAbout from './caffeine.about';
+import caffeineLiveHost from './caffeine.live-host';
 
 export const workList = [
+  caffeineLiveHost,
+  caffeineAbout,
   twitch,
   tsdp,
   electwitch,
@@ -22,6 +26,8 @@ export const workList = [
 });
 
 export const workDetail = {
+  caffeineLiveHost,
+  caffeineAbout,
   twitch,
   tsdp,
   electwitch,

@@ -8,8 +8,8 @@ const BriefImages = ({ images, hex, blockId }) => (
     {
       images.map((image, index) =>
         typeof (image.cover) !== 'undefined'
-        ? <WorkGif gif={image} key={index} index={index} hex={hex} blockId={blockId} />
-        : <WorkImage image={image} key={index} index={index} hex={hex} blockId={blockId} />
+        ? <WorkGif gif={image} key={index} index={index} blockId={blockId} />
+        : <WorkImage image={image} key={index} index={index} blockId={blockId} />
       )
     }
   </section>

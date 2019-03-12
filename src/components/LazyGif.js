@@ -58,7 +58,11 @@ class LazyGif extends React.Component {
         mountChildren
         >
         {
-          <LazyGifAnim gif={this.props.gif} retina={this._isRetinaDisplay()} />
+          <LazyGifAnim
+            gif={this.props.gif}
+            retina={this._isRetinaDisplay()}
+            forcePlay={this.props.forcePlay}
+            blockId={this.props.blockId} />
         }
       </Preload>
       : <div className='c-work-gif__aspect' />

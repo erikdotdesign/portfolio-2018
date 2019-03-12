@@ -25,11 +25,11 @@ const BriefMain = ({ brief, className, forcePlay, links, blockId }) => (
         </p>
       )
     }
-    {
+    {/* {
       links
       ? <BriefLinks links={links} forcePlay={forcePlay} blockId={blockId} />
       : null
-    }
+    } */}
   </div>
 );
 
