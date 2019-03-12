@@ -38,7 +38,7 @@ class BriefImages extends React.Component {
           images.map((image, index) =>
             typeof (image.cover) !== 'undefined'
             ? <WorkGif gif={image} key={index} index={index} />
-            : <a className='c-work-image-wrap' href="#" onClick={(e) => this.handleClick(e, index)} key={index} ><WorkImage image={image} index={index} blockId={this.props.blockId} /></a>
+            : <a className='c-work-image-wrap' href="#" alt={image.alt} onClick={(e) => this.handleClick(e, index)} key={index} ><WorkImage image={image} index={index} blockId={this.props.blockId} /></a>
           )
         }
         {isOpen && (
