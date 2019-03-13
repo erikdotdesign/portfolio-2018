@@ -82,21 +82,6 @@ class Scrambler extends React.Component {
         this.playTimeline();
       }
     }
-    // if (!prevProps.forcePlay && this.props.forcePlay) {
-    //   this.playTimeline();
-    // } else if (this.props.blockId !== prevProps.blockId) {
-    //   this.scrambleAnimation.kill();
-    //   this.element.textContent = this.props.text;
-    //   this.scrambleAnimation = this.addAnimation(createAnim, {
-    //     props: this.props,
-    //     refs: {
-    //       element: this.element
-    //     }
-    //   });
-    //   if (this.props.forcePlay && (!prevProps.forcePlay || this.props.header)) {
-    //     this.playTimeline();
-    //   }
-    // }
   }
   playTimeline = () => {
     this.scrambleAnimation.play();

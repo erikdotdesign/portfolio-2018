@@ -19,7 +19,7 @@ const BriefFooter = ({ blockId, nextWork, prevWork }) => (
                 blockId={blockId}
                 delay={0}
                 duration={0.5}
-                direction={'leftRight'}>
+                direction={'topBottom'}>
                 <Scrambler
                   forcePlay={isVisible}
                   duration={1}
