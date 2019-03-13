@@ -1,11 +1,9 @@
 .c-footer
   margin-top: 2rem
   padding-top: 2rem
-  @include box-shadow-border(top, 2px, $black);
+  margin-bottom: 1rem
 
 .c-footer__link
-  font-family: unquote(map-get($headingtype, font-family));
-  color: $red
-
-  &:hover, &:focus
-    color: darken($red, 10%)
+  font-family: unquote(map-get($headingtype, font-family))
+  color: $bodyColour
+  text-decoration: underline
