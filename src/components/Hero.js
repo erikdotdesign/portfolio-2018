@@ -27,7 +27,7 @@ const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) =
                 text={title}
                 secondStep={secondStep}
                 secondStepText={titleTwo}
-                secondStepDelay={2}>
+                secondStepDelay={1}>
                 {title}
               </Scrambler>
             </BlockReveal>
@@ -50,7 +50,7 @@ const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) =
                 text={subtitle}
                 secondStep={secondStep}
                 secondStepText={subtitleTwo}
-                secondStepDelay={2.5}>
+                secondStepDelay={1.5}>
                 {subtitle}
               </Scrambler>
             </BlockReveal>
