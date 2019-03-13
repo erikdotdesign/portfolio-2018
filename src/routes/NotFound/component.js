@@ -36,7 +36,7 @@ const NotFound = () => (
                 forcePlay={isVisible}
                 blockId={'404'}
                 header
-                delay={0}
+                delay={0.15}
                 duration={0.5}
                 direction='rightLeft'>
                 <Scrambler
@@ -44,7 +44,7 @@ const NotFound = () => (
                   blockId={'404'}
                   duration={1}
                   header
-                  delay={0.5}
+                  delay={0.65}
                   text={'Page not found'}>
                   Page not found
                 </Scrambler>
