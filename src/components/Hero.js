@@ -9,7 +9,7 @@ const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) =
   <VisibilitySensor delayedCall>
     {({isVisible}) =>
       <header className='section c-hero' role='banner'>
-        <div className='single c-work-hero__content'>
+        <div className='single c-hero__content'>
           <h1 className='epsilon--display-condensed'>
             <BlockReveal
               inline={false}
