@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import WorkBrief from './WorkBrief';
 import WorkItem from '../../Home/components/WorkItem';
 import Hero from '../../../components/Hero';
+import BriefFooter from './BriefFooter';
 
 class WorkDetail extends React.Component {
   render () {
@@ -22,8 +23,7 @@ class WorkDetail extends React.Component {
           hex={work.hex}
           links={work.links}
           images={work.images} />
-        <WorkItem work={nextWork} index={0} workDetail='Next' blockId={params.workId} />
-        <WorkItem work={prevWork} index={1} workDetail='Prev' blockId={params.workId} />
+        <BriefFooter blockId={params.workId} nextWork={nextWork} prevWork={prevWork} />
       </div>
     );
   }

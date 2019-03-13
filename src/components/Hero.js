@@ -38,7 +38,7 @@ const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) =
               forcePlay={isVisible}
               blockId={blockId}
               header
-              delay={0}
+              delay={0.15}
               duration={0.5}
               direction='rightLeft'>
               <Scrambler
@@ -46,7 +46,7 @@ const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) =
                 blockId={blockId}
                 duration={1}
                 header
-                delay={0.5}
+                delay={0.65}
                 text={subtitle}
                 secondStep={secondStep}
                 secondStepText={subtitleTwo}

@@ -26,9 +26,6 @@ const WorkItem = ({work, index, workDetail}) => (
               index={index} />
           </div>
           <div className='column column--duo column--content'>
-            {/* <HalftoneCharacter
-              className='c-work-item__display-name'
-              character={work.year} /> */}
             <h6 className='c-work-item__meta'>
               <BlockReveal
                 inline={false}
@@ -55,7 +52,7 @@ const WorkItem = ({work, index, workDetail}) => (
                 inline={false}
                 forcePlay={isVisible}
                 blockId={work.id}
-                delay={0}
+                delay={0.1}
                 duration={0.5}
                 direction={
                 index % 2 === 0
@@ -65,7 +62,7 @@ const WorkItem = ({work, index, workDetail}) => (
                   forcePlay={isVisible}
                   duration={1}
                   blockId={work.id}
-                  delay={0.5}
+                  delay={0.6}
                   text={work.name}>
                   {work.name}
                 </Scrambler>
@@ -76,7 +73,7 @@ const WorkItem = ({work, index, workDetail}) => (
                 inline={false}
                 forcePlay={isVisible}
                 blockId={work.id}
-                delay={0}
+                delay={0.15}
                 duration={0.5}
                 direction={
                 index % 2 === 0
@@ -87,7 +84,7 @@ const WorkItem = ({work, index, workDetail}) => (
                   blockId={work.id}
                   text={work.tags.join(', ')}
                   duration={1}
-                  delay={0.50}>
+                  delay={0.65}>
                   {work.tags.join(', ')}
                 </Scrambler>
               </BlockReveal>
@@ -97,7 +94,7 @@ const WorkItem = ({work, index, workDetail}) => (
                 inline={false}
                 forcePlay={isVisible}
                 blockId={work.id}
-                delay={0}
+                delay={0.20}
                 duration={0.5}
                 direction={
                 index % 2 === 0
