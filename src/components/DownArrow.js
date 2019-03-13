@@ -54,6 +54,8 @@ class DownArrow extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     if ((!this.props.forcePlay && nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
+    } else if ((this.props.forcePlay && !nextProps.forcePlay) && this.arrowAnimation.isActive()) {
+      return true;
     } else {
       return false;
     }
@@ -61,6 +63,8 @@ class DownArrow extends React.Component {
   componentDidUpdate (prevProps, prevState) {
     if (!prevProps.forcePlay && this.props.forcePlay) {
       this.playTimeline();
+    } else if ((prevProps.forcePlay && !this.props.forcePlay) && this.arrowAnimation.isActive()) {
+      this.pauseTimeline();
     } else if (this.props.blockId !== prevProps.blockId) {
       this.arrowAnimation.kill();
       this.arrowAnimation = this.addAnimation(createAnim, {

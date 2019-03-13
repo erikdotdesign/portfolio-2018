@@ -6,7 +6,7 @@ import BlockReveal from './BlockReveal';
 import Scrambler from './Scrambler';
 
 const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) => (
-  <VisibilitySensor delayedCall>
+  <VisibilitySensor delayedCall partialVisibility>
     {({isVisible}) =>
       <header className='section c-hero' role='banner'>
         <div className='single c-hero__content'>

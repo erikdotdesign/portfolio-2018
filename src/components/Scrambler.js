@@ -58,6 +58,8 @@ class Scrambler extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     if ((this.props.forcePlay !== nextProps.forcePlay) || (this.props.blockId !== nextProps.blockId)) {
       return true;
+    } else if ((this.props.forcePlay && !nextProps.forcePlay) && (this.scrambleAnimation.isActive() && this.props.secondStep)) {
+      return true;
     } else {
       return false;
     }
@@ -65,6 +67,8 @@ class Scrambler extends React.Component {
   componentDidUpdate (prevProps, prevState) {
     if (!prevProps.forcePlay && this.props.forcePlay) {
       this.playTimeline();
+    } else if ((prevProps.forcePlay && !this.props.forcePlay) && (this.scrambleAnimation.isActive() && this.props.secondStep)) {
+      this.pauseTimeline();
     } else if (this.props.blockId !== prevProps.blockId) {
       this.scrambleAnimation.kill();
       this.element.textContent = this.props.text;
