@@ -16,55 +16,55 @@ const caffeineAbout = {
   'images': [{
     'url': require('../../routes/WorkDetail/assets/img/su-1.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-1@2x.png'),
-    'alt': 'Sign-up 1'
+    'alt': 'Web signup page (entertainment variant)'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-2.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-2@2x.png'),
-    'alt': 'Sign-up 2'
+    'alt': 'Web signup page (gaming variant)'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-3.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-3@2x.png'),
-    'alt': 'Sign-up 3'
+    'alt': 'Web signup page (create arts variant)'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-4.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-4@2x.png'),
-    'alt': 'Sign-up 4'
+    'alt': 'Web sign-in page'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-mobile.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-mobile@2x.png'),
-    'alt': 'Sign-up mobile'
+    'alt': 'iOS landing, signup, and sign-in screens'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-1.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-1@2x.png'),
-    'alt': 'About 1'
+    'alt': 'Web about page video section. The video is a wholesome introduction to the Caffeine product and community.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-2.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-2@2x.png'),
-    'alt': 'About 2'
+    'alt': 'Web about page “Welcome to Caffeine” section'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-3.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-3@2x.png'),
-    'alt': 'About 3'
+    'alt': 'Web about page “A Personal Experience” section. This section highlights Caffeine’s social foundation.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-4.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-4@2x.png'),
-    'alt': 'About 4'
+    'alt': 'Web about page “Powerfully Simple” section. This section highlights Caffeine’s powerfully simple tools and the ease at which anyone can start broadcasting.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-5.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-5@2x.png'),
-    'alt': 'About 5'
+    'alt': 'Web about page “Earn Money” section. This section highlights Caffeines broadcaster monetization platform.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-6.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-6@2x.png'),
-    'alt': 'About 6'
+    'alt': 'Web about page “Contact Us” section'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-mobile-1.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-mobile-1@2x.png'),
-    'alt': 'About mobile 1'
+    'alt': 'Mobile web about page “Welcome to Caffeine”, “A Personal Experience”, and “Powerfully Simple“ sections.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-mobile-2.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-mobile-2@2x.png'),
-    'alt': 'About mobile 2'
+    'alt': 'Mobile web about page “Earn Money” and  “Contact Us” sections'
   }],
   'next': 'caffeineLiveHost',
   'prev': 'twitch'

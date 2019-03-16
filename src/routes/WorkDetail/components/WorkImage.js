@@ -27,14 +27,7 @@ const WorkImage = ({ image, index, blockId }) => (
               index % 2 === 0
               ? 'rightLeft'
               : 'leftRight'}>
-            <Scrambler
-              forcePlay={isVisible}
-              blockId={blockId}
-              text={`${index + 1}. ${image.alt}`}
-              duration={0.5}
-              delay={0.6}>
-              {`${index + 1}. ${image.alt}`}
-            </Scrambler>
+            {`${index + 1}. ${image.alt}`}
           </BlockReveal>
         </figcaption>
       </figure>
