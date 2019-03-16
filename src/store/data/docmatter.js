@@ -3,7 +3,7 @@ const docmatter = {
   'tags':['Branding', 'UI/UX'],
   'name':'DocMatter',
   'year': '2016',
-  'snippet':'A complete overhaul of the DocMatter branding, application, and public website.',
+  'snippet':`An introduction to DocMatter's branding and web application.`,
   'description': [
     `DocMatter is a healthcare startup focused on creating collaboration
     software for medical professionals. It provides an array of services

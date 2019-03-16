@@ -1,9 +1,9 @@
 const caffeineAbout = {
   'id':'caffeineAbout',
-  'tags':['About Page & Sign-up'],
+  'tags':['Product', 'UI/UX'],
   'name':'Caffeine.tv',
   'year': '2018',
-  'snippet': `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sollicitudin metus.`,
+  'snippet': `Responsive about page & signup for Caffeine.tv's web and iOS applications.`,
   'description': [
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sollicitudin metus. Phasellus quis libero fermentum, ultrices ante at, convallis felis. Phasellus venenatis, risus nec venenatis feugiat, magna odio malesuada mi, vitae vestibulum ante est quis orci. Curabitur ornare, ipsum vel lacinia venenatis, lacus nibh tristique elit, id porta urna quam lacinia mauris. Nam ut elementum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mauris leo, porttitor et ex nec, cursus sodales justo. Donec ipsum magna, porttitor vitae diam quis, tincidunt porttitor purus. Etiam tempor viverra rutrum. Aenean et venenatis tortor, ut porta purus. Etiam at pharetra magna, et feugiat velit.`
   ],

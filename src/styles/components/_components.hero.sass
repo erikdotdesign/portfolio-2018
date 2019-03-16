@@ -14,7 +14,12 @@
   font-family: unquote(map-get($headingtype, font-family))
   +sassline(alpha, $headingtype, 4, 1, all)
   position: relative
-  top: 1rem
+
+  +breakpoint(break-0)
+    top: 1rem
+
+  +breakpoint(break-4)
+    top: 2rem
 
 .c-hero__actions
   position: relative

@@ -3,7 +3,7 @@ const electwitch = {
   'tags':['Desktop application'],
   'name':'Electwitch',
   'year': '2017',
-  'snippet':'Twitch desktop application built with Electron, React, Redux, and Material Design.',
+  'snippet':'Twitch.tv desktop application built with Electron, React, Redux, and Material Design.',
   'description': [
     `Electwitch is a desktop application I designed and developed
     as a side project while working at Twitch. The application was programmed
