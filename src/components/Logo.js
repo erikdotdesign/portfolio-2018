@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
-import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
-import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
 
 function createAnim ({ options }) {
@@ -116,20 +113,3 @@ class Logo extends React.Component {
 }
 
 export default GSAP()(Logo);
-
-// import React from 'react';
-
-// const Logo = () => (
-//   <div className='c-logo'>
-//     <div className='c-logo__character c-logo__character--e'>
-//       <div className='c-logo__ligature c-logo__ligature--e'></div>
-//       <div className='c-logo__ligature c-logo__ligature--e'></div>
-//     </div>
-//     <div className='c-logo__character c-logo__character--m'>
-//       <div className='c-logo__ligature c-logo__ligature--m'></div>
-//       <div className='c-logo__ligature c-logo__ligature--m'></div>
-//     </div>
-//   </div>
-// );
-
-// export default Logo;

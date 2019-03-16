@@ -5,32 +5,34 @@ import BriefHeader from './BriefHeader';
 import BriefLinks from './BriefLinks';
 
 const BriefMain = ({ brief, className, forcePlay, links, blockId }) => (
-  <div className={`column c-work-brief__text ${className}`}>
-    <BriefHeader forcePlay={forcePlay} blockId={blockId} />
-    {
-      brief.map((paragraph, index) =>
-        <p key={index}>
-          <BlockReveal
-            forcePlay={forcePlay}
-            blockId={blockId}
-            inline={false}
-            delay={0}
-            duration={0.5}
-            direction={
-              index % 2 === 0
-              ? 'leftRight'
-              : 'rightLeft'}>
-            {paragraph}
-          </BlockReveal>
-        </p>
-      )
-    }
-    {
-      links
-      ? <BriefLinks links={links} forcePlay={forcePlay} blockId={blockId} />
-      : null
-    }
-  </div>
+  <section className='section'>
+    <div className={`column c-work-brief__text ${className}`}>
+      <BriefHeader forcePlay={forcePlay} blockId={blockId} />
+      {
+        brief.map((paragraph, index) =>
+          <p key={index}>
+            <BlockReveal
+              forcePlay={forcePlay}
+              blockId={blockId}
+              inline={false}
+              delay={0}
+              duration={0.5}
+              direction={
+                index % 2 === 0
+                ? 'leftRight'
+                : 'rightLeft'}>
+              {paragraph}
+            </BlockReveal>
+          </p>
+        )
+      }
+      {
+        links
+        ? <BriefLinks links={links} forcePlay={forcePlay} blockId={blockId} />
+        : null
+      }
+    </div>
+  </section>
 );
 
 BriefMain.propTypes = {

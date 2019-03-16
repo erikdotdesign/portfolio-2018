@@ -42,4 +42,10 @@ const BriefFooter = ({ blockId, nextWork, prevWork }) => (
   </VisibilitySensor>
 )
 
+BriefFooter.propTypes = {
+  blockId: PropTypes.string,
+  nextWork: PropTypes.object,
+  prevWork: PropTypes.object
+};
+
 export default BriefFooter;

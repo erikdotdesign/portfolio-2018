@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import VisibilitySensor from 'react-visibility-sensor';
 import BlockReveal from '../../components/BlockReveal';
 import Scrambler from '../../components/Scrambler';
@@ -66,10 +65,3 @@ const NotFound = () => (
 );
 
 export default NotFound;
-
-{/* <OutlineButton
-  text='View Work'
-  forcePlay={isVisible}
-  router
-  link={`/`}
-  blockId={'404'} /> */}

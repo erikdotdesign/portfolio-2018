@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
 import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
-import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
 
 function createAnim ({ options }) {

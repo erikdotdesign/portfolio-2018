@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
 import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
-import VisibilitySensor from 'react-visibility-sensor';
 import GSAP from 'react-gsap-enhancer';
 
 function createAnim ({ options }) {
@@ -85,14 +84,6 @@ class Tablet extends React.Component {
             role='img'
             preserveAspectRatio='xMidYMin meet'>
             <title id={`tablet-title-${this.props.index}`}>{this.props.image.alt}</title>
-            <defs>
-              <rect id={`tablet-path-${this.props.index}`}
-                x='51.5'
-                y='51.5'
-                rx='10'
-                width='997'
-                height='747' />
-            </defs>
             <g transform='translate(2.000000, 2.000000)'>
               <rect ref={(outline) => { this.outline = outline; }}
                 fill='none'
@@ -107,7 +98,12 @@ class Tablet extends React.Component {
                 rx='40'
                 vectorEffect='non-scaling-stroke' />
               <mask id={`tablet-mask-${this.props.index}`} fill='white'>
-                <use xlinkHref={`#tablet-path-${this.props.index}`} />
+                <rect id={`tablet-path-${this.props.index}`}
+                  x='51.5'
+                  y='51.5'
+                  rx='10'
+                  width='997'
+                  height='747' />
               </mask>
               <image ref={(screenMask) => { this.screenMask = screenMask; }}
                 mask={`url(#tablet-mask-${this.props.index})`}

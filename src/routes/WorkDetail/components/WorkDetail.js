@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WorkBrief from './WorkBrief';
-import WorkItem from '../../Home/components/WorkItem';
 import Hero from '../../../components/Hero';
 import BriefFooter from './BriefFooter';
 
@@ -16,14 +15,13 @@ class WorkDetail extends React.Component {
           subtitle={work.tags.join(', ')} />
         <WorkBrief
           brief={work.description}
-          title={work.name}
-          mobile={work.mobile}
           blockId={params.workId}
-          tablet={work.tablet}
-          hex={work.hex}
           links={work.links}
           images={work.images} />
-        <BriefFooter blockId={params.workId} nextWork={nextWork} prevWork={prevWork} />
+        <BriefFooter
+          blockId={params.workId}
+          nextWork={nextWork}
+          prevWork={prevWork} />
       </div>
     );
   }

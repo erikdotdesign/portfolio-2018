@@ -1,5 +1,4 @@
 import React from 'react';
-import OutlineButton from './OutlineButton';
 
 const Footer = () => (
   <footer className='c-footer section' role='contentinfo'>

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BlockReveal from '../../../components/BlockReveal';
 import VisibilitySensor from 'react-visibility-sensor';
+import BlockReveal from '../../../components/BlockReveal';
 import LazyImage from '../../../components/LazyImage';
-import Scrambler from '../../../components/Scrambler';
 
 const WorkImage = ({ image, index, blockId }) => (
   <VisibilitySensor delayedCall partialVisibility minTopValue={300}>
