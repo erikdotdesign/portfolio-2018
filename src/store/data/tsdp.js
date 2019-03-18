@@ -3,7 +3,7 @@ const tsdp = {
   'tags':['Design tool'],
   'name':'T.S.D.P',
   'year': '2017',
-  'snippet':'Sketch plugin with the power to populate your designs with real time twitch.tv data.',
+  'snippet':'Sketch plugin with the power to populate your designs with real-time twitch.tv data.',
   'description': [
     `Twitch Sketch Data Populator or TSDP for short is a fork of the
     Sketch Data Populator plugin. It features Twitch API integration

@@ -22,7 +22,7 @@ const caffeineLiveHost = {
   }, {
     'url': require('../../routes/WorkDetail/assets/img/lh-g-2.png'),
     'retina': require('../../routes/WorkDetail/assets/img/lh-g-2@2x.png'),
-    'alt': 'Live host selection menu. From the live host selection menu, broadcasters can select the broadcast they’d like to host, change hosts, or view any upcoming content with the programming guide.'
+    'alt': 'Live host selection menu. From the live host selection menu, broadcasters can select the broadcast they’d like to host, change hosts, or view upcoming content with the programming guide.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/lh-g-3.png'),
     'retina': require('../../routes/WorkDetail/assets/img/lh-g-3@2x.png'),

@@ -36,7 +36,7 @@ const caffeineAbout = {
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-1.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-1@2x.png'),
-    'alt': 'Web about page video section. The video is a wholesome introduction to the Caffeine product and community.'
+    'alt': 'Web about page video section.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-2.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-2@2x.png'),
@@ -44,15 +44,15 @@ const caffeineAbout = {
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-3.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-3@2x.png'),
-    'alt': 'Web about page “A Personal Experience” section. This section highlights Caffeine’s social foundation.'
+    'alt': 'Web about page “A Personal Experience” section.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-4.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-4@2x.png'),
-    'alt': 'Web about page “Powerfully Simple” section. This section highlights Caffeine’s powerfully simple tools and the ease at which anyone can start broadcasting.'
+    'alt': 'Web about page “Powerfully Simple” section.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-5.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-5@2x.png'),
-    'alt': 'Web about page “Earn Money” section. This section highlights Caffeines broadcaster monetization platform.'
+    'alt': 'Web about page “Earn Money” section.'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-6.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-6@2x.png'),
