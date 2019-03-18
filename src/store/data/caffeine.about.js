@@ -3,7 +3,7 @@ const caffeineAbout = {
   'tags':['Product', 'UI/UX'],
   'name':'Caffeine.tv',
   'year': '2018',
-  'snippet': `Responsive about page & signup for Caffeine.tv's web and iOS applications.`,
+  'snippet': `About page and signup flow redesign for Caffeine's web and iOS applications.`,
   'description': [
     `The objective for this project was to redesign Caffeine’s about page and signup flow.
     The goals for this project were to emphasize core product features, underscore available
