@@ -5,7 +5,11 @@ const caffeineAbout = {
   'year': '2018',
   'snippet': `Responsive about page & signup for Caffeine.tv's web and iOS applications.`,
   'description': [
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sollicitudin metus. Phasellus quis libero fermentum, ultrices ante at, convallis felis. Phasellus venenatis, risus nec venenatis feugiat, magna odio malesuada mi, vitae vestibulum ante est quis orci. Curabitur ornare, ipsum vel lacinia venenatis, lacus nibh tristique elit, id porta urna quam lacinia mauris. Nam ut elementum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mauris leo, porttitor et ex nec, cursus sodales justo. Donec ipsum magna, porttitor vitae diam quis, tincidunt porttitor purus. Etiam tempor viverra rutrum. Aenean et venenatis tortor, ut porta purus. Etiam at pharetra magna, et feugiat velit.`
+    `The objective for this project was to redesign Caffeine’s about page and signup flow.
+    The goals for this project were to emphasize core product features, underscore available
+    platforms, feature partnered broadcasters, and have a fun & inviting design language.
+    Both items were designed in tandem. The about page took the form of a fully responsive
+    webpage while the signup flow had to be catered to Caffeine’s web and iOS applications.`
   ],
   'links': null,
   'mobile': null,
@@ -24,7 +28,7 @@ const caffeineAbout = {
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-3.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-3@2x.png'),
-    'alt': 'Web signup page (create arts variant)'
+    'alt': 'Web signup page (creative arts variant)'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-4.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-4@2x.png'),
@@ -66,8 +70,8 @@ const caffeineAbout = {
     'retina': require('../../routes/WorkDetail/assets/img/ab-mobile-2@2x.png'),
     'alt': 'Mobile web about page “Earn Money” and  “Contact Us” sections'
   }],
-  'next': 'caffeineLiveHost',
-  'prev': 'twitch'
+  'next': 'twitch',
+  'prev': 'caffeineLiveHost'
 };
 
 export default caffeineAbout;

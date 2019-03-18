@@ -52,8 +52,8 @@ const electwitch = {
     'retina': require('../../routes/WorkDetail/assets/img/electwitch-8@2x.jpg'),
     'alt': 'Watch and chat experience'
   }],
-  'next': 'tsdp',
-  'prev': 'docmatter'
+  'next': 'docmatter',
+  'prev': 'tsdp'
 };
 
 export default electwitch;

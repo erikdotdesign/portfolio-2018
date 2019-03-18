@@ -38,8 +38,8 @@ const ironandale = {
     'url': require('../../routes/WorkDetail/assets/img/ironandale4.png'),
     'alt': 'Iron & Ale reviews'
   }],
-  'next': 'colledger',
-  'prev': 'tsdp'
+  'next': 'caffeineLiveHost',
+  'prev': 'colledger'
 };
 
 export default ironandale;

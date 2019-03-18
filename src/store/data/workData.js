@@ -18,7 +18,7 @@ export const workList = [
   betterworks,
   colledger,
   ironandale
-].map((currentValue) => {
+].map(currentValue => {
   const { id, tags, name, snippet, tablet, year } = currentValue;
   return {
     id, tags, name, snippet, tablet, year
@@ -36,3 +36,4 @@ export const workDetail = {
   colledger,
   ironandale
 };
+

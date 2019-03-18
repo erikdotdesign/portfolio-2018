@@ -41,8 +41,8 @@ const betterworks = {
     'url': require('../../routes/WorkDetail/assets/img/betterworks4.png'),
     'alt': 'BetterWorks styleguide dashboard modules'
   }],
-  'next': 'docmatter',
-  'prev': 'colledger'
+  'next': 'colledger',
+  'prev': 'docmatter'
 };
 
 export default betterworks;

@@ -95,8 +95,8 @@ const tsdp = {
       }
     ]
   }],
-  'next': 'twitch',
-  'prev': 'electwitch'
+  'next': 'electwitch',
+  'prev': 'twitch'
 };
 
 export default tsdp;

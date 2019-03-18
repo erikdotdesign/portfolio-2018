@@ -70,8 +70,8 @@ const twitch = {
     'retina': require('../../routes/WorkDetail/assets/img/twitch-ipr-mock-3@2x.jpg'),
     'alt': 'Additional recommendations mockup'
   }],
-  'next': 'caffeineAbout',
-  'prev': 'tsdp'
+  'next': 'tsdp',
+  'prev': 'caffeineAbout'
 };
 
 export default twitch;

@@ -44,8 +44,8 @@ const caffeineLiveHost = {
     'retina': require('../../routes/WorkDetail/assets/img/lh-g-7@2x.png'),
     'alt': 'Host controls. Broadcasters can also mute or granularly change the playback volume of the hosted broadcast.'
   }],
-  'next': 'ironandale',
-  'prev': 'caffeineAbout'
+  'next': 'caffeineAbout',
+  'prev': 'ironandale'
 };
 
 export default caffeineLiveHost;
