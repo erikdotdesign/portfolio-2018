@@ -7,7 +7,7 @@ import Scrambler from './Scrambler';
 
 const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) => (
   <VisibilitySensor delayedCall partialVisibility>
-    {({isVisible}) =>
+    {({ isVisible }) =>
       <header className='section c-hero' role='banner'>
         <div className='single c-hero__content'>
           <h1 className='epsilon--display-condensed'>
@@ -60,11 +60,9 @@ const Hero = ({ title, subtitle, secondStep, titleTwo, subtitleTwo, blockId }) =
       </header>
     }
   </VisibilitySensor>
-)
+);
 
 Hero.propTypes = {
-  children: PropTypes.node,
-  forcePlay: PropTypes.bool,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   secondStep: PropTypes.bool,

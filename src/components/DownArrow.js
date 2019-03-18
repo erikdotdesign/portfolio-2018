@@ -9,9 +9,9 @@ function createAnim ({ options }) {
   const arrowTimeline = new TimelineMax({ paused: true });
   const { chevron, stem, arrowGroup } = options.refs;
 
-  arrowTimeline.set(arrowGroup, {visibility: 'visible'});
-  arrowTimeline.set(stem, {drawSVG: 0});
-  arrowTimeline.set(chevron, {drawSVG: '50% 50%'});
+  arrowTimeline.set(arrowGroup, { visibility: 'visible' });
+  arrowTimeline.set(stem, { drawSVG: 0 });
+  arrowTimeline.set(chevron, { drawSVG: '50% 50%' });
 
   arrowTimeline
     .to(stem, 0.5, {
@@ -90,27 +90,25 @@ class DownArrow extends React.Component {
       <div className='c-down-arrow'>
         <svg
           ref={(arrowGroup) => { this.arrowGroup = arrowGroup; }}
-          visibility="hidden"
-          width="36px"
-          height="55px"
-          viewBox="0 0 36 55"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg">
+          visibility='hidden'
+          width='36px'
+          height='55px'
+          viewBox='0 0 36 55'
+          version='1.1'
+          xmlns='http://www.w3.org/2000/svg'>
           <g
-            transform="translate(1.000000, 1.000000)"
-            stroke="#000000"
-            strokeWidth="2">
+            transform='translate(1.000000, 1.000000)'
+            stroke='#000000'
+            strokeWidth='2'>
             <polyline
               ref={(chevron) => { this.chevron = chevron; }}
-              fill="none"
-              transform="translate(17.000000, 41.500000) rotate(-180.000000) translate(-17.000000, -41.500000)"
-              points="0 52 17 31 17 31 34 52">
-            </polyline>
+              fill='none'
+              transform='translate(17.000000, 41.500000) rotate(-180.000000) translate(-17.000000, -41.500000)'
+              points='0 52 17 31 17 31 34 52' />
             <path
               ref={(stem) => { this.stem = stem; }}
-              d="M17,0 L17,50"
-              strokeLinecap="square">
-            </path>
+              d='M17,0 L17,50'
+              strokeLinecap='square' />
           </g>
         </svg>
       </div>

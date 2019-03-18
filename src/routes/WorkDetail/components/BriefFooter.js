@@ -8,7 +8,7 @@ import DownArrow from '../../../components/DownArrow';
 
 const BriefFooter = ({ blockId, nextWork, prevWork }) => (
   <VisibilitySensor partialVisibility delayedCall>
-    {({isVisible}) =>
+    {({ isVisible }) =>
       <div>
         <div className='section c-brief-footer'>
           <div className='single c-brief-footer__header'>
@@ -40,7 +40,7 @@ const BriefFooter = ({ blockId, nextWork, prevWork }) => (
       </div>
     }
   </VisibilitySensor>
-)
+);
 
 BriefFooter.propTypes = {
   blockId: PropTypes.string,

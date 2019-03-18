@@ -9,7 +9,7 @@ import OutlineButton from '../../../components/OutlineButton';
 
 const WorkItem = ({ work, index, workDetail }) => (
   <VisibilitySensor delayedCall partialVisibility minTopValue={300}>
-    {({isVisible}) =>
+    {({ isVisible }) =>
       <article className='section c-work-item' role='article'>
         <div className='columns-flush'>
           <div className='column column--duo column--tablet'>
@@ -114,7 +114,7 @@ const WorkItem = ({ work, index, workDetail }) => (
       </article>
     }
   </VisibilitySensor>
-)
+);
 
 WorkItem.propTypes = {
   work: PropTypes.object,

@@ -134,6 +134,7 @@ OutlineButton.propTypes = {
   router: PropTypes.bool,
   blockId: PropTypes.string,
   forcePlay: PropTypes.bool,
+  gifForcePlay: PropTypes.bool,
   text: PropTypes.string,
   link: PropTypes.string
 };

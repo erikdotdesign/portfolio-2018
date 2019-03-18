@@ -64,48 +64,48 @@ class Logo extends React.Component {
     return (
       <div className='c-logo'>
         <svg
-          width="37px"
-          height="23px"
-          viewBox="0 0 37 23"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg">
+          width='37px'
+          height='23px'
+          viewBox='0 0 37 23'
+          version='1.1'
+          xmlns='http://www.w3.org/2000/svg'>
           <rect
             ref={(outline) => { this.outline = outline; }}
-            stroke="#fcfcfc"
-            strokeWidth="0"
-            fill="none"
-            x="1.5"
-            y="1.5"
-            width="34"
-            height="20" />
+            stroke='#fcfcfc'
+            strokeWidth='0'
+            fill='none'
+            x='1.5'
+            y='1.5'
+            width='34'
+            height='20' />
           <rect
             ref={(eTop) => { this.eTop = eTop; }}
-            fill="#fcfcfc"
-            x="7"
-            y="7"
-            width="0"
-            height="3" />
+            fill='#fcfcfc'
+            x='7'
+            y='7'
+            width='0'
+            height='3' />
           <rect
             ref={(eBottom) => { this.eBottom = eBottom; }}
-            fill="#fcfcfc"
-            x="7"
-            y="13"
-            width="0"
-            height="3" />
+            fill='#fcfcfc'
+            x='7'
+            y='13'
+            width='0'
+            height='3' />
           <rect
             ref={(mLeft) => { this.mLeft = mLeft; }}
-            fill="#fcfcfc"
-            x="20"
-            y="7"
-            width="3"
-            height="0" />
+            fill='#fcfcfc'
+            x='20'
+            y='7'
+            width='3'
+            height='0' />
           <rect
             ref={(mRight) => { this.mRight = mRight; }}
-            fill="#fcfcfc"
-            x="27"
-            y="7"
-            width="3"
-            height="0" />
+            fill='#fcfcfc'
+            x='27'
+            y='7'
+            width='3'
+            height='0' />
         </svg>
       </div>
     );

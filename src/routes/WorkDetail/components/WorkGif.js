@@ -26,7 +26,7 @@ const WorkGif = ({ gif, index, blockId }) => (
       </figure>
     }
   </VisibilitySensor>
-)
+);
 
 WorkGif.propTypes = {
   gif: PropTypes.object,

@@ -23,7 +23,7 @@ class BriefImages extends React.Component {
   _isRetinaDisplay = () => {
     if (window.matchMedia) {
       var mq = window.matchMedia('only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)');
-      return (mq && mq.matches || (window.devicePixelRatio > 1));
+      return ((mq && mq.matches) || (window.devicePixelRatio > 1));
     }
   }
   render () {
@@ -38,7 +38,7 @@ class BriefImages extends React.Component {
           images.map((image, index) =>
             typeof (image.cover) !== 'undefined'
             ? <WorkGif gif={image} key={index} index={index} />
-            : <a className='c-work-image-wrap' href="#" alt={image.alt} onClick={(e) => this.handleClick(e, index)} key={index} ><WorkImage image={image} index={index} blockId={this.props.blockId} /></a>
+            : <a className='c-work-image-wrap' href='#' alt={image.alt} onClick={(e) => this.handleClick(e, index)} key={index} ><WorkImage image={image} index={index} blockId={this.props.blockId} /></a>
           )
         }
         {isOpen && (

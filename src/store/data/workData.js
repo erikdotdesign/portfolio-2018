@@ -36,4 +36,3 @@ export const workDetail = {
   colledger,
   ironandale
 };
-
