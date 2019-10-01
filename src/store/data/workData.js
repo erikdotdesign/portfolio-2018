@@ -1,7 +1,5 @@
 import betterworks from './betterworks';
-import colledger from './colledger';
 import docmatter from './docmatter';
-import ironandale from './ironandale';
 import electwitch from './electwitch';
 import tsdp from './tsdp';
 import twitch from './twitch';
@@ -15,9 +13,7 @@ export const workList = [
   tsdp,
   electwitch,
   docmatter,
-  betterworks,
-  colledger,
-  ironandale
+  betterworks
 ].map(currentValue => {
   const { id, tags, name, snippet, tablet, year } = currentValue;
   return {
@@ -32,7 +28,5 @@ export const workDetail = {
   tsdp,
   electwitch,
   docmatter,
-  betterworks,
-  colledger,
-  ironandale
+  betterworks
 };
