@@ -5,9 +5,8 @@ const caffeineLiveHost = {
   'year': '2018',
   'snippet': `Live Host feature breakdown for Caffeine.tv’s web and iOS applications.`,
   'description': [
-    `Caffeine.tv is a social broadcasting platform for gaming, entertainment, and the creative arts.
-    The Live Host feature allows broadcasters on Caffeine’s web and iOS applications to commentate over select live broadcasts in real-time.
-    As the project’s design DRI (directly responsible individual), it was my responsibility to oversee, synthesize, and execute any product related decision.`
+    `Caffeine.tv is a social broadcasting platform for gaming, entertainment, and the creative arts. It offers simple and easy to use tools for broadcasters to live stream using their browser, mobile device, or Windows gaming machine. The Live Host feature is built atop Caffeine’s web and iOS applications. Before Live Host, you could only broadcast your webcam using these platforms. That changed when Caffeine signed an exclusive content deal with Fox. With the influx of amazing content, we wanted to give broadcasters an equally amazing toolset to leverage this content.`,
+    `Live Host gives broadcasters the ability to add this content to their webcam broadcasts in real-time, effectively giving them the power to be their own sports commentator. Along with this, broadcasters are also provided with a programing guide of upcoming content so they can plan future broadcasts. Both the web and iOS UI/UX were completely redesigned to make room for Live Host. We also introduced a brand new icon system in tandem.`
   ],
   'links': null,
   'mobile': null,
