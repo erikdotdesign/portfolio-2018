@@ -44,7 +44,7 @@ const caffeineLiveHost = {
     'alt': 'Host controls. Broadcasters can also mute or granularly change the playback volume of the hosted broadcast.'
   }],
   'next': 'caffeineAbout',
-  'prev': 'ironandale'
+  'prev': 'betterworks'
 };
 
 export default caffeineLiveHost;
