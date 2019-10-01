@@ -43,7 +43,7 @@ class BriefImages extends React.Component {
         }
         {isOpen && (
           <Lightbox
-            imageCaption={captions[photoIndex]}
+            imageCaption={false}
             mainSrc={rawImages[photoIndex]}
             nextSrc={rawImages[(photoIndex + 1) % rawImages.length]}
             prevSrc={rawImages[(photoIndex + rawImages.length - 1) % rawImages.length]}
