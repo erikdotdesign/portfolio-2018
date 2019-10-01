@@ -3,7 +3,7 @@ const caffeineAbout = {
   'tags':['Product', 'UI/UX'],
   'name':'Caffeine.tv',
   'year': '2018',
-  'snippet': `About page and signup flow redesign for Caffeine's web and iOS applications.`,
+  'snippet': `About Page and Sign Up flow redesign for Caffeine's web and iOS applications.`,
   'description': [
     `The objective for this project was to redesign Caffeine’s About Page and Sign Up Flow. The goals were to emphasize core product features (e.g. chat and player experience for viewers and broadcasters), underscore available platforms (e.g. web and iOS), spotlight partnered broadcasters, and create a friendly design language. Both items were designed in tandem for a cohesive product experience. The About Page took the form of a fully responsive webpage while the Sign Up flow was created for Caffeine’s web and iOS applications.`,
     `The prevailing theme for the Sign Up flow was making friends around Caffeine’s diverse content catalog. It was centered around three main areas: Entertainment, Gaming, and Creative Arts. Both the web and iOS experience featured a tagline that rotated between each area (e.g. Sign up and make friends around live entertainment.). For the web experience, each section also included relevant platform visuals with corresponding partnered broadcasters.`,
