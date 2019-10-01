@@ -10,8 +10,8 @@ const Home = ({ workList }) => (
       subtitle='Erik Myers Design'
       secondStep
       blockId='home'
-      titleTwo='2014 – 2019'
-      subtitleTwo='Full Stack Design' />
+      titleTwo='2015 – 2019'
+      subtitleTwo='Full-Stack Design' />
     <WorkList workList={workList} />
   </div>
 );
