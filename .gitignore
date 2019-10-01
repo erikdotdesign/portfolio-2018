@@ -3,5 +3,6 @@
 node_modules
 dist
 coverage
+src/routes/WorkDetail/assets
 .idea/
 .yarn-cache
