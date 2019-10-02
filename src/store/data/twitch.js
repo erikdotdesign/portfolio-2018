@@ -20,7 +20,7 @@ const twitch = {
     is appended to the player and can take two forms depending on the player type.
     After a video, the featured recommendation will autoplay within ten seconds. Users
     can view additional recommendations by clicking ‘Cancel’ or ‘More videos’ if autoplay
-    is disabled as seen after a live broadcast. All recommendations are responsive and
+    is disabled, as seen after a live broadcast. All recommendations are responsive and
     adapt to the size of the player. The number of additional recommendations displayed
     is also dependent on the player size.`
   ],
