@@ -49,9 +49,7 @@ const caffeineLiveHost = {
     'url': require('../../routes/WorkDetail/assets/img/lh-g-7.png'),
     'retina': require('../../routes/WorkDetail/assets/img/lh-g-7@2x.png'),
     'alt': 'Host controls. Broadcasters can also mute or granularly change the playback volume of the hosted broadcast.'
-  }],
-  'next': 'caffeineAbout',
-  'prev': 'betterworks'
+  }]
 };
 
 export default caffeineLiveHost;

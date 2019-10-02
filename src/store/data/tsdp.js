@@ -89,9 +89,7 @@ const tsdp = {
         '2x': require('../../routes/WorkDetail/assets/img/tsdp-streams-7@2x.jpg')
       }
     ]
-  }],
-  'next': 'electwitch',
-  'prev': 'twitch'
+  }]
 };
 
 export default tsdp;

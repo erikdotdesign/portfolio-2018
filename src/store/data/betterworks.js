@@ -40,9 +40,7 @@ const betterworks = {
   }, {
     'url': require('../../routes/WorkDetail/assets/img/betterworks4.png'),
     'alt': 'BetterWorks styleguide dashboard modules'
-  }],
-  'next': 'caffeineLiveHost',
-  'prev': 'docmatter'
+  }]
 };
 
 export default betterworks;

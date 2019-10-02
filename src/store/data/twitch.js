@@ -69,9 +69,7 @@ const twitch = {
     'url': require('../../routes/WorkDetail/assets/img/twitch-ipr-mock-3.jpg'),
     'retina': require('../../routes/WorkDetail/assets/img/twitch-ipr-mock-3@2x.jpg'),
     'alt': 'Additional recommendations mockup'
-  }],
-  'next': 'tsdp',
-  'prev': 'caffeineAbout'
+  }]
 };
 
 export default twitch;

@@ -48,9 +48,7 @@ const electwitch = {
     'url': require('../../routes/WorkDetail/assets/img/electwitch-8.jpg'),
     'retina': require('../../routes/WorkDetail/assets/img/electwitch-8@2x.jpg'),
     'alt': 'Watch and chat experience'
-  }],
-  'next': 'docmatter',
-  'prev': 'tsdp'
+  }]
 };
 
 export default electwitch;

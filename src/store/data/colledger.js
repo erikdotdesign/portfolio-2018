@@ -41,9 +41,7 @@ const colledger = {
   }, {
     'url': require('../../routes/WorkDetail/assets/img/colledger4.png'),
     'alt': 'Colledger compare - tuition'
-  }],
-  'next': 'ironandale',
-  'prev': 'betterworks'
+  }]
 };
 
 export default colledger;

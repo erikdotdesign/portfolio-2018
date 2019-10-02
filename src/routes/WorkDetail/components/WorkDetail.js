@@ -6,7 +6,7 @@ import BriefFooter from './BriefFooter';
 
 class WorkDetail extends React.Component {
   render () {
-    const { work, nextWork, prevWork, params } = this.props;
+    const { work, params } = this.props;
     return (
       <div className='typeset'>
         <Hero
@@ -20,8 +20,8 @@ class WorkDetail extends React.Component {
           images={work.images} />
         <BriefFooter
           blockId={params.workId}
-          nextWork={nextWork}
-          prevWork={prevWork} />
+          nextWork={work.nextWork}
+          prevWork={work.prevWork} />
       </div>
     );
   }
@@ -29,8 +29,6 @@ class WorkDetail extends React.Component {
 
 WorkDetail.propTypes = {
   work: PropTypes.object,
-  nextWork: PropTypes.object,
-  prevWork: PropTypes.object,
   params: PropTypes.object
 };
 

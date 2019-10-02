@@ -67,9 +67,7 @@ const caffeineAbout = {
     'url': require('../../routes/WorkDetail/assets/img/ab-mobile-2.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-mobile-2@2x.png'),
     'alt': 'Mobile web about page “Earn Money” and  “Contact Us” sections'
-  }],
-  'next': 'twitch',
-  'prev': 'caffeineLiveHost'
+  }]
 };
 
 export default caffeineAbout;
