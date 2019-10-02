@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
-import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
 import GSAP from 'react-gsap-enhancer';
+import DrawSVGPlugin from '../gsapPlugins/DrawSVGPlugin';
 
 function createAnim ({ options }) {
   const arrowTimeline = new TimelineMax({ paused: true });

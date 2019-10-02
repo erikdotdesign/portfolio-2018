@@ -4,5 +4,6 @@ node_modules
 dist
 coverage
 src/routes/WorkDetail/assets
+src/gsapPlugins
 .idea/
 .yarn-cache

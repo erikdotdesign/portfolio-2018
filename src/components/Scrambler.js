@@ -1,9 +1,9 @@
 import React from 'react';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
-import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
 import PropTypes from 'prop-types';
 import GSAP from 'react-gsap-enhancer';
+import ScrambleTextPlugin from '../gsapPlugins/ScrambleTextPlugin';
 
 function createAnim ({ options }) {
   const { delay, duration, text, secondStep, secondStepText, secondStepDelay } = options.props;

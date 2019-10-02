@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import GSAP from 'react-gsap-enhancer';
 import TweenMax from 'gsap/TweenMax';
 import TimelineMax from 'gsap/TimelineMax';
-import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
-import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
 import { Link } from 'react-router';
+import DrawSVGPlugin from '../gsapPlugins/DrawSVGPlugin';
+import ScrambleTextPlugin from '../gsapPlugins/ScrambleTextPlugin';
 
 function createAnim ({ options }) {
   const { text } = options.props;
