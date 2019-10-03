@@ -17,7 +17,6 @@ const caffeineLiveHost = {
     are also provided with a programing guide of upcoming content, allowing them to plan future broadcasts.`
   ],
   'links': null,
-  'mobile': null,
   'tablet': {
     'url': require('../../routes/WorkDetail/assets/img/lh-tablet.png'),
     'alt': 'Caffeine live host feature'

@@ -40,10 +40,6 @@ const docmatter = {
     'text': 'View website',
     'url': 'https://www.docmatter.com'
   }],
-  'mobile': {
-    'url': require('../../routes/WorkDetail/assets/img/docmatter-mobile.png'),
-    'alt': 'Mobile web DocMatter public website homepage'
-  },
   'tablet': {
     'url': require('../../routes/WorkDetail/assets/img/docmatter.png'),
     'alt': 'DocMatter public website landing page'

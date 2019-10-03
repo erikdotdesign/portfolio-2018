@@ -26,10 +26,6 @@ const twitch = {
     is also dependent on the player size.`
   ],
   'links': null,
-  'mobile': {
-    'url': require('../../routes/WorkDetail/assets/img/twitch-ipr-mobile.jpg'),
-    'alt': 'Twitch mobile in-player recommendations'
-  },
   'tablet': {
     'url': require('../../routes/WorkDetail/assets/img/twitch-ipr.jpg'),
     'alt': 'Twitch in-player recommendations'

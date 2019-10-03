@@ -3,7 +3,7 @@ const electwitch = {
   'tags': ['Desktop application'],
   'name': 'Electwitch',
   'year': '2017',
-  'snippet': 'Twitch.tv desktop application built with Electron, React, Redux, and Material Design.',
+  'snippet': `Twitch.tv desktop application built with Electron, React, Redux, and Material Design.`,
   'description': [
     `Electwitch (Electron + Twitch) is a desktop application I designed and developed as a side project
     while working at Twitch. Before Twitch had a desktop application, the only way to view broadcasts
@@ -18,7 +18,6 @@ const electwitch = {
     'text': 'View on Github',
     'url': 'https://github.com/endswithak/twitch-electron-react-app'
   }],
-  'mobile': null,
   'tablet': {
     'url': require('../../routes/WorkDetail/assets/img/electwitch.jpg'),
     'alt': 'Electwitch application browse games'

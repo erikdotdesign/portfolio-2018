@@ -3,7 +3,7 @@ const tsdp = {
   'tags': ['Design tool'],
   'name': 'T.S.D.P',
   'year': '2017',
-  'snippet': 'Sketch plugin with the power to populate your designs with live Twitch.tv data.',
+  'snippet': `Sketch plugin with the power to populate your designs with live Twitch.tv data.`,
   'description': [
     `Twitch Sketch Data Populator, or TSDP for short, is a fork of the Sketch Data Populator plugin.
     It features Twitch API integration and is preset with 17 custom commands. Each command allows
@@ -17,7 +17,6 @@ const tsdp = {
     'text': 'View on Github',
     'url': 'https://github.com/endswithak/twitch-sketch-data-populator'
   }],
-  'mobile': null,
   'tablet': {
     'url': require('../../routes/WorkDetail/assets/img/tsdp.jpg'),
     'alt': 'Twitch Sketch Data Populator top games example'

@@ -23,7 +23,6 @@ const caffeineAbout = {
     platform visuals.`
   ],
   'links': null,
-  'mobile': null,
   'tablet': {
     'url': require('../../routes/WorkDetail/assets/img/su-tablet.png'),
     'alt': 'Caffeine about page'

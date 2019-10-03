@@ -20,10 +20,6 @@ const betterworks = {
     across the entire product.`
   ],
   'links': null,
-  'mobile': {
-    'url': require('../../routes/WorkDetail/assets/img/betterworks-mobile.png'),
-    'alt': 'Mobile web BetterWorks style guide'
-  },
   'tablet': {
     'url': require('../../routes/WorkDetail/assets/img/betterworks.png'),
     'alt': 'BetterWorks style guide typography'
