@@ -12,14 +12,14 @@ const caffeineAbout = {
     form of a fully responsive webpage while the sign up flow was created for Caffeine’s web and iOS applications.`,
 
     `The prevailing theme for the sign up flow was making friends around Caffeine’s diverse content catalog.
-    It was centered around three main areas: Entertainment, Gaming, and Creative Arts. Both the web and iOS experience
+    It was centered around three main areas: entertainment, gaming, and creative arts. Both the web and iOS experience
     featured a tagline that rotated between each area (e.g. sign up and make friends around live entertainment).
     For the web experience, each section also included relevant platform visuals with corresponding partnered broadcasters.`,
 
     `The goal for the About Page was to welcome new users unfamiliar with the product, brief them on Caffeine, and compel
     them to sign up. It was broken into six sections. The first section included an introductory video along with a welcome
     statement. The next three sections dove into what made Caffeine unique compared to its competitors. And the final two
-    sections provided users with sign up and Contact links. Included with each section were relevant illustrations and
+    sections provided users with sign up and contact links. Included with each section were relevant illustrations and
     platform visuals.`
   ],
   'links': null,
