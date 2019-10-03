@@ -1,0 +1,68 @@
+.ril__toolbarItemChild {
+  vertical-align: top !important;
+}
+
+.ril__builtinButton {
+  height: 50px !important;
+  width: 50px !important;
+  background-color: rgba(0, 0, 0, 1) !important;
+  opacity: 1 !important;
+}
+
+.ril__toolbarRightSide {
+  padding-right: 0 !important;
+}
+
+.ril-toolbar, .ril__toolbar {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.ril__navButtons {
+  width: 50px !important;
+  padding: 50px 0 !important;
+}
+
+.ril__navButtonNext, .ril__navButtonPrev {
+  background-color: rgba(0, 0, 0, 1) !important;
+  opacity: 1 !important;
+}
+
+.ril-zoom-in, .ril-zoom-out {
+  display: none;
+}
+
+.ril__loadingCircle {
+  &:before,
+  &:after {
+    content: '';
+    border: 2px solid $white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  &:before {
+    transform: scale(1,1);
+    opacity: 1;
+    animation: waveAnimBf 0.6s infinite linear;
+  }
+
+  &:after {
+    transform: scale(0,0);
+    opacity: 0;
+    animation: waveAnimAf 0.6s infinite linear;
+  }
+}
+
+.ril__loadingCirclePoint {
+  @for $i from 1 through 12 {
+    &:nth-of-type(#{$i}) {
+      display: none !important;
+    }
+  }
+}
+
