@@ -3,7 +3,7 @@ const docmatter = {
   'tags':['Branding', 'UI/UX'],
   'name':'DocMatter',
   'year': '2016',
-  'snippet':`An introduction to DocMatter's branding and web application.`,
+  'snippet':`Branding process overview for DocMatter’s public facing website.`,
   'description': [
     `DocMatter is a healthcare startup focused on creating collaboration
     software for medical professionals. It provides an array of services
@@ -56,7 +56,7 @@ const docmatter = {
     'alt': 'DocMatter application login'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/docmatter4.png'),
-    'alt': 'DocMatter signup page'
+    'alt': 'DocMatter sign up page'
   }]
 };
 

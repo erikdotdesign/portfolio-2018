@@ -3,7 +3,7 @@ const caffeineAbout = {
   'tags':['Product', 'UI/UX'],
   'name':'Caffeine.tv',
   'year': '2018',
-  'snippet': `About Page and Sign Up flow redesign for Caffeine's web and iOS applications.`,
+  'snippet': `About Page and Sign Up redesign for Caffeine.tv's web and iOS applications.`,
   'description': [
     `The objective for this project was to redesign Caffeine’s About Page and Sign Up Flow. The goals were to emphasize core product features (e.g. chat and player experience for viewers and broadcasters), underscore available platforms (e.g. web and iOS), spotlight partnered broadcasters, and create a friendly design language. Both items were designed in tandem for a cohesive product experience. The About Page took the form of a fully responsive webpage while the Sign Up flow was created for Caffeine’s web and iOS applications.`,
     `The prevailing theme for the Sign Up flow was making friends around Caffeine’s diverse content catalog. It was centered around three main areas: Entertainment, Gaming, and Creative Arts. Both the web and iOS experience featured a tagline that rotated between each area (e.g. Sign up and make friends around live entertainment.). For the web experience, each section also included relevant platform visuals with corresponding partnered broadcasters.`,
@@ -18,23 +18,23 @@ const caffeineAbout = {
   'images': [{
     'url': require('../../routes/WorkDetail/assets/img/su-1.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-1@2x.png'),
-    'alt': 'Web signup page (entertainment variant)'
+    'alt': 'Web sign up page (entertainment variant)'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-2.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-2@2x.png'),
-    'alt': 'Web signup page (gaming variant)'
+    'alt': 'Web sign up page (gaming variant)'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-3.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-3@2x.png'),
-    'alt': 'Web signup page (creative arts variant)'
+    'alt': 'Web sign up page (creative arts variant)'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-4.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-4@2x.png'),
-    'alt': 'Web sign-in page'
+    'alt': 'Web sign in page'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/su-mobile.png'),
     'retina': require('../../routes/WorkDetail/assets/img/su-mobile@2x.png'),
-    'alt': 'iOS landing, signup, and sign-in screens'
+    'alt': 'iOS landing, sign up, and sign in screens'
   }, {
     'url': require('../../routes/WorkDetail/assets/img/ab-1.png'),
     'retina': require('../../routes/WorkDetail/assets/img/ab-1@2x.png'),
