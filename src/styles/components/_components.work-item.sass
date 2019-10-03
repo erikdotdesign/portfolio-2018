@@ -3,15 +3,16 @@
   margin-bottom: 7rem
 
 .typeset
-  .c-work-item__tag-list
-    font-family: unquote(map-get($headingtype, font-family))
-    +sassline(delta, $headingtype, 2, 1, all)
-    font-weight: 400
-
+  .c-work-item__tag-list,
   .c-work-item__meta
     font-family: unquote(map-get($headingtype, font-family))
-    +sassline(zeta, $headingtype, 2, 1, all)
     font-weight: 400
+
+  .c-work-item__tag-list
+    +sassline(delta, $headingtype, 2, 1, all)
+
+  .c-work-item__meta
+    +sassline(zeta, $headingtype, 2, 1, all)
 
   .c-work-item__display-name
     +sassline-display(alpha, $headingtype, 11, 1, 4)
@@ -23,15 +24,6 @@
     +breakpoint(break-0)
       top: -2rem
 
-    +breakpoint(break-1)
-      top: -2rem
-
-    +breakpoint(break-2)
-      top: -2rem
-
-    +breakpoint(break-3)
-      top: -2rem
-
     +breakpoint(break-4)
       top: -4rem
 
@@ -41,19 +33,14 @@
     align-items: center
     justify-content: center
 
+  .halftone-wrap--tablet
     +breakpoint(break-0)
       left: 0
 
     +breakpoint(break-1)
       left: -10rem
 
-    +breakpoint(break-2)
-      left: -10rem
-
     +breakpoint(break-3)
-      left: 0
-
-    +breakpoint(break-4)
       left: 0
 
   .c-work-item__index
@@ -67,18 +54,6 @@
   .columns-flush
 
     +breakpoint(break-1)
-      height: initial
-      display: flex
-
-    +breakpoint(break-2)
-      height: initial
-      display: flex
-
-    +breakpoint(break-3)
-      height: initial
-      display: flex
-
-    +breakpoint(break-4)
       height: initial
       display: flex
 

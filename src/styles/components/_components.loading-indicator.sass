@@ -9,15 +9,14 @@
   position: absolute
   top: 50%
   left: 50%
-  transform: translateY(-50%) translateX(-50%)
 
 %loading-indicator-anim--before
-  transform: scale(1,1)
+  transform: translateY(-50%) translateX(-50%) scale(1,1)
   opacity: 1
   animation: waveAnimBf 0.6s infinite linear
 
 %loading-indicator-anim--after
-  transform: scale(0,0)
+  transform: translateY(-50%) translateX(-50%) scale(0,0)
   opacity: 0
   animation: waveAnimAf 0.6s infinite linear
 

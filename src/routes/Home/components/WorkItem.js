@@ -13,7 +13,7 @@ const WorkItem = ({ work, index, workDetail }) => (
       <article className='section c-work-item' role='article'>
         <div className='columns-flush'>
           <div className='column column--duo column--tablet'>
-            <div className='halftone-wrap'>
+            <div className='halftone-wrap halftone-wrap--tablet'>
               <HalftoneCharacter
                 className='c-work-item__index'
                 character={workDetail ? `${workDetail.slice(0, 2)}` : `0${index + 1}`} />
