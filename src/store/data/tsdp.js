@@ -1,11 +1,17 @@
 const tsdp = {
-  'id':'tsdp',
-  'tags':['Design tool'],
-  'name':'T.S.D.P',
+  'id': 'tsdp',
+  'tags': ['Design tool'],
+  'name': 'T.S.D.P',
   'year': '2017',
-  'snippet':'Sketch plugin with the power to populate your designs with real-time Twitch.tv data.',
+  'snippet': 'Sketch plugin with the power to populate your designs with live Twitch.tv data.',
   'description': [
-    `Twitch Sketch Data Populator, or TSDP for short, is a fork of the Sketch Data Populator plugin. It features Twitch API integration and is preset with 17 custom commands. Each command allows you to quickly populate specified layers in your Sketch file with live Twitch data. I developed this plugin as a side project while working at Twitch for a more efficient workflow. Sketch, similar to Illustrator or Photoshop, is a popular tool among Product Designers. Plugins are third-party addons users can install to increase Sketch’s functionality and are usually programmed in JavaScript.`
+    `Twitch Sketch Data Populator, or TSDP for short, is a fork of the Sketch Data Populator plugin.
+    It features Twitch API integration and is preset with 17 custom commands. Each command allows
+    you to quickly populate specified layers in your Sketch file with live Twitch data. While working
+    at Twitch, I developed this plugin as a side project for a more efficient workflow. Sketch,
+    similar to Illustrator or Photoshop, is a popular tool among Product Designers. Plugins are
+    third-party addons users can install to increase Sketch’s functionality and are usually
+    programmed in JavaScript.`
   ],
   'links': [{
     'text': 'View on Github',

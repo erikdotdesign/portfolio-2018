@@ -1,14 +1,15 @@
 const betterworks = {
-  'id':'betterworks',
-  'tags':['Style guide', 'UI/UX'],
-  'name':'BetterWorks',
+  'id': 'betterworks',
+  'tags': ['Style guide', 'UI/UX'],
+  'name': 'BetterWorks',
   'year': '2015',
-  'snippet':`Internal style guide outline for BetterWork’s web application.`,
+  'snippet': `Internal style guide outline for BetterWork’s web application.`,
   'description': [
     `BetterWorks is an enterprise startup focused on creating
     the easiest way to set and manage goals. Their product takes
     advantage of OKRs (Objectives and Key Results) and Goal Science
     to engage and align high performing teams.`,
+
     `The BetterWorks style guide was created through close collaboration
     with the BetterWorks Design and Engineering teams. The purpose of
     this resource is to help increase efficiency across all media channels

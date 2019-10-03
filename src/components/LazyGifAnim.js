@@ -65,7 +65,7 @@ class LazyGifAnim extends React.Component {
             alt={this.props.gif.alt} />
         </div>
         <div className='c-work-gif__overlay' ref={overlay => { this.overlay = overlay; }}>
-          <OutlineButton gifForcePlay blockId={'tspd'} text='Play' />
+          <OutlineButton gifForcePlay blockId={'tspd'} text='Click to Play' />
         </div>
       </div>
     );

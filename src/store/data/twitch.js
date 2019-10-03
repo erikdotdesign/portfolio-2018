@@ -1,9 +1,9 @@
 const twitch = {
-  'id':'twitch',
-  'tags':['Product', 'UI/UX'],
-  'name':'Twitch.tv',
+  'id': 'twitch',
+  'tags': ['Product', 'UI/UX'],
+  'name': 'Twitch.tv',
   'year': '2017',
-  'snippet': 'In-Player Recommendations feature analysis for Twitch.tv’s web application. ',
+  'snippet': `In-Player Recommendations feature analysis for Twitch.tv’s web application.`,
   'description': [
     `While at Twitch I was fortunate enough to work on many great products
     and features. As a UI/UX designer for the live video team, I worked
@@ -15,6 +15,7 @@ const twitch = {
     Some major products I helped worked on include: In-player recommendations v1,
     Discover directory v1, Channel page redesign, Video page redesign,
     and Events v1. For this post, I’ll just be talking about in-player recommendations.`,
+
     `When a broadcaster’s live stream or video ends, video recommendations are displayed
     within the player. The first recommendation surfaced, the featured recommendation,
     is appended to the player and can take two forms depending on the player type.

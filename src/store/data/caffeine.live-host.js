@@ -1,7 +1,7 @@
 const caffeineLiveHost = {
-  'id':'caffeineLiveHost',
-  'tags':['Product', 'UI/UX'],
-  'name':'Live Host',
+  'id': 'caffeineLiveHost',
+  'tags': ['Product', 'UI/UX'],
+  'name': 'Live Host',
   'year': '2018',
   'snippet': `Live Host feature breakdown for Caffeine.tv’s web and iOS applications.`,
   'description': [
@@ -11,6 +11,7 @@ const caffeineLiveHost = {
     Before Live Host, you could only broadcast your webcam using these platforms. That changed when Caffeine
     signed an exclusive content deal with Fox. With the influx of amazing content, we wanted to give broadcasters
     an equally amazing toolset to leverage this content.`,
+
     `Live Host gives broadcasters the ability to add said content to their webcam broadcasts in real-time,
     effectively giving them the power to be their own sports commentator. Along with this, broadcasters
     are also provided with a programing guide of upcoming content, allowing them to plan future broadcasts.`
