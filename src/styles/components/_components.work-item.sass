@@ -14,33 +14,25 @@
     font-weight: 400
 
   .c-work-item__display-name
+    +sassline-display(alpha, $headingtype, 11, 1, 4)
     position: absolute
+    left: 0
     color: $black
     z-index: -1
 
     +breakpoint(break-0)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: 0
       top: -2rem
 
     +breakpoint(break-1)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: 0
       top: -2rem
 
     +breakpoint(break-2)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: 0
       top: -2rem
 
     +breakpoint(break-3)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: 0
       top: -2rem
 
     +breakpoint(break-4)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      left: 0
       top: -4rem
 
   .halftone-wrap
@@ -49,30 +41,27 @@
     align-items: center
     justify-content: center
 
-  .c-work-item__index
-    position: relative
-    text-align: center
-    color: $black
-
     +breakpoint(break-0)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      top: -0.5rem
+      left: 0
 
     +breakpoint(break-1)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      top: -0.5rem
+      left: -10rem
 
     +breakpoint(break-2)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      top: -0.5rem
+      left: -10rem
 
     +breakpoint(break-3)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      top: -0.5rem
+      left: 0
 
     +breakpoint(break-4)
-      +sassline-display(alpha, $headingtype, 11, 1, 4)
-      top: -0.5rem
+      left: 0
+
+  .c-work-item__index
+    +sassline-display(alpha, $headingtype, 11, 1, 4)
+    position: relative
+    top: -0.5rem
+    text-align: center
+    color: $black
 
 .c-work-item
   .columns-flush
